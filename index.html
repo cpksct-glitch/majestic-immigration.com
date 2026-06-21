@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Majestic Education & Immigration Consultancy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #1a2744;
+    --navy-deep: #0f1a30;
+    --gold: #c9a84c;
+    --gold-light: #e8c97a;
+    --white: #ffffff;
+    --off-white: #f8f6f1;
+    --text-dark: #1a2744;
+    --text-mid: #4a5568;
+    --text-light: #718096;
+    --border: #e2ddd4;
+  }
+
+  body {
+    font-family: 'Noto Sans TC', sans-serif;
+    color: var(--text-dark);
+    background: var(--white);
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    box-shadow: 0 2px 12px rgba(26,39,68,.06);
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+
+  .logo-mark {
+    width: 42px;
+    height: 42px;
+  }
+
+  .logo-text {
+    line-height: 1.1;
+  }
+
+  .logo-name {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--navy);
+    letter-spacing: 2px;
+  }
+
+  .logo-sub {
+    font-size: 8px;
+    color: var(--text-light);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-mid);
+    letter-spacing: 0.5px;
+    transition: color .2s;
+    white-space: nowrap;
+  }
+
+  .nav-links a:hover { color: var(--navy); }
+
+  .nav-cta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .nav-phone {
+    font-size: 13px;
+    color: var(--text-mid);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .btn-primary {
+    background: var(--navy);
+    color: var(--white);
+    padding: 9px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 13px;
+    font-family: inherit;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    text-decoration: none;
+    display: inline-block;
+    transition: background .2s;
+  }
+
+  .btn-primary:hover { background: #253366; }
+
+  .btn-gold {
+    background: var(--gold);
+    color: var(--white);
+    padding: 13px 28px;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    font-family: inherit;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background .2s;
+  }
+
+  .btn-gold:hover { background: #b8973e; }
+
+  .btn-outline-white {
+    border: 1.5px solid rgba(255,255,255,0.7);
+    color: var(--white);
+    padding: 13px 28px;
+    border-radius: 4px;
+    font-size: 15px;
+    font-family: inherit;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    background: transparent;
+    transition: background .2s;
+  }
+
+  .btn-outline-white:hover { background: rgba(255,255,255,.1); }
+
+  /* ── HERO ── */
+  .hero {
+    position: relative;
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: var(--navy-deep);
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #0f1a30 0%, #1a2744 40%, #2a3f6f 70%, #1a2744 100%);
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='520'%3E%3Cellipse cx='650' cy='260' rx='300' ry='260' fill='%23c9a84c' fill-opacity='0.04'/%3E%3Cellipse cx='100' cy='420' rx='200' ry='150' fill='%23ffffff' fill-opacity='0.02'/%3E%3C/svg%3E") center/cover;
+  }
+
+  /* City silhouette */
+  .hero-cities {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 180px;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .hero-city-left {
+    flex: 1;
+    height: 100%;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 180' preserveAspectRatio='xMinYMax meet'%3E%3Cpath d='M0,180 L0,90 L30,90 L30,60 L50,60 L50,40 L70,40 L70,60 L90,60 L90,30 L110,30 L110,60 L130,60 L130,50 L150,50 L150,0 L160,0 L160,50 L170,50 L170,40 L200,40 L200,60 L220,60 L220,80 L240,80 L240,60 L270,60 L270,40 L290,40 L290,60 L320,60 L320,70 L350,70 L350,60 L380,60 L380,80 L420,80 L420,90 L460,90 L460,100 L500,100 L500,180 Z' fill='%23162040' fill-opacity='0.85'/%3E%3C/svg%3E") left bottom/cover no-repeat;
+  }
+
+  .hero-city-right {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 45%;
+    height: 100%;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 180' preserveAspectRatio='xMaxYMax meet'%3E%3Cpath d='M400,180 L400,100 L380,100 L380,80 L360,80 L360,50 L340,50 L340,30 L320,30 L320,20 L310,20 L300,0 L290,20 L280,20 L280,30 L260,30 L260,50 L240,50 L240,70 L220,70 L220,90 L200,90 L200,100 L180,100 L180,110 L160,110 L160,120 L0,120 L0,180 Z' fill='%231a2040' fill-opacity='0.7'/%3E%3C/svg%3E") right bottom/cover no-repeat;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 60px 20px 100px;
+    max-width: 700px;
+  }
+
+  .hero-content h1 {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 44px;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.3;
+    margin-bottom: 16px;
+    text-shadow: 0 2px 12px rgba(0,0,0,.3);
+  }
+
+  .hero-tagline {
+    color: var(--gold);
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    margin-bottom: 12px;
+  }
+
+  .hero-sub {
+    color: rgba(255,255,255,.8);
+    font-size: 15px;
+    margin-bottom: 36px;
+    line-height: 1.8;
+  }
+
+  .hero-btns {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* ── SECTION COMMON ── */
+  section { padding: 72px 40px; }
+
+  .section-center { text-align: center; }
+
+  .section-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .section-title {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 12px;
+  }
+
+  .divider-gold {
+    width: 50px;
+    height: 2px;
+    background: var(--gold);
+    margin: 0 auto 40px;
+  }
+
+  /* ── BELIEF FLOW ── */
+  .belief-section {
+    background: var(--off-white);
+    padding: 64px 40px;
+  }
+
+  .belief-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    max-width: 900px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+
+  .belief-item {
+    text-align: center;
+    flex: 1;
+    min-width: 160px;
+    padding: 0 16px;
+  }
+
+  .belief-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--navy);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 14px;
+  }
+
+  .belief-icon svg { width: 28px; height: 28px; fill: var(--gold); }
+
+  .belief-item h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 6px;
+  }
+
+  .belief-item p {
+    font-size: 12px;
+    color: var(--text-light);
+    line-height: 1.6;
+  }
+
+  .belief-arrow {
+    color: var(--gold);
+    font-size: 22px;
+    padding: 0 4px;
+    margin-top: -30px;
+  }
+
+  /* ── CORE SERVICES ── */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .service-card {
+    position: relative;
+    overflow: hidden;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 28px 24px;
+    cursor: pointer;
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    transition: transform .3s;
+  }
+
+  .sc-hk::before { background: linear-gradient(160deg, #1a2744 0%, #2a3f6f 100%); }
+  .sc-uk::before { background: linear-gradient(160deg, #1e3a5f 0%, #2d5488 100%); }
+  .sc-exec::before { background: linear-gradient(160deg, #0f1a30 0%, #1a2744 100%); }
+  .sc-invest::before { background: linear-gradient(160deg, #7a6020 0%, #b8973e 100%); }
+
+  .service-card:hover::before { transform: scale(1.03); }
+
+  .service-card-body { position: relative; z-index: 1; }
+
+  .service-flag {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.15);
+    border: 2px solid rgba(255,255,255,.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+    font-size: 22px;
+  }
+
+  .service-card h3 {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 14px;
+  }
+
+  .service-card ul {
+    list-style: none;
+  }
+
+  .service-card ul li {
+    font-size: 12.5px;
+    color: rgba(255,255,255,.85);
+    padding: 3px 0;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+
+  .service-card ul li::before {
+    content: '•';
+    color: var(--gold);
+    font-size: 16px;
+  }
+
+  /* ── AUDIENCE ── */
+  .audience-section { background: var(--off-white); }
+
+  .audience-grid {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .audience-item {
+    text-align: center;
+    width: 160px;
+  }
+
+  .audience-icon {
+    width: 64px;
+    height: 64px;
+    background: var(--white);
+    border-radius: 50%;
+    border: 2px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 12px;
+    box-shadow: 0 2px 10px rgba(26,39,68,.08);
+  }
+
+  .audience-icon svg { width: 28px; height: 28px; fill: var(--navy); }
+
+  .audience-item h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 4px;
+  }
+
+  .audience-item p {
+    font-size: 12px;
+    color: var(--text-light);
+    line-height: 1.5;
+  }
+
+  /* ── FOUNDER BANNER ── */
+  .founder-section {
+    background: var(--navy);
+    padding: 0;
+    display: flex;
+    overflow: hidden;
+    min-height: 280px;
+  }
+
+  .founder-image-col {
+    width: 260px;
+    flex-shrink: 0;
+    background: var(--navy-deep);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .founder-avatar {
+    width: 200px;
+    height: 230px;
+    background: linear-gradient(180deg, #2a3f6f 0%, #1a2744 100%);
+    border-radius: 8px 8px 0 0;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+  }
+
+  .founder-content {
+    flex: 1;
+    padding: 50px 50px 50px 40px;
+    display: flex;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .founder-text { flex: 1; }
+
+  .founder-text h2 {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.4;
+    margin-bottom: 14px;
+  }
+
+  .founder-text p {
+    font-size: 13px;
+    color: rgba(255,255,255,.75);
+    line-height: 1.9;
+    margin-bottom: 20px;
+  }
+
+  .founder-link {
+    font-size: 13px;
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .stats-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 40px;
+    flex-shrink: 0;
+  }
+
+  .stat-item {
+    text-align: center;
+  }
+
+  .stat-icon {
+    width: 44px;
+    height: 44px;
+    background: rgba(201,168,76,.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 8px;
+  }
+
+  .stat-icon svg { width: 22px; height: 22px; fill: var(--gold); }
+
+  .stat-item .num {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .stat-item .label {
+    font-size: 11.5px;
+    color: rgba(255,255,255,.7);
+  }
+
+  /* ── SUCCESS STORIES ── */
+  .stories-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 28px;
+  }
+
+  .stories-header h2 {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--navy);
+  }
+
+  .see-more {
+    font-size: 13px;
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .stories-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .story-card {
+    display: flex;
+    gap: 16px;
+    padding: 20px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--white);
+    transition: box-shadow .2s;
+  }
+
+  .story-card:hover { box-shadow: 0 4px 20px rgba(26,39,68,.1); }
+
+  .story-thumb {
+    width: 90px;
+    height: 80px;
+    border-radius: 6px;
+    flex-shrink: 0;
+    background: var(--navy);
+    overflow: hidden;
+  }
+
+  .story-thumb-inner {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #1a2744, #2a3f6f);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+  }
+
+  .story-content h4 {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 5px;
+    line-height: 1.4;
+  }
+
+  .story-label {
+    font-size: 10px;
+    color: var(--gold);
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  .story-content p {
+    font-size: 11.5px;
+    color: var(--text-light);
+    line-height: 1.6;
+  }
+
+  /* ── INSIGHTS ── */
+  .insights-section { background: var(--off-white); }
+
+  .insights-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .insight-card {
+    background: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    transition: box-shadow .2s;
+    cursor: pointer;
+  }
+
+  .insight-card:hover { box-shadow: 0 4px 16px rgba(26,39,68,.1); }
+
+  .insight-thumb {
+    height: 100px;
+    background: linear-gradient(135deg, #1a2744, #2a3f6f);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+  }
+
+  .insight-body { padding: 14px; }
+
+  .insight-body h4 {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.5;
+    margin-bottom: 8px;
+  }
+
+  .insight-date {
+    font-size: 10.5px;
+    color: var(--text-light);
+  }
+
+  /* ── CTA FOOTER BANNER ── */
+  .cta-banner {
+    background: var(--navy-deep);
+    padding: 40px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .cta-banner-left h2 {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 6px;
+  }
+
+  .cta-banner-left p {
+    font-size: 13px;
+    color: rgba(255,255,255,.7);
+  }
+
+  .cta-banner-right {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  .btn-whatsapp {
+    background: #25D366;
+    color: var(--white);
+    padding: 11px 22px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .btn-email {
+    border: 1.5px solid rgba(255,255,255,.4);
+    color: var(--white);
+    padding: 11px 22px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    background: transparent;
+    cursor: pointer;
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--navy);
+    padding: 50px 60px 30px;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+
+  .footer-logo-col .logo-name { color: var(--white); font-size: 20px; }
+  .footer-logo-col .logo-sub { color: rgba(255,255,255,.4); }
+
+  .footer-tagline {
+    font-size: 12px;
+    color: rgba(255,255,255,.5);
+    margin-top: 14px;
+    line-height: 1.7;
+  }
+
+  .footer-col h4 {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--gold);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .footer-col ul { list-style: none; }
+
+  .footer-col ul li {
+    margin-bottom: 10px;
+  }
+
+  .footer-col ul li a {
+    font-size: 13px;
+    color: rgba(255,255,255,.65);
+    text-decoration: none;
+    transition: color .2s;
+  }
+
+  .footer-col ul li a:hover { color: var(--gold); }
+
+  .social-links {
+    display: flex;
+    gap: 10px;
+    margin-top: 16px;
+  }
+
+  .social-btn {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,.65);
+    font-size: 14px;
+    cursor: pointer;
+    transition: border-color .2s, color .2s;
+  }
+
+  .social-btn:hover { border-color: var(--gold); color: var(--gold); }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,.1);
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: rgba(255,255,255,.4);
+  }
+
+  .footer-bottom-links { display: flex; gap: 20px; }
+  .footer-bottom-links a { color: rgba(255,255,255,.4); text-decoration: none; }
+  .footer-bottom-links a:hover { color: var(--gold); }
+
+  /* WhatsApp float */
+  .whatsapp-float {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    width: 54px;
+    height: 54px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(37,211,102,.4);
+    cursor: pointer;
+    z-index: 999;
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+    .stories-grid { grid-template-columns: 1fr; }
+    .insights-grid { grid-template-columns: repeat(2, 1fr); }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .stats-col { grid-template-columns: 1fr 1fr; }
+    nav { padding: 0 20px; }
+    .nav-links { display: none; }
+  }
+
+  @media (max-width: 600px) {
+    .hero-content h1 { font-size: 30px; }
+    .founder-section { flex-direction: column; }
+    .cta-banner { padding: 30px 24px; }
+    .footer-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo">
+    <svg class="logo-mark" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="21" cy="21" r="20" stroke="#1a2744" stroke-width="1.5"/>
+      <circle cx="21" cy="21" r="13" stroke="#c9a84c" stroke-width="1.5"/>
+      <path d="M12 21 Q21 10 30 21" stroke="#1a2744" stroke-width="2" fill="none"/>
+      <path d="M12 21 Q21 32 30 21" stroke="#c9a84c" stroke-width="2" fill="none"/>
+    </svg>
+    <div class="logo-text">
+      <div class="logo-name">MAJESTIC</div>
+      <div class="logo-sub">Education · Career · Identity · Investment Planning</div>
+    </div>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="#">HOME</a></li>
+    <li><a href="#">ABOUT US</a></li>
+    <li><a href="#">EDUCATION ▾</a></li>
+    <li><a href="#">EXECUTIVE EDUCATION</a></li>
+    <li><a href="#">IDENTITY & INVESTMENT</a></li>
+    <li><a href="#">SUCCESS STORIES</a></li>
+    <li><a href="#">INSIGHTS</a></li>
+    <li><a href="#">CONTACT</a></li>
+  </ul>
+
+  <div class="nav-cta">
+    <span class="nav-phone">📞 +852 1234 5678</span>
+    <a href="#" class="btn-primary">免費諮詢</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-cities">
+    <div class="hero-city-left"></div>
+    <div class="hero-city-right"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-tagline">教育規劃 ｜ 職涯發展 ｜ 身份規劃 ｜ 投資移民</div>
+    <h1>為您的未來創造更多可能</h1>
+    <p class="hero-sub">協助專業人士及家庭建立更清晰的未來發展藍圖</p>
+    <div class="hero-btns">
+      <a href="#" class="btn-outline-white">預約免費諮詢</a>
+      <a href="#" class="btn-gold">了解我們</a>
+    </div>
+  </div>
+</div>
+
+<!-- BELIEF -->
+<div class="belief-section">
+  <div class="section-center" style="margin-bottom:40px">
+    <h2 style="font-family:'Noto Serif TC',serif;font-size:24px;color:var(--navy);font-weight:700">我們相信成功規劃來自整體思維</h2>
+  </div>
+  <div class="belief-flow">
+    <div class="belief-item">
+      <div class="belief-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2C9.2 2 7 4.2 7 7c0 2 1.1 3.7 2.7 4.6L9 14h6l-.7-2.4C15.9 10.7 17 9 17 7c0-2.8-2.2-5-5-5zm-3 16h6v1H9v-1zm1 2h4v1h-4v-1z"/></svg>
+      </div>
+      <h3>教育規劃</h3>
+      <p>提升學歷<br>開拓更多機會</p>
+    </div>
+    <div class="belief-arrow">→</div>
+    <div class="belief-item">
+      <div class="belief-icon">
+        <svg viewBox="0 0 24 24"><path d="M20 6h-2.18c.07-.44.18-.88.18-1.35C18 2.08 15.92 0 13.35 0c-1.3 0-2.48.5-3.35 1.3C9.13.5 7.95 0 6.65 0 4.08 0 2 2.08 2 4.65c0 .47.11.91.18 1.35H0v14h24V6h-4zm-4-.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5zM8 4.65c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5S10.33 6.15 9.5 6.15 8 5.48 8 4.65z"/></svg>
+      </div>
+      <h3>職涯發展</h3>
+      <p>增值自己<br>實現事業目標</p>
+    </div>
+    <div class="belief-arrow">→</div>
+    <div class="belief-item">
+      <div class="belief-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+      </div>
+      <h3>身份規劃</h3>
+      <p>靈活身份<br>拓展全球發展空間</p>
+    </div>
+    <div class="belief-arrow">→</div>
+    <div class="belief-item">
+      <div class="belief-icon">
+        <svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+      </div>
+      <h3>財富及家庭傳承</h3>
+      <p>財富增值<br>守護家人未來</p>
+    </div>
+  </div>
+</div>
+
+<!-- CORE SERVICES -->
+<section style="padding:0;background:var(--white)">
+  <div style="text-align:center;padding:52px 40px 32px">
+    <div class="section-label">SERVICES</div>
+    <h2 class="section-title">四大核心服務</h2>
+    <div class="divider-gold"></div>
+  </div>
+  <div class="services-grid">
+    <div class="service-card sc-hk">
+      <div class="service-card-body">
+        <div class="service-flag">🇭🇰</div>
+        <h3>香港升學</h3>
+        <ul>
+          <li>副學士課程</li>
+          <li>學士學位課程</li>
+          <li>碩士學位課程</li>
+          <li>內地學生赴港升學</li>
+        </ul>
+      </div>
+    </div>
+    <div class="service-card sc-uk">
+      <div class="service-card-body">
+        <div class="service-flag">🇬🇧</div>
+        <h3>英國升學</h3>
+        <ul>
+          <li>Bachelor 課程</li>
+          <li>Master 課程</li>
+          <li>DBA 博士課程</li>
+        </ul>
+      </div>
+    </div>
+    <div class="service-card sc-exec">
+      <div class="service-card-body">
+        <div class="service-flag">📖</div>
+        <h3>Executive Education</h3>
+        <ul>
+          <li>MSc 碩士課程</li>
+          <li>MBA 工商管理碩士</li>
+          <li>DBA 博士課程</li>
+          <li>專業進修課程</li>
+        </ul>
+      </div>
+    </div>
+    <div class="service-card sc-invest">
+      <div class="service-card-body">
+        <div class="service-flag">🌏</div>
+        <h3>身份及投資規劃</h3>
+        <ul>
+          <li>高才通計劃</li>
+          <li>優秀人才入境計劃</li>
+          <li>專才計劃</li>
+          <li>投資移民計劃</li>
+          <li>家庭身份規劃</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AUDIENCE -->
+<div class="audience-section">
+  <div class="section-center" style="margin-bottom:40px">
+    <div class="section-label">WHO WE SERVE</div>
+    <h2 class="section-title">我們服務的對象</h2>
+    <div class="divider-gold"></div>
+  </div>
+  <div class="audience-grid">
+    <div class="audience-item">
+      <div class="audience-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+      </div>
+      <h4>專業人士</h4>
+      <p>提升競爭力<br>拓展事業發展空間</p>
+    </div>
+    <div class="audience-item">
+      <div class="audience-icon">
+        <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+      </div>
+      <h4>中高層管理人員</h4>
+      <p>進修增值<br>邁向更高層次</p>
+    </div>
+    <div class="audience-item">
+      <div class="audience-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg>
+      </div>
+      <h4>企業家</h4>
+      <p>學習管理智慧<br>推動企業成長</p>
+    </div>
+    <div class="audience-item">
+      <div class="audience-icon">
+        <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+      </div>
+      <h4>家庭客戶</h4>
+      <p>為子女教育及未來<br>作長遠規劃</p>
+    </div>
+    <div class="audience-item">
+      <div class="audience-icon">
+        <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/></svg>
+      </div>
+      <h4>高淨值人士</h4>
+      <p>靈活身份配置<br>財富及資產傳承</p>
+    </div>
+  </div>
+</div>
+
+<!-- FOUNDER -->
+<div class="founder-section">
+  <div class="founder-image-col">
+    <div class="founder-avatar">👔</div>
+  </div>
+  <div class="founder-content">
+    <div class="founder-text">
+      <h2>從銀行管理層<br>到未來規劃顧問</h2>
+      <p>擁有超過25年金融及管理經驗，曾於香港大型銀行擔任管理層職位，深明專業人士及家庭在教育、職涯及身份規劃上的需要。我們以專業、誠信及以客為先的態度，陪伴客戶規劃每一個重要的人生里程。</p>
+      <a href="#" class="founder-link">了解更多關於我們 →</a>
+    </div>
+    <div class="stats-col">
+      <div class="stat-item">
+        <div class="stat-icon"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg></div>
+        <div class="num">20+</div>
+        <div class="label">年專業經驗</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon"><svg viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zm0 12.27L4.45 11.5 12 7.73l7.55 3.77L12 15.27z"/></svg></div>
+        <div class="num">1000+</div>
+        <div class="label">成功案例</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
+        <div class="num">香港·英國·全球</div>
+        <div class="label">廣泛資源</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon"><svg viewBox="0 0 24 24"><path d="M11 7H9v2h2v2H9v2h2v2H7V5h4v2zm4 0v10h-4v-2h2v-2h-2v-2h2V9h-2V7h4z"/></svg></div>
+        <div class="num">一對一</div>
+        <div class="label">專屬服務·量身定制</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SUCCESS STORIES -->
+<section style="background:var(--white);padding:64px 60px">
+  <div class="stories-header">
+    <h2>成功案例</h2>
+    <a href="#" class="see-more">瀏覽更多案例 ›</a>
+  </div>
+  <div class="stories-grid">
+    <div class="story-card">
+      <div class="story-thumb"><div class="story-thumb-inner">🏛️</div></div>
+      <div class="story-content">
+        <div class="story-label">案例一</div>
+        <h4>金融從業員成功修讀英國 Leicester MSc Finance</h4>
+        <p>提升專業知識，事業更上一層樓</p>
+      </div>
+    </div>
+    <div class="story-card">
+      <div class="story-thumb"><div class="story-thumb-inner">💼</div></div>
+      <div class="story-content">
+        <div class="story-label">案例二</div>
+        <h4>企業高層管理人員完成 DBA 博士課程</h4>
+        <p>學以致用，推動企業創新發展</p>
+      </div>
+    </div>
+    <div class="story-card">
+      <div class="story-thumb"><div class="story-thumb-inner">🌏</div></div>
+      <div class="story-content">
+        <div class="story-label">案例三</div>
+        <h4>一家三口透過投資移民計劃成功獲得香港身份</h4>
+        <p>開啟子女教育及事業新篇章</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSIGHTS -->
+<div class="insights-section" style="padding:64px 60px">
+  <div class="stories-header" style="max-width:1100px;margin:0 auto 28px">
+    <h2 style="font-family:'Noto Serif TC',serif;font-size:26px;font-weight:700;color:var(--navy)">最新洞察</h2>
+    <a href="#" class="see-more">瀏覽更多文章 ›</a>
+  </div>
+  <div class="insights-grid">
+    <div class="insight-card">
+      <div class="insight-thumb">🏛️</div>
+      <div class="insight-body">
+        <h4>Leicester MSc Finance 值得讀嗎？</h4>
+        <div class="insight-date">2024年5月15日</div>
+      </div>
+    </div>
+    <div class="insight-card">
+      <div class="insight-thumb">📚</div>
+      <div class="insight-body">
+        <h4>DBA 博士課程適合什麼人？</h4>
+        <div class="insight-date">2024年5月10日</div>
+      </div>
+    </div>
+    <div class="insight-card">
+      <div class="insight-thumb">🌆</div>
+      <div class="insight-body">
+        <h4>香港投資移民計劃最新需求一覽</h4>
+        <div class="insight-date">2024年5月5日</div>
+      </div>
+    </div>
+    <div class="insight-card">
+      <div class="insight-thumb">✈️</div>
+      <div class="insight-body">
+        <h4>高才通簽簽攻略：如何成功申請？</h4>
+        <div class="insight-date">2024年4月26日</div>
+      </div>
+    </div>
+    <div class="insight-card">
+      <div class="insight-thumb">🎓</div>
+      <div class="insight-body">
+        <h4>內地學生申請香港大學完整指南</h4>
+        <div class="insight-date">2024年4月20日</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA BANNER -->
+<div class="cta-banner">
+  <div class="cta-banner-left">
+    <h2>您的下一步，從一次規劃開始</h2>
+    <p>立即預約免費諮詢，讓我們為您設計專屬的未來發展方案</p>
+  </div>
+  <div class="cta-banner-right">
+    <button class="btn-whatsapp">💬 WhatsApp 查詢</button>
+    <a href="#" class="btn-gold" style="padding:11px 22px;font-size:13px">預約免費諮詢</a>
+    <button class="btn-email">✉ 電郵聯絡我們</button>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-logo-col">
+      <div class="logo-text">
+        <div class="logo-name">MAJESTIC</div>
+        <div class="logo-sub" style="color:rgba(255,255,255,.4)">Education · Career · Identity · Investment Planning</div>
+      </div>
+      <p class="footer-tagline">以專業與誠信，協助專業人士及家庭<br>建立更清晰的未來發展藍圖</p>
+      <div class="social-links">
+        <div class="social-btn">f</div>
+        <div class="social-btn">in</div>
+        <div class="social-btn">ig</div>
+        <div class="social-btn">yt</div>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>快捷連結</h4>
+      <ul>
+        <li><a href="#">關於我們</a></li>
+        <li><a href="#">香港升學</a></li>
+        <li><a href="#">英國升學</a></li>
+        <li><a href="#">在職高端教育</a></li>
+        <li><a href="#">聯絡我們</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>身份及投資規劃</h4>
+      <ul>
+        <li><a href="#">成功案例</a></li>
+        <li><a href="#">專欄文章</a></li>
+        <li><a href="#">聯絡我們</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>關注我們</h4>
+      <ul>
+        <li><a href="#">📞 +852 1234 5678</a></li>
+        <li><a href="#">✉ info@majestic.com.hk</a></li>
+        <li><a href="#">📍 香港中環皇后大道中99號</a></li>
+        <li><a href="#">📍 21 Tothill St, Westminster, London</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2024 Majestic Education & Immigration Consultancy. All Rights Reserved.</span>
+    <div class="footer-bottom-links">
+      <a href="#">私隱政策</a>
+      <a href="#">免責聲明</a>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp Float -->
+<div class="whatsapp-float">
+  <span style="color:white;font-size:26px">💬</span>
+</div>
+
+</body>
+</html>
