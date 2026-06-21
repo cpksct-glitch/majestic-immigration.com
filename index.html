@@ -43,7 +43,7 @@
   /* HERO */
   .hero { position: relative; min-height: 520px; display: flex; align-items: center; justify-content: center; overflow: hidden; background: var(--navy-deep); }
   .hero-bg { position: absolute; inset: 0; background: url("hero-bg.png") center/cover no-repeat; }
-  .hero-bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.45) 100%); }
+  .hero-bg::after { display: none; }
   .hero-cities { position: absolute; bottom: 0; left: 0; right: 0; height: 180px; display: flex; align-items: flex-end; }
   .hero-city-left { flex: 1; height: 100%; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 180' preserveAspectRatio='xMinYMax meet'%3E%3Cpath d='M0,180 L0,90 L30,90 L30,60 L50,60 L50,40 L70,40 L70,60 L90,60 L90,30 L110,30 L110,60 L130,60 L130,50 L150,50 L150,0 L160,0 L160,50 L170,50 L170,40 L200,40 L200,60 L220,60 L220,80 L240,80 L240,60 L270,60 L270,40 L290,40 L290,60 L320,60 L320,70 L350,70 L350,60 L380,60 L380,80 L420,80 L420,90 L460,90 L460,100 L500,100 L500,180 Z' fill='%23162040' fill-opacity='0.85'/%3E%3C/svg%3E") left bottom/cover no-repeat; }
   .hero-city-right { position: absolute; right: 0; bottom: 0; width: 45%; height: 100%; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 180' preserveAspectRatio='xMaxYMax meet'%3E%3Cpath d='M400,180 L400,100 L380,100 L380,80 L360,80 L360,50 L340,50 L340,30 L320,30 L320,20 L310,20 L300,0 L290,20 L280,20 L280,30 L260,30 L260,50 L240,50 L240,70 L220,70 L220,90 L200,90 L200,100 L180,100 L180,110 L160,110 L160,120 L0,120 L0,180 Z' fill='%231a2040' fill-opacity='0.7'/%3E%3C/svg%3E") right bottom/cover no-repeat; }
@@ -260,7 +260,7 @@ const LANG = {
       {title:"身份及投資規劃", links:["成功案例","專欄文章","聯絡我們"]},
       {title:"聯絡資訊", links:["📞 +852 1234 5678","✉ info@majestic.com.hk","📍 香港中環皇后大道中99號","📍 21 Tothill St, Westminster, London"]}
     ],
-    footer_copy: "© 2024 Majestic Education & Immigration Consultancy. All Rights Reserved.",
+    footer_copy: "© 2026 Majestic Education & Immigration Consultancy. All Rights Reserved.",
     footer_links: ["私隱政策","免責聲明"]
   },
   en: {
@@ -332,7 +332,7 @@ const LANG = {
       {title:"Identity & Investment", links:["Success Stories","Articles","Contact Us"]},
       {title:"Contact Info", links:["📞 +852 1234 5678","✉ info@majestic.com.hk","📍 99 Queen's Road Central, Hong Kong","📍 21 Tothill St, Westminster, London"]}
     ],
-    footer_copy: "© 2024 Majestic Education & Immigration Consultancy. All Rights Reserved.",
+    footer_copy: "© 2026 Majestic Education & Immigration Consultancy. All Rights Reserved.",
     footer_links: ["Privacy Policy","Disclaimer"]
   },
   sc: {
@@ -404,7 +404,7 @@ const LANG = {
       {title:"身份及投资规划", links:["成功案例","专栏文章","联系我们"]},
       {title:"联系资讯", links:["📞 +852 1234 5678","✉ info@majestic.com.hk","📍 香港中环皇后大道中99号","📍 21 Tothill St, Westminster, London"]}
     ],
-    footer_copy: "© 2024 Majestic Education & Immigration Consultancy. All Rights Reserved.",
+    footer_copy: "© 2026 Majestic Education & Immigration Consultancy. All Rights Reserved.",
     footer_links: ["私隐政策","免责声明"]
   }
 };
@@ -753,7 +753,7 @@ function setLang(lang) {
     <div class="footer-col"><h4>聯絡資訊</h4><ul><li><a href="#">📞 +852 1234 5678</a></li><li><a href="#">✉ info@majestic.com.hk</a></li><li><a href="#">📍 香港中環皇后大道中99號</a></li><li><a href="#">📍 21 Tothill St, Westminster, London</a></li></ul></div>
   </div>
   <div class="footer-bottom">
-    <span class="footer-copy">© 2024 Majestic Education & Immigration Consultancy. All Rights Reserved.</span>
+    <span class="footer-copy">© 2026 Majestic Education & Immigration Consultancy. All Rights Reserved.</span>
     <div class="footer-bottom-links"><a href="#">私隱政策</a><a href="#">免責聲明</a></div>
   </div>
 </footer>
