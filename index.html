@@ -42,7 +42,8 @@
 
   /* HERO */
   .hero { position: relative; min-height: 520px; display: flex; align-items: center; justify-content: center; overflow: hidden; background: var(--navy-deep); }
-  .hero-bg { position: absolute; inset: 0; background: linear-gradient(135deg, #0f1a30 0%, #1a2744 40%, #2a3f6f 70%, #1a2744 100%); }
+  .hero-bg { position: absolute; inset: 0; background: url("https://images.unsplash.com/photo-1506146332389-18140dc7b2fb?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat; }
+  .hero-bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(15,26,48,0.85) 0%, rgba(26,39,68,0.75) 50%, rgba(42,63,111,0.7) 100%); }
   .hero-cities { position: absolute; bottom: 0; left: 0; right: 0; height: 180px; display: flex; align-items: flex-end; }
   .hero-city-left { flex: 1; height: 100%; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 180' preserveAspectRatio='xMinYMax meet'%3E%3Cpath d='M0,180 L0,90 L30,90 L30,60 L50,60 L50,40 L70,40 L70,60 L90,60 L90,30 L110,30 L110,60 L130,60 L130,50 L150,50 L150,0 L160,0 L160,50 L170,50 L170,40 L200,40 L200,60 L220,60 L220,80 L240,80 L240,60 L270,60 L270,40 L290,40 L290,60 L320,60 L320,70 L350,70 L350,60 L380,60 L380,80 L420,80 L420,90 L460,90 L460,100 L500,100 L500,180 Z' fill='%23162040' fill-opacity='0.85'/%3E%3C/svg%3E") left bottom/cover no-repeat; }
   .hero-city-right { position: absolute; right: 0; bottom: 0; width: 45%; height: 100%; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 180' preserveAspectRatio='xMaxYMax meet'%3E%3Cpath d='M400,180 L400,100 L380,100 L380,80 L360,80 L360,50 L340,50 L340,30 L320,30 L320,20 L310,20 L300,0 L290,20 L280,20 L280,30 L260,30 L260,50 L240,50 L240,70 L220,70 L220,90 L200,90 L200,100 L180,100 L180,110 L160,110 L160,120 L0,120 L0,180 Z' fill='%231a2040' fill-opacity='0.7'/%3E%3C/svg%3E") right bottom/cover no-repeat; }
@@ -75,12 +76,16 @@
   .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; max-width: 1100px; margin: 0 auto; }
   .service-card { position: relative; overflow: hidden; min-height: 280px; display: flex; flex-direction: column; justify-content: flex-end; padding: 28px 24px; cursor: pointer; }
   .service-card::before { content: ""; position: absolute; inset: 0; transition: transform .3s; }
-  .sc-hk::before { background: linear-gradient(160deg, #1a2744 0%, #2a3f6f 100%); }
-  .sc-uk::before { background: linear-gradient(160deg, #1e3a5f 0%, #2d5488 100%); }
-  .sc-exec::before { background: linear-gradient(160deg, #0f1a30 0%, #1a2744 100%); }
-  .sc-invest::before { background: linear-gradient(160deg, #7a6020 0%, #b8973e 100%); }
+  .sc-hk::before { background: url("https://images.unsplash.com/photo-1474181487882-5abf3f0ba6c2?auto=format&fit=crop&w=800&q=80") center/cover no-repeat; }
+  .sc-hk::after { content: ""; position: absolute; inset: 0; background: linear-gradient(160deg, rgba(26,39,68,0.82) 0%, rgba(42,63,111,0.78) 100%); }
+  .sc-uk::before { background: url("https://images.unsplash.com/photo-1526129318478-62ed807ebdf9?auto=format&fit=crop&w=800&q=80") center/cover no-repeat; }
+  .sc-uk::after { content: ""; position: absolute; inset: 0; background: linear-gradient(160deg, rgba(30,58,95,0.82) 0%, rgba(45,84,136,0.78) 100%); }
+  .sc-exec::before { background: url("https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80") center/cover no-repeat; }
+  .sc-exec::after { content: ""; position: absolute; inset: 0; background: linear-gradient(160deg, rgba(15,26,48,0.85) 0%, rgba(26,39,68,0.82) 100%); }
+  .sc-invest::before { background: url("https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=800&q=80") center/cover no-repeat; }
+  .sc-invest::after { content: ""; position: absolute; inset: 0; background: linear-gradient(160deg, rgba(122,96,32,0.82) 0%, rgba(184,151,62,0.75) 100%); }
   .service-card:hover::before { transform: scale(1.03); }
-  .service-card-body { position: relative; z-index: 1; }
+  .service-card-body { position: relative; z-index: 2; }
   .service-flag { width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,.15); border: 2px solid rgba(255,255,255,.3); display: flex; align-items: center; justify-content: center; margin-bottom: 14px; font-size: 22px; }
   .service-card h3 { font-family: "Noto Serif TC", serif; font-size: 18px; font-weight: 700; color: var(--white); margin-bottom: 14px; }
   body.lang-en .service-card h3 { font-family: Georgia, serif; }
@@ -639,7 +644,7 @@ function setLang(lang) {
 <!-- FOUNDER -->
 <div class="founder-section">
   <div class="founder-image-col">
-    <div class="founder-avatar">👔</div>
+    <div class="founder-avatar" style="background:url('https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=300&q=80') center/cover no-repeat;font-size:0;"></div>
   </div>
   <div class="founder-content">
     <div class="founder-text">
@@ -676,7 +681,7 @@ function setLang(lang) {
   </div>
   <div class="stories-grid">
     <div class="story-card">
-      <div class="story-thumb"><div class="story-thumb-inner">🏛️</div></div>
+      <div class="story-thumb"><img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=200&q=80" style="width:100%;height:100%;object-fit:cover;" alt="University"></div>
       <div class="story-content">
         <div class="story-label">案例一</div>
         <h4>金融從業員成功修讀英國 Leicester MSc Finance</h4>
@@ -684,7 +689,7 @@ function setLang(lang) {
       </div>
     </div>
     <div class="story-card">
-      <div class="story-thumb"><div class="story-thumb-inner">💼</div></div>
+      <div class="story-thumb"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=200&q=80" style="width:100%;height:100%;object-fit:cover;" alt="Business"></div>
       <div class="story-content">
         <div class="story-label">案例二</div>
         <h4>企業高層管理人員完成 DBA 博士課程</h4>
@@ -692,7 +697,7 @@ function setLang(lang) {
       </div>
     </div>
     <div class="story-card">
-      <div class="story-thumb"><div class="story-thumb-inner">🌏</div></div>
+      <div class="story-thumb"><img src="https://images.unsplash.com/photo-1511895426328-dc8714191011?auto=format&fit=crop&w=200&q=80" style="width:100%;height:100%;object-fit:cover;" alt="Family"></div>
       <div class="story-content">
         <div class="story-label">案例三</div>
         <h4>一家三口透過投資移民計劃成功獲得香港身份</h4>
@@ -709,11 +714,11 @@ function setLang(lang) {
     <a href="#" class="see-more insights-more">瀏覽更多文章 ›</a>
   </div>
   <div class="insights-grid">
-    <div class="insight-card"><div class="insight-thumb">🏛️</div><div class="insight-body"><h4>Leicester MSc Finance 值得讀嗎？</h4><div class="insight-date">2024年5月15日</div></div></div>
-    <div class="insight-card"><div class="insight-thumb">📚</div><div class="insight-body"><h4>DBA 博士課程適合什麼人？</h4><div class="insight-date">2024年5月10日</div></div></div>
-    <div class="insight-card"><div class="insight-thumb">🌆</div><div class="insight-body"><h4>香港投資移民計劃最新需求一覽</h4><div class="insight-date">2024年5月5日</div></div></div>
-    <div class="insight-card"><div class="insight-thumb">✈️</div><div class="insight-body"><h4>高才通簽簽攻略：如何成功申請？</h4><div class="insight-date">2024年4月26日</div></div></div>
-    <div class="insight-card"><div class="insight-thumb">🎓</div><div class="insight-body"><h4>內地學生申請香港大學完整指南</h4><div class="insight-date">2024年4月20日</div></div></div>
+    <div class="insight-card"><div class="insight-thumb" style="background:url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=400&q=80') center/cover no-repeat;font-size:0;"></div><div class="insight-body"><h4>Leicester MSc Finance 值得讀嗎？</h4><div class="insight-date">2024年5月15日</div></div></div>
+    <div class="insight-card"><div class="insight-thumb" style="background:url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=400&q=80') center/cover no-repeat;font-size:0;"></div><div class="insight-body"><h4>DBA 博士課程適合什麼人？</h4><div class="insight-date">2024年5月10日</div></div></div>
+    <div class="insight-card"><div class="insight-thumb" style="background:url('https://images.unsplash.com/photo-1474181487882-5abf3f0ba6c2?auto=format&fit=crop&w=400&q=80') center/cover no-repeat;font-size:0;"></div><div class="insight-body"><h4>香港投資移民計劃最新需求一覽</h4><div class="insight-date">2024年5月5日</div></div></div>
+    <div class="insight-card"><div class="insight-thumb" style="background:url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=400&q=80') center/cover no-repeat;font-size:0;"></div><div class="insight-body"><h4>高才通簽簽攻略：如何成功申請？</h4><div class="insight-date">2024年4月26日</div></div></div>
+    <div class="insight-card"><div class="insight-thumb" style="background:url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=400&q=80') center/cover no-repeat;font-size:0;"></div><div class="insight-body"><h4>內地學生申請香港大學完整指南</h4><div class="insight-date">2024年4月20日</div></div></div>
   </div>
 </div>
 
