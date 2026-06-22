@@ -211,13 +211,13 @@ function updateContent(lang){
 <body>
 <nav>
   <a href="index.html" class="logo">
-    <img src="logo.png" alt="Majestic" style="height:52px;width:auto;">
+    <img src="logo.png" alt="Majestic Education &amp; Immigration" style="height:52px;width:auto;">
   </a>
   <ul class="nav-links">
     <li><a href="index.html" data-key="nav0">首頁</a></li>
     <li><a href="about.html" data-key="nav1">關於我們</a></li>
     <li class="nav-dropdown">
-      <a href="#" data-key="nav2" class="nav-dropdown-toggle" onclick="event.preventDefault();event.stopPropagation();var m=this.nextElementSibling;m.classList.toggle('open')">升學 ▾</a>
+      <a href="hk-education.html" class="nav-dropdown-toggle" data-key="nav2" onclick="var e=event,m=this.nextElementSibling;if(window.innerWidth>900){e.preventDefault();m.classList.toggle('open');e.stopPropagation();}">升學 ▾</a>
       <div class="nav-dropdown-menu">
         <a href="hk-education.html">🇭🇰 香港升學</a>
         <a href="uk-education.html">🇬🇧 英國升學</a>
@@ -230,7 +230,7 @@ function updateContent(lang){
     <li><a href="contact.html" data-key="nav8">聯絡我們</a></li>
   </ul>
   <div class="nav-cta">
-    <span class="nav-phone">📞 +852 1234 5678</span>
+    <span class="nav-phone">📞 +852 5338 4136</span>
     <div class="lang-switcher">
       <button class="lang-btn active" data-lang="tc" onclick="setLang('tc')">繁</button>
       <button class="lang-btn" data-lang="sc" onclick="setLang('sc')">简</button>
@@ -239,6 +239,11 @@ function updateContent(lang){
     <a href="contact.html" class="btn-primary btn-nav-cta">免費諮詢</a>
   </div>
 </nav>
+<script>
+document.addEventListener('click',function(e){
+  if(!e.target.closest('.nav-dropdown')) document.querySelectorAll('.nav-dropdown-menu').forEach(m=>m.classList.remove('open'));
+});
+</script>
 
 <!-- HERO -->
 <div style="position:relative;min-height:520px;overflow:hidden;background:#f8f6f1">
