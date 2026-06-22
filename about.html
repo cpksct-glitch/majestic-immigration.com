@@ -246,15 +246,19 @@ document.addEventListener('click',function(e){
 </script>
 
 <!-- HERO -->
-<div style="position:relative;min-height:520px;overflow:hidden;background:#f8f6f1">
-  <img src="about-hero.jpg" alt="About Majestic" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top">
-  <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(248,246,241,0.95) 45%,rgba(248,246,241,0.2) 100%)"></div>
-  <div style="position:relative;z-index:2;padding:80px 80px;max-width:580px">
-    <div style="font-size:11px;letter-spacing:3px;color:var(--gold);font-weight:600;margin-bottom:16px" data-key="hero_label">ABOUT US</div>
-    <h1 style="font-family:'Noto Serif TC',serif;font-size:52px;font-weight:700;color:var(--navy);line-height:1.2;margin-bottom:12px" data-key="hero_h1">關於我們</h1>
-    <div style="width:40px;height:3px;background:var(--gold);margin-bottom:20px"></div>
-    <h2 style="font-family:'Noto Serif TC',serif;font-size:20px;font-weight:600;color:var(--navy);margin-bottom:20px" data-key="hero_sub">專業規劃・成就未來</h2>
-    <p style="font-size:14px;color:var(--text-mid);line-height:1.9;max-width:440px" data-key="hero_p">Majestic 致力為客戶及家庭提供專業的教育、職涯發展及身分規劃建議，結合香港與英國資源，協助您在不斷變化的世界中，作出更明智的選擇，開創更多可能，成就更理想的未來。</p>
+<div style="position:relative;height:560px;overflow:hidden;background:#f8f6f1;display:flex;align-items:center">
+  <!-- Background image right side -->
+  <img src="about-hero.jpg" alt="About Majestic" 
+    style="position:absolute;right:0;top:0;width:65%;height:100%;object-fit:cover;object-position:left center">
+  <!-- Gradient overlay -->
+  <div style="position:absolute;inset:0;background:linear-gradient(to right, #f8f6f1 42%, rgba(248,246,241,0.85) 55%, transparent 75%);pointer-events:none"></div>
+  <!-- Text content -->
+  <div style="position:relative;z-index:2;padding:0 80px;max-width:560px">
+    <div style="font-size:11px;letter-spacing:3px;color:#c9a84c;font-weight:600;margin-bottom:20px">ABOUT US</div>
+    <h1 style="font-family:'Noto Serif TC',serif;font-size:56px;font-weight:700;color:#1a2744;line-height:1.1;margin-bottom:16px">關於我們</h1>
+    <div style="width:36px;height:3px;background:#c9a84c;margin-bottom:20px"></div>
+    <h2 style="font-family:'Noto Serif TC',serif;font-size:20px;font-weight:500;color:#1a2744;margin-bottom:24px;letter-spacing:1px">專業規劃・成就未來</h2>
+    <p style="font-size:14px;color:#4a5568;line-height:1.9;max-width:420px">Majestic 致力為客戶及家庭提供專業的教育、職涯發展及身分規劃建議，結合香港與英國資源，協助您在不斷變化的世界中，作出更明智的選擇，開創更多可能，成就更理想的未來。</p>
   </div>
 </div>
 
@@ -360,7 +364,7 @@ document.addEventListener('click',function(e){
     <div class="footer-col">
       <h4 data-key="footer_contact">聯絡資訊</h4>
       <ul>
-        <li><a href="#">📞 +852 1234 5678</a></li>
+        <li><a href="#">📞 +852 5338 4136</a></li>
         <li><a href="#">✉ info@majestic.com.hk</a></li>
         <li><a href="#">📍 香港中環皇后大道中99號</a></li>
         <li><a href="#">📍 21 Tothill St, Westminster, London</a></li>
@@ -382,7 +386,7 @@ document.addEventListener('click',function(e){
 const T = {
   tc:{
     nav:["首頁","關於我們","香港升學","英國升學","在職高端教育","身份及投資","成功案例","洞察","聯絡我們"],
-    cta:"免費諮詢",phone:"+852 1234 5678",
+    cta:"免費諮詢",phone:"+852 5338 4136",
     footer_tag:"以專業與誠信，協助專業人士及家庭<br>建立更清晰的未來發展藍圖",
     footer_quick:"快捷連結",footer_id:"身份及投資規劃",footer_contact:"聯絡資訊",
     fnav:["關於我們","香港升學","英國升學","在職高端教育","聯絡我們","成功案例","專欄文章","聯絡我們"],
@@ -391,7 +395,7 @@ const T = {
   },
   sc:{
     nav:["首页","关于我们","香港升学","英国升学","在职高端教育","身份及投资","成功案例","洞察","联系我们"],
-    cta:"免费咨询",phone:"+852 1234 5678",
+    cta:"免费咨询",phone:"+852 5338 4136",
     footer_tag:"以专业与诚信，协助专业人士及家庭<br>建立更清晰的未来发展蓝图",
     footer_quick:"快捷链接",footer_id:"身份及投资规划",footer_contact:"联系资讯",
     fnav:["关于我们","香港升学","英国升学","在职高端教育","联系我们","成功案例","专栏文章","联系我们"],
@@ -400,7 +404,7 @@ const T = {
   },
   en:{
     nav:["Home","About Us","HK Education","UK Education","Executive Education","Identity & Investment","Success Stories","Insights","Contact"],
-    cta:"Free Consultation",phone:"+852 1234 5678",
+    cta:"Free Consultation",phone:"+852 5338 4136",
     footer_tag:"With professionalism and integrity, helping professionals<br>and families build a clearer roadmap for their future",
     footer_quick:"Quick Links",footer_id:"Identity & Investment",footer_contact:"Contact Info",
     fnav:["About Us","HK Education","UK Education","Executive Education","Contact Us","Success Stories","Articles","Contact Us"],
