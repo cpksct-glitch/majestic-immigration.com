@@ -115,57 +115,63 @@ footer{background:var(--navy);padding:50px 80px 28px}
 </style>
 <script>
 const PT={
-  tc:{hero_label:"ABOUT US",hero_h1:"關於我們",hero_sub:"以專業與誠信，協助專業人士及家庭<br>建立更清晰的未來發展藍圖",
-    belief_label:"OUR BELIEF",belief_title:"我們的信念",
-    b0_t:"專業",b0_p:"結合教育、職涯、身份及投資領域的專業知識，提供整合性解決方案",
-    b1_t:"誠信",b1_p:"以誠信為本，堅守專業操守，為客戶提供客觀中立的建議與服務",
-    b2_t:"以人為本",b2_p:"深入了解客戶的目標與需求，量身打造最合適的規劃方案",
-    b3_t:"全球視野",b3_p:"連結香港與全球優質資源，助您把握國際機遇，開拓更大可能",
-    founder_label:"FOUNDER STORY",founder_title:"創辦人背景",
-    founder_p1:"擁有超過25年銀行及金融行業的豐富經驗，曾於多家國際銀行擔任管理層職位，專注於財富管理、投資顧問及高淨值客戶服務。",
-    founder_p2:"深信教育與規劃能改變人生，因而創立 Majestic，致力為專業人士及家庭提供一站式的教育、職涯、身份及投資規劃服務。",
-    f_li0:"25+ 年銀行及金融行業經驗",f_li1:"曾任國際銀行管理層",f_li2:"專注高淨值客戶及財富管理",f_li3:"熟悉香港及海外教育與移民政策",
-    founder_btn:"了解更多關於我們的故事 →",
-    s0_n:"10,000+",s0_l:"服務客戶及家庭",s1_n:"5,000+",s1_l:"成功升學案例",s2_n:"30+",s2_l:"全球合作夥伴及院校",s3_n:"25+ 年",s3_l:"專業經驗與信賴",
-    journey_label:"OUR JOURNEY",journey_title:"我們的發展歷程",
-    cta_h:"與我們一起規劃您的未來",cta_p:"立即預約免費諮詢，讓專業顧問為您量身設計方案",
-    cta_wa:"💬 WhatsApp 查詢",cta_book:"預約免費諮詢"},
-  sc:{hero_label:"ABOUT US",hero_h1:"关于我们",hero_sub:"以专业与诚信，协助专业人士及家庭<br>建立更清晰的未来发展蓝图",
-    belief_label:"OUR BELIEF",belief_title:"我们的信念",
-    b0_t:"专业",b0_p:"结合教育、职涯、身份及投资领域的专业知识，提供整合性解决方案",
-    b1_t:"诚信",b1_p:"以诚信为本，坚守专业操守，为客户提供客观中立的建议与服务",
-    b2_t:"以人为本",b2_p:"深入了解客户的目标与需求，量身打造最合适的规划方案",
-    b3_t:"全球视野",b3_p:"连结香港与全球优质资源，助您把握国际机遇，开拓更大可能",
-    founder_label:"FOUNDER STORY",founder_title:"创办人背景",
-    founder_p1:"拥有超过25年银行及金融行业的丰富经验，曾于多家国际银行担任管理层职位，专注于财富管理、投资顾问及高净值客户服务。",
-    founder_p2:"深信教育与规划能改变人生，因而创立 Majestic，致力为专业人士及家庭提供一站式的教育、职涯、身份及投资规划服务。",
-    f_li0:"25+ 年银行及金融行业经验",f_li1:"曾任国际银行管理层",f_li2:"专注高净值客户及财富管理",f_li3:"熟悉香港及海外教育与移民政策",
-    founder_btn:"了解更多关于我们的故事 →",
-    s0_n:"10,000+",s0_l:"服务客户及家庭",s1_n:"5,000+",s1_l:"成功升学案例",s2_n:"30+",s2_l:"全球合作伙伴及院校",s3_n:"25+ 年",s3_l:"专业经验与信赖",
-    journey_label:"OUR JOURNEY",journey_title:"我们的发展历程",
-    cta_h:"与我们一起规划您的未来",cta_p:"立即预约免费咨询，让专业顾问为您量身设计方案",
-    cta_wa:"💬 WhatsApp 查询",cta_book:"预约免费咨询"},
-  en:{hero_label:"ABOUT US",hero_h1:"About Us",hero_sub:"With professionalism and integrity, helping professionals<br>and families build a clearer roadmap for the future",
-    belief_label:"OUR BELIEF",belief_title:"Our Beliefs",
-    b0_t:"Expertise",b0_p:"Combining knowledge across education, career, identity and investment to deliver integrated solutions",
-    b1_t:"Integrity",b1_p:"Upholding professional ethics and providing objective, unbiased advice and services to every client",
-    b2_t:"Client-First",b2_p:"Deeply understanding each client's goals and needs to craft the most suitable personalised plan",
-    b3_t:"Global Vision",b3_p:"Connecting Hong Kong with global quality resources to help you seize international opportunities",
-    founder_label:"FOUNDER STORY",founder_title:"Founder Background",
-    founder_p1:"With over 25 years of banking and financial industry experience, having served in senior management at multiple international banks, specialising in wealth management, investment advisory and high-net-worth client services.",
-    founder_p2:"Believing deeply in the transformative power of education and planning, Majestic was founded to provide one-stop education, career, identity and investment planning services.",
-    f_li0:"25+ years banking & financial industry experience",f_li1:"Former international bank management",f_li2:"Specialised in HNW clients & wealth management",f_li3:"Expert in HK & overseas education & immigration",
-    founder_btn:"Learn more about our story →",
-    s0_n:"10,000+",s0_l:"Clients & Families Served",s1_n:"5,000+",s1_l:"Successful Admissions",s2_n:"30+",s2_l:"Global Partners & Institutions",s3_n:"25+ Yrs",s3_l:"Experience & Trust",
-    journey_label:"OUR JOURNEY",journey_title:"Our Journey",
-    cta_h:"Plan Your Future With Us",cta_p:"Book a free consultation and let our advisors design a tailored plan for you",
-    cta_wa:"💬 WhatsApp Us",cta_book:"Book Free Consultation"}
+  tc:{
+    hero_label:"ABOUT US", hero_h1:"關於我們", hero_sub:"專業規劃・成就未來",
+    hero_p:"Majestic 致力為客戶及家庭提供專業的教育、職涯發展及身分規劃建議，結合香港與英國資源，協助您在不斷變化的世界中，作出更明智的選擇，開創更多可能，成就更理想的未來。",
+    mission_label:"OUR MISSION", mission_title:"我們的理念",
+    mission_sub:"每個家庭都值得擁有更清晰的未來規劃。<br>無論是子女教育、個人進修、身分安排或長遠發展，我們相信專業建議能夠幫助客戶作出更明智的選擇。",
+    b0t:"前香港銀行管理層背景", b0p:"多年服務高資產及專業人士家庭，深諳財富管理與風險規劃之道",
+    b1t:"教育 × 身份 × 財富規劃", b1p:"結合教育、職涯及身分規劃，提供更全面的規劃視角",
+    b2t:"香港及英國資源網絡", b2p:"連接本地及海外優質資源，拓展更多升學與發展機會",
+    b3t:"一對一顧問服務", b3p:"深入了解個人及家庭需要，量身制定專屬規劃方案",
+    serve_label:"WHO WE SERVE", serve_title:"我們服務的客戶",
+    clients:["高才通及計劃來港家庭","專業人士及企業管理層","香港及海外學生及家長","希望在英國升學或進修人士","MBA / DBA 及高級管理課程申請人","有意進行身分規劃及資產配置人士"],
+    quote:"真正的規劃，並不只是解決今天的問題，而是為未來創造更多可能。",
+    quote_sub:"我們希望成為您值得信賴的長遠規劃夥伴，陪伴您與家人走得更遠、看得更高、活出更豐盛的人生。",
+    cta_h:"與我們一起規劃您的未來", cta_btn:"預約免費諮詢"
+  },
+  sc:{
+    hero_label:"ABOUT US", hero_h1:"关于我们", hero_sub:"专业规划・成就未来",
+    hero_p:"Majestic 致力为客户及家庭提供专业的教育、职涯发展及身分规划建议，结合香港与英国资源，协助您在不断变化的世界中，作出更明智的选择，开创更多可能，成就更理想的未来。",
+    mission_label:"OUR MISSION", mission_title:"我们的理念",
+    mission_sub:"每个家庭都值得拥有更清晰的未来规划。<br>无论是子女教育、个人进修、身分安排或长远发展，我们相信专业建议能够帮助客户作出更明智的选择。",
+    b0t:"前香港银行管理层背景", b0p:"多年服务高资产及专业人士家庭，深谙财富管理与风险规划之道",
+    b1t:"教育 × 身份 × 财富规划", b1p:"结合教育、职涯及身分规划，提供更全面的规划视角",
+    b2t:"香港及英国资源网络", b2p:"连接本地及海外优质资源，拓展更多升学与发展机会",
+    b3t:"一对一顾问服务", b3p:"深入了解个人及家庭需要，量身制定专属规划方案",
+    serve_label:"WHO WE SERVE", serve_title:"我们服务的客户",
+    clients:["高才通及计划来港家庭","专业人士及企业管理层","香港及海外学生及家长","希望在英国升学或进修人士","MBA / DBA 及高级管理课程申请人","有意进行身分规划及资产配置人士"],
+    quote:"真正的规划，并不只是解决今天的问题，而是为未来创造更多可能。",
+    quote_sub:"我们希望成为您值得信赖的长远规划伙伴，陪伴您与家人走得更远、看得更高、活出更丰盛的人生。",
+    cta_h:"与我们一起规划您的未来", cta_btn:"预约免费咨询"
+  },
+  en:{
+    hero_label:"ABOUT US", hero_h1:"About Us", hero_sub:"Professional Planning · Achieving Your Future",
+    hero_p:"Majestic is dedicated to providing professional education, career development and identity planning advice for clients and families. Combining Hong Kong and UK resources, we help you make smarter choices in an ever-changing world.",
+    mission_label:"OUR MISSION", mission_title:"Our Mission",
+    mission_sub:"Every family deserves a clearer roadmap for the future.<br>Whether it's children's education, personal development, identity planning or long-term growth, professional advice helps you make smarter decisions.",
+    b0t:"Former HK Banking Executive Background", b0p:"Years of serving high-net-worth and professional families with expertise in wealth management and risk planning",
+    b1t:"Education × Identity × Wealth Planning", b1p:"Combining education, career and identity planning for a more comprehensive advisory perspective",
+    b2t:"HK & UK Resource Network", b2p:"Connecting local and overseas quality resources to expand education and development opportunities",
+    b3t:"One-on-One Advisory Service", b3p:"Understanding individual and family needs to craft personalised planning solutions",
+    serve_label:"WHO WE SERVE", serve_title:"Who We Serve",
+    clients:["Families coming to HK via talent schemes","Professionals and corporate executives","HK and overseas students and parents","Those seeking UK education or further studies","MBA / DBA and executive programme applicants","Those planning identity arrangements and asset allocation"],
+    quote:"True planning is not just about solving today\'s problems, but creating more possibilities for the future.",
+    quote_sub:"We aspire to be your trusted long-term planning partner, accompanying you and your family to go further, see higher, and live a more fulfilling life.",
+    cta_h:"Plan Your Future With Us", cta_btn:"Book Free Consultation"
+  }
 };
 function updateContent(lang){
   const t=PT[lang];
   Object.keys(t).forEach(k=>{
-    const el=document.querySelector("[data-key='"+k+"']");
-    if(el) el.innerHTML=t[k];
+    const el=document.querySelector("[data-key=\'"+k+"\']");
+    if(el){
+      if(Array.isArray(t[k])){
+        el.innerHTML=t[k].map(i=>`<li style="display:flex;align-items:center;gap:10px;margin-bottom:12px"><span style="color:var(--gold);font-size:16px">✦</span><span>${i}</span></li>`).join("");
+      } else {
+        el.innerHTML=t[k];
+      }
+    }
   });
 }
 </script>
@@ -187,7 +193,7 @@ function updateContent(lang){
     <li><a href="contact.html" data-key="nav8">聯絡我們</a></li>
   </ul>
   <div class="nav-cta">
-    <span class="nav-phone">📞 +852 5338 4136</span>
+    <span class="nav-phone">📞 +852 1234 5678</span>
     <div class="lang-switcher">
       <button class="lang-btn active" data-lang="tc" onclick="setLang('tc')">繁</button>
       <button class="lang-btn" data-lang="sc" onclick="setLang('sc')">简</button>
@@ -197,146 +203,87 @@ function updateContent(lang){
   </div>
 </nav>
 
-<div class="page-hero">
-  <div class="page-hero-bg"></div>
-  <div class="page-hero-content">
-    <div class="label" data-key="hero_label">ABOUT US</div>
-    <h1 data-key="hero_h1">關於我們</h1>
-    <p data-key="hero_sub">以專業與誠信，協助專業人士及家庭<br>建立更清晰的未來發展藍圖</p>
+<!-- HERO -->
+<div style="position:relative;min-height:520px;overflow:hidden;background:#f8f6f1">
+  <img src="about-hero.jpg" alt="About Majestic" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top">
+  <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(248,246,241,0.95) 45%,rgba(248,246,241,0.2) 100%)"></div>
+  <div style="position:relative;z-index:2;padding:80px 80px;max-width:580px">
+    <div style="font-size:11px;letter-spacing:3px;color:var(--gold);font-weight:600;margin-bottom:16px" data-key="hero_label">ABOUT US</div>
+    <h1 style="font-family:'Noto Serif TC',serif;font-size:52px;font-weight:700;color:var(--navy);line-height:1.2;margin-bottom:12px" data-key="hero_h1">關於我們</h1>
+    <div style="width:40px;height:3px;background:var(--gold);margin-bottom:20px"></div>
+    <h2 style="font-family:'Noto Serif TC',serif;font-size:20px;font-weight:600;color:var(--navy);margin-bottom:20px" data-key="hero_sub">專業規劃・成就未來</h2>
+    <p style="font-size:14px;color:var(--text-mid);line-height:1.9;max-width:440px" data-key="hero_p">Majestic 致力為客戶及家庭提供專業的教育、職涯發展及身分規劃建議，結合香港與英國資源，協助您在不斷變化的世界中，作出更明智的選擇，開創更多可能，成就更理想的未來。</p>
   </div>
 </div>
 
-<!-- BELIEF -->
+<!-- MISSION -->
 <div class="section section-center bg-offwhite">
-  <div class="section-label" data-key="belief_label">OUR BELIEF</div>
-  <h2 class="section-title" data-key="belief_title">我們的信念</h2>
-  <div class="divider-gold"></div>
-  <div class="cards-4" style="max-width:1000px;margin:0 auto">
+  <div class="section-label" data-key="mission_label">OUR MISSION</div>
+  <h2 class="section-title" data-key="mission_title">我們的理念</h2>
+  <div style="width:40px;height:2px;background:var(--gold);margin:0 auto 20px"></div>
+  <p style="font-size:14px;color:var(--text-mid);line-height:1.9;max-width:700px;margin:0 auto 48px" data-key="mission_sub">每個家庭都值得擁有更清晰的未來規劃。<br>無論是子女教育、個人進修、身分安排或長遠發展，我們相信專業建議能夠幫助客戶作出更明智的選擇。</p>
+  <div class="cards-4" style="max-width:1100px;margin:0 auto">
     <div style="text-align:center;padding:20px">
-      <div style="width:64px;height:64px;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px">
-        <svg viewBox="0 0 24 24" style="width:28px;height:28px;fill:var(--gold)"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-      </div>
-      <h3 style="font-size:15px;font-weight:700;color:var(--navy);margin-bottom:8px" data-key="b0_t">專業</h3>
-      <p style="font-size:12.5px;color:var(--text-light);line-height:1.7" data-key="b0_p">結合教育、職涯、身份及投資領域的專業知識，提供整合性解決方案</p>
+      <div style="font-size:36px;color:var(--gold);margin-bottom:14px">👤</div>
+      <h3 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:8px" data-key="b0t">前香港銀行管理層背景</h3>
+      <p style="font-size:12.5px;color:var(--text-light);line-height:1.7" data-key="b0p">多年服務高資產及專業人士家庭，深諳財富管理與風險規劃之道</p>
     </div>
     <div style="text-align:center;padding:20px">
-      <div style="width:64px;height:64px;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px">
-        <svg viewBox="0 0 24 24" style="width:28px;height:28px;fill:var(--gold)"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
-      </div>
-      <h3 style="font-size:15px;font-weight:700;color:var(--navy);margin-bottom:8px" data-key="b1_t">誠信</h3>
-      <p style="font-size:12.5px;color:var(--text-light);line-height:1.7" data-key="b1_p">以誠信為本，堅守專業操守，為客戶提供客觀中立的建議與服務</p>
+      <div style="font-size:36px;color:var(--gold);margin-bottom:14px">🎓</div>
+      <h3 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:8px" data-key="b1t">教育 × 身份 × 財富規劃</h3>
+      <p style="font-size:12.5px;color:var(--text-light);line-height:1.7" data-key="b1p">結合教育、職涯及身分規劃，提供更全面的規劃視角</p>
     </div>
     <div style="text-align:center;padding:20px">
-      <div style="width:64px;height:64px;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px">
-        <svg viewBox="0 0 24 24" style="width:28px;height:28px;fill:var(--gold)"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
-      </div>
-      <h3 style="font-size:15px;font-weight:700;color:var(--navy);margin-bottom:8px" data-key="b2_t">以人為本</h3>
-      <p style="font-size:12.5px;color:var(--text-light);line-height:1.7" data-key="b2_p">深入了解客戶的目標與需求，量身打造最合適的規劃方案</p>
+      <div style="font-size:36px;color:var(--gold);margin-bottom:14px">🌐</div>
+      <h3 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:8px" data-key="b2t">香港及英國資源網絡</h3>
+      <p style="font-size:12.5px;color:var(--text-light);line-height:1.7" data-key="b2p">連接本地及海外優質資源，拓展更多升學與發展機會</p>
     </div>
     <div style="text-align:center;padding:20px">
-      <div style="width:64px;height:64px;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px">
-        <svg viewBox="0 0 24 24" style="width:28px;height:28px;fill:var(--gold)"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
-      </div>
-      <h3 style="font-size:15px;font-weight:700;color:var(--navy);margin-bottom:8px" data-key="b3_t">全球視野</h3>
-      <p style="font-size:12.5px;color:var(--text-light);line-height:1.7" data-key="b3_p">連結香港與全球優質資源，助您把握國際機遇，開拓更大可能</p>
+      <div style="font-size:36px;color:var(--gold);margin-bottom:14px">🤝</div>
+      <h3 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:8px" data-key="b3t">一對一顧問服務</h3>
+      <p style="font-size:12.5px;color:var(--text-light);line-height:1.7" data-key="b3p">深入了解個人及家庭需要，量身制定專屬規劃方案</p>
     </div>
   </div>
 </div>
 
-<!-- FOUNDER -->
-<div class="section" style="padding:72px 80px">
+<!-- WHO WE SERVE -->
+<div class="section">
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;max-width:1100px;margin:0 auto">
     <div>
-      <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80" alt="Founder" style="width:100%;border-radius:8px;box-shadow:0 8px 40px rgba(26,39,68,.15)">
-    </div>
-    <div>
-      <div class="section-label" data-key="founder_label">FOUNDER STORY</div>
-      <h2 class="section-title" style="text-align:left" data-key="founder_title">創辦人背景</h2>
-      <div class="divider-gold left"></div>
-      <p style="font-size:14px;color:var(--text-mid);line-height:1.9;margin-bottom:16px" data-key="founder_p1">擁有超過25年銀行及金融行業的豐富經驗，曾於多家國際銀行擔任管理層職位，專注於財富管理、投資顧問及高淨值客戶服務。</p>
-      <p style="font-size:14px;color:var(--text-mid);line-height:1.9;margin-bottom:24px" data-key="founder_p2">深信教育與規劃能改變人生，因而創立 Majestic，致力為專業人士及家庭提供一站式的教育、職涯、身份及投資規劃服務，陪伴客戶實現更高遠的目標。</p>
-      <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:28px">
-        <li style="display:flex;align-items:center;gap:10px;font-size:13.5px;color:var(--text-dark)"><span style="color:var(--gold)">✦</span><span data-key="f_li0">25+ 年銀行及金融行業經驗</span></li>
-        <li style="display:flex;align-items:center;gap:10px;font-size:13.5px;color:var(--text-dark)"><span style="color:var(--gold)">✦</span><span data-key="f_li1">曾任國際銀行管理層</span></li>
-        <li style="display:flex;align-items:center;gap:10px;font-size:13.5px;color:var(--text-dark)"><span style="color:var(--gold)">✦</span><span data-key="f_li2">專注高淨值客戶及財富管理</span></li>
-        <li style="display:flex;align-items:center;gap:10px;font-size:13.5px;color:var(--text-dark)"><span style="color:var(--gold)">✦</span><span data-key="f_li3">熟悉香港及海外教育與移民政策</span></li>
+      <div class="section-label" data-key="serve_label">WHO WE SERVE</div>
+      <h2 class="section-title" style="text-align:left" data-key="serve_title">我們服務的客戶</h2>
+      <div style="width:40px;height:2px;background:var(--gold);margin:0 0 28px"></div>
+      <ul style="list-style:none" data-key="clients">
+        <li style="display:flex;align-items:center;gap:10px;margin-bottom:12px"><span style="color:var(--gold);font-size:16px">✦</span><span style="font-size:14px;color:var(--text-dark)">高才通及計劃來港家庭</span></li>
+        <li style="display:flex;align-items:center;gap:10px;margin-bottom:12px"><span style="color:var(--gold);font-size:16px">✦</span><span style="font-size:14px;color:var(--text-dark)">專業人士及企業管理層</span></li>
+        <li style="display:flex;align-items:center;gap:10px;margin-bottom:12px"><span style="color:var(--gold);font-size:16px">✦</span><span style="font-size:14px;color:var(--text-dark)">香港及海外學生及家長</span></li>
+        <li style="display:flex;align-items:center;gap:10px;margin-bottom:12px"><span style="color:var(--gold);font-size:16px">✦</span><span style="font-size:14px;color:var(--text-dark)">希望在英國升學或進修人士</span></li>
+        <li style="display:flex;align-items:center;gap:10px;margin-bottom:12px"><span style="color:var(--gold);font-size:16px">✦</span><span style="font-size:14px;color:var(--text-dark)">MBA / DBA 及高級管理課程申請人</span></li>
+        <li style="display:flex;align-items:center;gap:10px;margin-bottom:12px"><span style="color:var(--gold);font-size:16px">✦</span><span style="font-size:14px;color:var(--text-dark)">有意進行身分規劃及資產配置人士</span></li>
       </ul>
-      <a href="contact.html" class="btn-gold-sm" data-key="founder_btn">了解更多關於我們的故事 →</a>
+    </div>
+    <div style="border-radius:12px;overflow:hidden;box-shadow:0 8px 40px rgba(26,39,68,.12)">
+      <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80" alt="Consultation" style="width:100%;height:420px;object-fit:cover">
     </div>
   </div>
 </div>
 
-<!-- STATS -->
-<div style="background:var(--navy);padding:50px 80px">
-  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:40px;max-width:1000px;margin:0 auto;text-align:center">
+<!-- QUOTE -->
+<div style="background:var(--navy);padding:64px 80px">
+  <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center">
     <div>
-      <div style="font-family:'Noto Serif TC',serif;font-size:36px;font-weight:700;color:var(--gold)" data-key="s0_n">10,000+</div>
-      <div style="font-size:13px;color:rgba(255,255,255,.7);margin-top:6px" data-key="s0_l">服務客戶及家庭</div>
-    </div>
-    <div>
-      <div style="font-family:'Noto Serif TC',serif;font-size:36px;font-weight:700;color:var(--gold)" data-key="s1_n">5,000+</div>
-      <div style="font-size:13px;color:rgba(255,255,255,.7);margin-top:6px" data-key="s1_l">成功升學案例</div>
+      <div style="font-size:64px;color:var(--gold);line-height:1;margin-bottom:16px;font-family:Georgia,serif">"</div>
+      <p style="font-family:'Noto Serif TC',serif;font-size:22px;font-weight:600;color:var(--white);line-height:1.7" data-key="quote">真正的規劃，並不只是解決今天的問題，而是為<span style="color:var(--gold)">未來創造更多可能</span>。</p>
     </div>
     <div>
-      <div style="font-family:'Noto Serif TC',serif;font-size:36px;font-weight:700;color:var(--gold)" data-key="s2_n">30+</div>
-      <div style="font-size:13px;color:rgba(255,255,255,.7);margin-top:6px" data-key="s2_l">全球合作夥伴及院校</div>
-    </div>
-    <div>
-      <div style="font-family:'Noto Serif TC',serif;font-size:36px;font-weight:700;color:var(--gold)" data-key="s3_n">25+ 年</div>
-      <div style="font-size:13px;color:rgba(255,255,255,.7);margin-top:6px" data-key="s3_l">專業經驗與信賴</div>
-    </div>
-  </div>
-</div>
-
-<!-- JOURNEY -->
-<div class="section section-center">
-  <div class="section-label" data-key="journey_label">OUR JOURNEY</div>
-  <h2 class="section-title" data-key="journey_title">我們的發展歷程</h2>
-  <div class="divider-gold"></div>
-  <div style="display:flex;justify-content:center;gap:0;max-width:1100px;margin:0 auto;position:relative">
-    <div style="position:absolute;top:28px;left:10%;right:10%;height:2px;background:linear-gradient(to right,var(--gold),var(--gold));opacity:.3"></div>
-    <div style="flex:1;text-align:center;padding:0 16px" data-key="j0">
-      <div style="font-size:18px;font-weight:700;color:var(--gold);margin-bottom:12px">2000</div>
-      <div style="width:56px;height:56px;border-radius:50%;border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;background:var(--white)">🏛️</div>
-      <h4 style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:6px">專業起步</h4>
-      <p style="font-size:11.5px;color:var(--text-light);line-height:1.6">於國際銀行開展職業生涯，專注財富管理及客戶服務</p>
-    </div>
-    <div style="flex:1;text-align:center;padding:0 16px">
-      <div style="font-size:18px;font-weight:700;color:var(--gold);margin-bottom:12px">2010</div>
-      <div style="width:56px;height:56px;border-radius:50%;border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;background:var(--white)">👥</div>
-      <h4 style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:6px">管理經驗</h4>
-      <p style="font-size:11.5px;color:var(--text-light);line-height:1.6">晉升管理層，帶領團隊服務高淨值客戶</p>
-    </div>
-    <div style="flex:1;text-align:center;padding:0 16px">
-      <div style="font-size:18px;font-weight:700;color:var(--gold);margin-bottom:12px">2015</div>
-      <div style="width:56px;height:56px;border-radius:50%;border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;background:var(--white)">🌏</div>
-      <h4 style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:6px">國際視野</h4>
-      <p style="font-size:11.5px;color:var(--text-light);line-height:1.6">深入了解海外市場，拓展國際合作網絡</p>
-    </div>
-    <div style="flex:1;text-align:center;padding:0 16px">
-      <div style="font-size:18px;font-weight:700;color:var(--gold);margin-bottom:12px">2020</div>
-      <div style="width:56px;height:56px;border-radius:50%;border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;background:var(--white)">🏆</div>
-      <h4 style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:6px">創立 Majestic</h4>
-      <p style="font-size:11.5px;color:var(--text-light);line-height:1.6">結合教育與財富管理經驗，成立顧問公司</p>
-    </div>
-    <div style="flex:1;text-align:center;padding:0 16px">
-      <div style="font-size:18px;font-weight:700;color:var(--gold);margin-bottom:12px">至今</div>
-      <div style="width:56px;height:56px;border-radius:50%;border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;background:var(--white)">📈</div>
-      <h4 style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:6px">持續成長</h4>
-      <p style="font-size:11.5px;color:var(--text-light);line-height:1.6">持續擴展服務範疇，陪伴更多客戶實現夢想</p>
+      <p style="font-size:14px;color:rgba(255,255,255,.8);line-height:1.9" data-key="quote_sub">我們希望成為您值得信賴的長遠規劃夥伴，陪伴您與家人走得更遠、看得更高、活出更豐盛的人生。</p>
     </div>
   </div>
 </div>
 
 <div class="cta-banner">
-  <div>
-    <h2 data-key="cta_h">與我們一起規劃您的未來</h2>
-    <p data-key="cta_p">立即預約免費諮詢，讓專業顧問為您量身設計方案</p>
-  </div>
-  <div class="cta-banner-right">
-    <button class="btn-wa" data-key="cta_wa">💬 WhatsApp 查詢</button>
-    <a href="contact.html" class="btn-gold" style="padding:11px 22px;font-size:13px" data-key="cta_book">預約免費諮詢</a>
-  </div>
+  <div><h2 data-key="cta_h">與我們一起規劃您的未來</h2><p>立即預約免費諮詢，讓專業顧問為您量身設計方案</p></div>
+  <a href="contact.html" class="btn-gold" data-key="cta_btn">預約免費諮詢</a>
 </div>
 <footer>
   <div class="footer-grid">
@@ -344,10 +291,10 @@ function updateContent(lang){
       <img src="logo.png" alt="Majestic" style="height:48px;width:auto;filter:brightness(0) invert(1);margin-bottom:12px;">
       <p class="footer-tagline" data-key="footer_tag">以專業與誠信，協助專業人士及家庭<br>建立更清晰的未來發展藍圖</p>
       <div class="social-links">
-        <a href="https://www.facebook.com/Magesticeduvisa/" target="_blank" class="social-btn" title="Facebook">f</a>
-        <a href="https://wa.me/85253384136" target="_blank" class="social-btn" title="WhatsApp" style="background:#25D366;border-color:#25D366;color:#fff">💬</a>
-        <a href="https://www.instagram.com/majestic_educationhk/" target="_blank" class="social-btn" title="Instagram" style="background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);border:none;color:#fff">ig</a>
-        <a href="javascript:void(0)" onclick="document.getElementById('wechat-modal').style.display='flex'" class="social-btn" title="WeChat" style="background:#07C160;border-color:#07C160;color:#fff;pointer-events:auto !important;cursor:pointer;position:relative;z-index:9999">微</a>
+        <div class="social-btn">f</div>
+        <div class="social-btn">in</div>
+        <div class="social-btn">ig</div>
+        <div class="social-btn">yt</div>
       </div>
     </div>
     <div class="footer-col">
@@ -371,51 +318,51 @@ function updateContent(lang){
     <div class="footer-col">
       <h4 data-key="footer_contact">聯絡資訊</h4>
       <ul>
-        <li><a href="#">📞 +852 5338 4136</a></li>
-        <li><a href="#">✉ info@majestic-immigration.com</a></li>
-        <li><a href="#">📍 RM 3805, 38/F ONE MIDTOWN, 11 Hoi Shing Rd, Tsuen Wan, Hong Kong</a></li>
+        <li><a href="#">📞 +852 1234 5678</a></li>
+        <li><a href="#">✉ info@majestic.com.hk</a></li>
+        <li><a href="#">📍 香港中環皇后大道中99號</a></li>
         <li><a href="#">📍 21 Tothill St, Westminster, London</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <span data-key="footer_copy">© 2026 Majestic Education & Immigration Consultancy. All Rights Reserved.</span>
+    <span data-key="footer_copy">© 2024 Majestic Education & Immigration Consultancy. All Rights Reserved.</span>
     <div class="footer-bottom-links">
       <a href="#" data-key="footer_priv">私隱政策</a>
       <a href="#" data-key="footer_disc">免責聲明</a>
     </div>
   </div>
 </footer>
-<div class="whatsapp-float" onclick="window.open('https://wa.me/85253384136')">
+<div class="whatsapp-float" onclick="window.open('https://wa.me/85212345678')">
   <span style="color:white;font-size:26px">💬</span>
 </div>
 <script>
 const T = {
   tc:{
     nav:["首頁","關於我們","香港升學","英國升學","在職高端教育","身份及投資","成功案例","洞察","聯絡我們"],
-    cta:"免費諮詢",phone:"+852 5338 4136",
+    cta:"免費諮詢",phone:"+852 1234 5678",
     footer_tag:"以專業與誠信，協助專業人士及家庭<br>建立更清晰的未來發展藍圖",
     footer_quick:"快捷連結",footer_id:"身份及投資規劃",footer_contact:"聯絡資訊",
     fnav:["關於我們","香港升學","英國升學","在職高端教育","聯絡我們","成功案例","專欄文章","聯絡我們"],
-    footer_copy:"© 2026 Majestic Education & Immigration Consultancy. All Rights Reserved.",
+    footer_copy:"© 2024 Majestic Education & Immigration Consultancy. All Rights Reserved.",
     footer_priv:"私隱政策",footer_disc:"免責聲明"
   },
   sc:{
     nav:["首页","关于我们","香港升学","英国升学","在职高端教育","身份及投资","成功案例","洞察","联系我们"],
-    cta:"免费咨询",phone:"+852 5338 4136",
+    cta:"免费咨询",phone:"+852 1234 5678",
     footer_tag:"以专业与诚信，协助专业人士及家庭<br>建立更清晰的未来发展蓝图",
     footer_quick:"快捷链接",footer_id:"身份及投资规划",footer_contact:"联系资讯",
     fnav:["关于我们","香港升学","英国升学","在职高端教育","联系我们","成功案例","专栏文章","联系我们"],
-    footer_copy:"© 2026 Majestic Education & Immigration Consultancy. All Rights Reserved.",
+    footer_copy:"© 2024 Majestic Education & Immigration Consultancy. All Rights Reserved.",
     footer_priv:"私隐政策",footer_disc:"免责声明"
   },
   en:{
     nav:["Home","About Us","HK Education","UK Education","Executive Education","Identity & Investment","Success Stories","Insights","Contact"],
-    cta:"Free Consultation",phone:"+852 5338 4136",
+    cta:"Free Consultation",phone:"+852 1234 5678",
     footer_tag:"With professionalism and integrity, helping professionals<br>and families build a clearer roadmap for their future",
     footer_quick:"Quick Links",footer_id:"Identity & Investment",footer_contact:"Contact Info",
     fnav:["About Us","HK Education","UK Education","Executive Education","Contact Us","Success Stories","Articles","Contact Us"],
-    footer_copy:"© 2026 Majestic Education & Immigration Consultancy. All Rights Reserved.",
+    footer_copy:"© 2024 Majestic Education & Immigration Consultancy. All Rights Reserved.",
     footer_priv:"Privacy Policy",footer_disc:"Disclaimer"
   }
 };
@@ -466,17 +413,5 @@ document.addEventListener("DOMContentLoaded",()=>{
   setLang(currentLang);
 });
 </script>
-
-<!-- WeChat Modal -->
-<div id="wechat-modal" onclick="this.style.display='none'" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);z-index:999999;align-items:center;justify-content:center">
-  <div onclick="event.stopPropagation()" style="background:#fff;border-radius:20px;padding:32px 28px;text-align:center;max-width:300px;width:88%;box-shadow:0 20px 60px rgba(0,0,0,0.3)">
-    <div style="font-size:32px;margin-bottom:8px">💚</div>
-    <h3 style="font-size:18px;font-weight:700;color:#1a2744;margin-bottom:4px">WeChat 微信</h3>
-    <p style="font-size:12px;color:#718096;margin-bottom:16px">掃描二維碼，加我為朋友<br>雄景 Majestic</p>
-    <img src="wechat-qr.jpg" alt="WeChat QR Code" style="width:200px;height:200px;object-fit:contain;border-radius:8px;border:1px solid #e2ddd4">
-    <br>
-    <button onclick="document.getElementById('wechat-modal').style.display='none'" style="margin-top:18px;padding:10px 28px;background:#07C160;color:#fff;border:none;border-radius:20px;cursor:pointer;font-size:14px;font-weight:600">關閉</button>
-  </div>
-</div>
 </body>
 </html>
