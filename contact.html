@@ -140,7 +140,7 @@ footer{background:var(--navy);padding:50px 80px 28px}
     white-space: nowrap;
   }
   .nav-dropdown-menu a:hover { background: var(--off-white); color: var(--navy) !important; }
-  .nav-dropdown:hover .nav-dropdown-menu { display: block; }
+  .nav-dropdown-menu.open { display: block !important; }
   /* mobile */
   @media(max-width:900px){ .nav-dropdown-menu { display: none !important; } }
 
@@ -159,7 +159,7 @@ function updateContent(lang){const t=PT[lang];Object.keys(t).forEach(k=>{const e
     <li><a href="index.html" data-key="nav0">首頁</a></li>
     <li><a href="about.html" data-key="nav1">關於我們</a></li>
     <li class="nav-dropdown">
-      <a href="#" data-key="nav2" class="nav-dropdown-toggle">升學 ▾</a>
+      <a href="#" data-key="nav2" class="nav-dropdown-toggle" onclick="event.preventDefault();event.stopPropagation();var m=this.nextElementSibling;m.classList.toggle('open')">升學 ▾</a>
       <div class="nav-dropdown-menu">
         <a href="hk-education.html">🇭🇰 香港升學</a>
         <a href="uk-education.html">🇬🇧 英國升學</a>
@@ -443,5 +443,13 @@ document.addEventListener("DOMContentLoaded",()=>{
     <button onclick="document.getElementById('wechat-modal').style.display='none'" style="margin-top:18px;padding:10px 28px;background:#07C160;color:#fff;border:none;border-radius:20px;cursor:pointer;font-size:14px;font-weight:600">關閉</button>
   </div>
 </div>
+
+<script>
+document.addEventListener('click', function(e){
+  if(!e.target.closest('.nav-dropdown')){
+    document.querySelectorAll('.nav-dropdown-menu').forEach(m=>m.classList.remove('open'));
+  }
+});
+</script>
 </body>
 </html>
