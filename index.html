@@ -539,18 +539,24 @@ function setLang(lang) {
 
 <!-- NAV -->
 <nav>
-  <a href="#" class="logo">
-    <img src="logo.png" alt="Majestic Education & Immigration" style="height:52px;width:auto;">
+  <a href="index.html" class="logo">
+    <img src="logo.png" alt="Majestic Education &amp; Immigration" style="height:52px;width:auto;">
   </a>
   <ul class="nav-links">
-    <li><a href="#">HOME</a></li>
-    <li><a href="#">關於我們</a></li>
-    <li><a href="#">升學 ▾</a></li>
-    <li><a href="#">在職高端教育</a></li>
-    <li><a href="#">身份及投資 ▾</a></li>
-    <li><a href="#">成功案例</a></li>
-    <li><a href="#">洞察</a></li>
-    <li><a href="#">聯絡我們</a></li>
+    <li><a href="index.html" data-key="nav0">首頁</a></li>
+    <li><a href="about.html" data-key="nav1">關於我們</a></li>
+    <li class="nav-dropdown">
+      <a href="hk-education.html" class="nav-dropdown-toggle" data-key="nav2" onclick="var e=event,m=this.nextElementSibling;if(window.innerWidth>900){e.preventDefault();m.classList.toggle('open');e.stopPropagation();}">升學 ▾</a>
+      <div class="nav-dropdown-menu">
+        <a href="hk-education.html">🇭🇰 香港升學</a>
+        <a href="uk-education.html">🇬🇧 英國升學</a>
+      </div>
+    </li>
+    <li><a href="executive-education.html" data-key="nav4">在職高端教育</a></li>
+    <li><a href="identity-investment.html" data-key="nav5">身份及投資</a></li>
+    <li><a href="success-stories.html" data-key="nav6">成功案例</a></li>
+    <li><a href="insights.html" data-key="nav7">洞察</a></li>
+    <li><a href="contact.html" data-key="nav8">聯絡我們</a></li>
   </ul>
   <div class="nav-cta">
     <span class="nav-phone">📞 +852 5338 4136</span>
@@ -559,9 +565,14 @@ function setLang(lang) {
       <button class="lang-btn" data-lang="sc" onclick="setLang('sc')">简</button>
       <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
     </div>
-    <a href="#" class="btn-primary btn-nav-cta">免費諮詢</a>
+    <a href="contact.html" class="btn-primary btn-nav-cta">免費諮詢</a>
   </div>
 </nav>
+<script>
+document.addEventListener('click',function(e){
+  if(!e.target.closest('.nav-dropdown')) document.querySelectorAll('.nav-dropdown-menu').forEach(m=>m.classList.remove('open'));
+});
+</script>
 
 <!-- HERO -->
 <div class="hero">
