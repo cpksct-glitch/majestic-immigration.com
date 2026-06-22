@@ -8,309 +8,463 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700&family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--navy:#1a2744;--navy-deep:#0f1a30;--gold:#c9a84c;--white:#fff;--off:#f8f6f1;--mid:#4a5568;--light:#718096;--border:#e2ddd4}
-body{font-family:'Noto Sans TC',sans-serif;color:var(--navy);background:var(--white);overflow-x:hidden}
-body.lang-en{font-family:'Segoe UI',Arial,sans-serif}
-body.lang-sc{font-family:'Noto Sans SC',sans-serif}
-
-/* NAV */
-nav{position:sticky;top:0;z-index:1000;background:var(--white);border-bottom:1px solid var(--border);height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 48px;box-shadow:0 2px 12px rgba(26,39,68,.06)}
-.logo img{height:48px;width:auto;display:block}
-.nav-links{display:flex;gap:24px;list-style:none;align-items:center}
-.nav-links a{font-size:13px;font-weight:500;color:var(--mid);text-decoration:none;white-space:nowrap;transition:color .2s}
-.nav-links a:hover{color:var(--navy)}
-.nav-dropdown{position:relative}
-.nav-dropdown-menu{display:none;position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%);background:var(--white);border:1px solid var(--border);border-radius:8px;box-shadow:0 8px 28px rgba(26,39,68,.12);min-width:160px;z-index:9999;overflow:hidden}
-.nav-dropdown-menu.open{display:block}
-.nav-dropdown-menu a{display:block;padding:12px 20px;font-size:13px;color:var(--navy);text-decoration:none;white-space:nowrap}
-.nav-dropdown-menu a:hover{background:var(--off)}
-.nav-right{display:flex;align-items:center;gap:12px}
-.nav-phone{font-size:12.5px;color:var(--mid);white-space:nowrap}
-.lang-sw{display:flex;gap:2px;background:var(--off);border-radius:20px;padding:3px;border:1px solid var(--border)}
-.lang-btn{padding:4px 10px;border:none;background:transparent;font-size:11px;font-weight:600;color:var(--mid);cursor:pointer;border-radius:16px;transition:all .2s;font-family:inherit}
+:root{--navy:#1a2744;--navy-deep:#0f1a30;--gold:#c9a84c;--white:#fff;--off-white:#f8f6f1;--text-dark:#1a2744;--text-mid:#4a5568;--text-light:#718096;--border:#e2ddd4}
+body{font-family:"Noto Sans TC",sans-serif;color:var(--text-dark);background:var(--white);overflow-x:hidden}
+body.lang-en{font-family:"Segoe UI",Arial,sans-serif}
+body.lang-sc{font-family:"Noto Sans SC",sans-serif}
+nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:1px solid var(--border);padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:70px;box-shadow:0 2px 12px rgba(26,39,68,.06)}
+.logo{display:flex;align-items:center;text-decoration:none}
+.nav-links{display:flex;gap:20px;list-style:none}
+.nav-links a{text-decoration:none;font-size:12.5px;font-weight:500;color:var(--text-mid);white-space:nowrap;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--navy)}
+.nav-links a.active{border-bottom:2px solid var(--gold);padding-bottom:2px}
+.nav-cta{display:flex;align-items:center;gap:12px}
+.nav-phone{font-size:12px;color:var(--text-mid);white-space:nowrap}
+.lang-switcher{display:flex;gap:3px;background:var(--off-white);border-radius:20px;padding:3px;border:1px solid var(--border)}
+.lang-btn{padding:4px 10px;border:none;background:transparent;font-size:11px;font-weight:600;color:var(--text-mid);cursor:pointer;border-radius:16px;transition:all .2s;font-family:inherit}
 .lang-btn.active{background:var(--navy);color:var(--white)}
-.btn-cta{background:var(--navy);color:var(--white);padding:9px 18px;border:none;border-radius:4px;font-size:13px;font-family:inherit;font-weight:500;cursor:pointer;text-decoration:none;white-space:nowrap}
-.btn-cta:hover{background:#253366}
-.btn-gold{background:var(--gold);color:var(--white);padding:12px 26px;border:none;border-radius:4px;font-size:14px;font-family:inherit;font-weight:600;cursor:pointer;text-decoration:none;display:inline-block}
-.btn-outline-w{border:1.5px solid rgba(255,255,255,.75);color:var(--white);padding:12px 26px;border-radius:4px;font-size:14px;font-family:inherit;cursor:pointer;text-decoration:none;display:inline-block;background:transparent}
-
-/* PAGE HERO (inner pages) */
-.page-hero{position:relative;min-height:400px;display:flex;align-items:center;overflow:hidden;background:var(--navy-deep)}
-.page-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;pointer-events:none}
-.page-hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,rgba(10,20,45,.82) 40%,rgba(10,20,45,.4) 100%);pointer-events:none}
-.page-hero-text{position:relative;z-index:2;padding:60px 80px;max-width:640px}
-.page-hero-label{font-size:11px;letter-spacing:3px;color:var(--gold);font-weight:600;margin-bottom:14px;text-transform:uppercase}
-.page-hero-text h1{font-family:'Noto Serif TC',serif;font-size:38px;font-weight:700;color:var(--white);line-height:1.3;margin-bottom:14px}
-.page-hero-text p{font-size:14px;color:rgba(255,255,255,.82);line-height:1.85}
-
+.btn-primary{background:var(--navy);color:var(--white);padding:9px 18px;border:none;border-radius:4px;font-size:12.5px;font-family:inherit;font-weight:500;cursor:pointer;white-space:nowrap;text-decoration:none;display:inline-block;transition:background .2s}
+.btn-primary:hover{background:#253366}
+.btn-gold{background:var(--gold);color:var(--white);padding:13px 28px;border:none;border-radius:4px;font-size:15px;font-family:inherit;font-weight:500;cursor:pointer;text-decoration:none;display:inline-block;transition:background .2s}
+.btn-gold:hover{background:#b8973e}
+.btn-gold-sm{background:var(--gold);color:var(--white);padding:9px 20px;border:none;border-radius:4px;font-size:13px;font-family:inherit;font-weight:500;cursor:pointer;text-decoration:none;display:inline-block}
+.btn-outline{border:1.5px solid var(--navy);color:var(--navy);padding:9px 20px;border-radius:4px;font-size:13px;font-family:inherit;font-weight:500;background:transparent;cursor:pointer;text-decoration:none;display:inline-block}
+.btn-outline-white{border:1.5px solid rgba(255,255,255,0.7);color:var(--white);padding:13px 28px;border-radius:4px;font-size:15px;font-family:inherit;font-weight:500;cursor:pointer;text-decoration:none;display:inline-block;background:transparent}
+/* HERO */
+.page-hero{position:relative;min-height:420px;display:flex;align-items:center;overflow:hidden;background:var(--navy-deep)}
+.page-hero-bg{position:absolute;inset:0;background:url("hero-bg.png") center/cover no-repeat}
+.page-hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(to right,rgba(10,20,45,0.82) 40%,rgba(10,20,45,0.4) 100%)}
+.page-hero-content{position:relative;z-index:2;padding:60px 80px;max-width:620px}
+.page-hero-content .label{color:var(--gold);font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:600;margin-bottom:14px}
+.page-hero-content h1{font-family:"Noto Serif TC",serif;font-size:38px;font-weight:700;color:var(--white);line-height:1.3;margin-bottom:16px}
+body.lang-en .page-hero-content h1{font-family:Georgia,serif;font-size:32px}
+.page-hero-content p{color:rgba(255,255,255,.82);font-size:15px;line-height:1.8}
 /* SECTIONS */
-.sec{padding:72px 80px}
-.sec-sm{padding:48px 80px}
-.bg-off{background:var(--off)}
+.section{padding:72px 80px}
+.section-sm{padding:48px 80px}
+.section-center{text-align:center}
+.section-label{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:8px}
+.section-title{font-family:"Noto Serif TC",serif;font-size:30px;font-weight:700;color:var(--navy);margin-bottom:10px}
+body.lang-en .section-title{font-family:Georgia,serif}
+.divider-gold{width:40px;height:2px;background:var(--gold);margin:0 auto 36px}
+.divider-gold.left{margin:0 0 36px}
+.bg-offwhite{background:var(--off-white)}
 .bg-navy{background:var(--navy)}
-.tc{text-align:center}
-.sec-label{font-size:11px;letter-spacing:3px;color:var(--gold);font-weight:600;margin-bottom:8px;text-transform:uppercase}
-.sec-title{font-family:'Noto Serif TC',serif;font-size:30px;font-weight:700;color:var(--navy);margin-bottom:10px}
-body.lang-en .sec-title{font-family:Georgia,serif}
-.gold-line{width:40px;height:2px;background:var(--gold);margin:0 auto 36px}
-.gold-line.left{margin:0 0 36px}
-
-/* GRID */
-.g2{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}
-.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.g5{display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
-
-/* CARD */
+/* CARDS */
+.cards-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.cards-4{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.cards-5{display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
 .card{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:28px;transition:box-shadow .2s}
 .card:hover{box-shadow:0 6px 24px rgba(26,39,68,.1)}
-
 /* STEPS */
-.steps{display:flex;align-items:flex-start;justify-content:center;flex-wrap:wrap;gap:0}
-.step{flex:1;min-width:100px;text-align:center;padding:0 10px}
-.step-circle{width:52px;height:52px;border-radius:50%;border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;background:var(--white);font-size:20px}
+.steps{display:flex;align-items:flex-start;gap:0;justify-content:center;flex-wrap:wrap}
+.step{text-align:center;flex:1;min-width:120px;padding:0 12px;position:relative}
+.step-circle{width:56px;height:56px;border-radius:50%;border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;background:var(--white)}
+.step-circle svg{width:24px;height:24px;fill:var(--gold)}
+.step-arrow{color:var(--gold);font-size:20px;padding-top:20px;flex-shrink:0}
+.step h4{font-size:13px;font-weight:700;color:var(--navy);margin-bottom:6px}
+.step p{font-size:11.5px;color:var(--text-light);line-height:1.6}
 .step-num{font-size:10px;color:var(--gold);font-weight:700;letter-spacing:1px;margin-bottom:4px}
-.step h4{font-size:13px;font-weight:700;color:var(--navy);margin-bottom:5px}
-.step p{font-size:11.5px;color:var(--light);line-height:1.6}
-.step-arr{color:var(--gold);font-size:18px;padding-top:18px;flex-shrink:0}
-
 /* FAQ */
 .faq-item{border-bottom:1px solid var(--border);padding:18px 0;cursor:pointer}
 .faq-q{display:flex;justify-content:space-between;align-items:center;font-size:14px;font-weight:600;color:var(--navy)}
-.faq-plus{color:var(--gold);font-size:22px;font-weight:300;transition:transform .2s}
-.faq-a{font-size:13px;color:var(--mid);line-height:1.75;margin-top:12px;display:none}
+.faq-plus{color:var(--gold);font-size:20px;font-weight:300}
+.faq-a{font-size:13px;color:var(--text-mid);line-height:1.7;margin-top:12px;display:none}
 .faq-item.open .faq-a{display:block}
 .faq-item.open .faq-plus{transform:rotate(45deg)}
-
 /* CTA BANNER */
-.cta-bar{background:var(--navy-deep);padding:40px 80px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
-.cta-bar h2{font-family:'Noto Serif TC',serif;font-size:22px;font-weight:700;color:var(--white);margin-bottom:6px}
-body.lang-en .cta-bar h2{font-family:Georgia,serif}
-.cta-bar p{font-size:13px;color:rgba(255,255,255,.7)}
-.cta-bar-btns{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
-.btn-wa{background:#25D366;color:var(--white);padding:11px 20px;border-radius:4px;font-size:13px;font-weight:600;border:none;font-family:inherit;cursor:pointer;display:inline-flex;align-items:center;gap:6px;text-decoration:none}
-.btn-email-c{border:1.5px solid rgba(255,255,255,.4);color:var(--white);padding:11px 20px;border-radius:4px;font-size:13px;font-weight:600;background:transparent;border-radius:4px;font-family:inherit;cursor:pointer;display:inline-flex;align-items:center;gap:6px;text-decoration:none}
-
+.cta-banner{background:var(--navy-deep);padding:40px 80px;display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap}
+.cta-banner h2{font-family:"Noto Serif TC",serif;font-size:22px;font-weight:700;color:var(--white);margin-bottom:6px}
+body.lang-en .cta-banner h2{font-family:Georgia,serif}
+.cta-banner p{font-size:13px;color:rgba(255,255,255,.7)}
+.cta-banner-right{display:flex;gap:12px;flex-wrap:wrap}
+.btn-wa{background:#25D366;color:var(--white);padding:11px 20px;border-radius:4px;font-size:13px;font-weight:600;cursor:pointer;border:none;font-family:inherit;display:inline-flex;align-items:center;gap:8px}
+.btn-email-c{border:1.5px solid rgba(255,255,255,.4);color:var(--white);padding:11px 20px;border-radius:4px;font-size:13px;font-weight:600;background:transparent;cursor:pointer;font-family:inherit;display:inline-flex;align-items:center;gap:8px}
 /* FOOTER */
 footer{background:var(--navy);padding:50px 80px 28px}
-.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;margin-bottom:36px}
-.footer-tag{font-size:12px;color:rgba(255,255,255,.5);line-height:1.8;margin-top:10px}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;margin-bottom:36px}
+.footer-tagline{font-size:12px;color:rgba(255,255,255,.5);line-height:1.8;margin-top:10px}
 .footer-col h4{font-size:11px;font-weight:700;color:var(--gold);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px}
 .footer-col ul{list-style:none}
-.footer-col li{margin-bottom:9px}
-.footer-col a{font-size:12.5px;color:rgba(255,255,255,.6);text-decoration:none;transition:color .2s}
-.footer-col a:hover{color:var(--gold)}
-.social-row{display:flex;gap:8px;margin-top:14px}
-.sb{width:32px;height:32px;border-radius:50%;border:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.65);font-size:13px;cursor:pointer;transition:all .2s;text-decoration:none}
-.sb:hover{border-color:var(--gold);color:var(--gold)}
-.footer-bot{border-top:1px solid rgba(255,255,255,.1);padding-top:18px;display:flex;justify-content:space-between;align-items:center;font-size:11.5px;color:rgba(255,255,255,.4)}
-.footer-bot a{color:rgba(255,255,255,.4);text-decoration:none}
-.footer-bot a:hover{color:var(--gold)}
-
-/* WA FLOAT */
-.wa-float{position:fixed;bottom:28px;right:28px;width:52px;height:52px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4);cursor:pointer;z-index:9998;font-size:24px;text-decoration:none}
-
+.footer-col ul li{margin-bottom:9px}
+.footer-col ul li a{font-size:12.5px;color:rgba(255,255,255,.6);text-decoration:none;transition:color .2s}
+.footer-col ul li a:hover{color:var(--gold)}
+.social-links{display:flex;gap:8px;margin-top:14px}
+.social-btn{width:32px;height:32px;border-radius:50%;border:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.6);font-size:13px;cursor:pointer;transition:all .2s}
+.social-btn:hover{border-color:var(--gold);color:var(--gold)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:18px;display:flex;justify-content:space-between;align-items:center;font-size:11.5px;color:rgba(255,255,255,.4)}
+.footer-bottom-links{display:flex;gap:18px}
+.footer-bottom-links a{color:rgba(255,255,255,.4);text-decoration:none}
+.footer-bottom-links a:hover{color:var(--gold)}
+.whatsapp-float{position:fixed;bottom:28px;right:28px;width:52px;height:52px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4);cursor:pointer;z-index:999}
 /* RESPONSIVE */
-@media(max-width:960px){
+@media(max-width:900px){
   nav{padding:0 20px}
   .nav-links{display:none}
-  .page-hero-text{padding:40px 24px}
-  .sec,.sec-sm,.cta-bar{padding-left:24px;padding-right:24px}
-  .g2,.g3,.g4,.g5{grid-template-columns:1fr 1fr}
+  .page-hero-content{padding:40px 24px}
+  .section,.section-sm,.cta-banner{padding-left:24px;padding-right:24px}
+  .cards-3,.cards-4,.cards-5{grid-template-columns:1fr 1fr}
+  .footer-grid{grid-template-columns:1fr 1fr;padding:0}
   footer{padding:40px 24px 24px}
-  .footer-grid{grid-template-columns:1fr 1fr}
 }
 @media(max-width:600px){
-  .g2,.g3,.g4,.g5{grid-template-columns:1fr}
-  .page-hero-text h1{font-size:28px}
-  .cta-bar{flex-direction:column}
+  .cards-3,.cards-4,.cards-5{grid-template-columns:1fr}
+  .page-hero-content h1{font-size:26px}
+  .cta-banner{flex-direction:column}
 }
-
-.about-hero{position:relative;height:540px;display:flex;align-items:center;overflow:hidden;background:#f8f6f1}
-.about-hero-img{position:absolute;right:0;top:0;width:58%;height:100%;object-fit:cover;object-position:left center}
-.about-hero-grad{position:absolute;inset:0;background:linear-gradient(to right,#f8f6f1 38%,rgba(248,246,241,.88) 52%,rgba(248,246,241,.2) 72%,transparent 100%);pointer-events:none}
-.about-hero-txt{position:relative;z-index:2;padding:0 80px;max-width:540px}
-@media(max-width:900px){.about-hero-img{width:100%;opacity:.25}.about-hero-txt{padding:0 24px}}
 </style>
+<script>
+const PT={
+  tc:{hero_label:"ABOUT US",hero_h1:"關於我們",hero_sub:"以專業與誠信，協助專業人士及家庭<br>建立更清晰的未來發展藍圖",
+    belief_label:"OUR BELIEF",belief_title:"我們的信念",
+    b0_t:"專業",b0_p:"結合教育、職涯、身份及投資領域的專業知識，提供整合性解決方案",
+    b1_t:"誠信",b1_p:"以誠信為本，堅守專業操守，為客戶提供客觀中立的建議與服務",
+    b2_t:"以人為本",b2_p:"深入了解客戶的目標與需求，量身打造最合適的規劃方案",
+    b3_t:"全球視野",b3_p:"連結香港與全球優質資源，助您把握國際機遇，開拓更大可能",
+    founder_label:"FOUNDER STORY",founder_title:"創辦人背景",
+    founder_p1:"擁有超過25年銀行及金融行業的豐富經驗，曾於多家國際銀行擔任管理層職位，專注於財富管理、投資顧問及高淨值客戶服務。",
+    founder_p2:"深信教育與規劃能改變人生，因而創立 Majestic，致力為專業人士及家庭提供一站式的教育、職涯、身份及投資規劃服務。",
+    f_li0:"25+ 年銀行及金融行業經驗",f_li1:"曾任國際銀行管理層",f_li2:"專注高淨值客戶及財富管理",f_li3:"熟悉香港及海外教育與移民政策",
+    founder_btn:"了解更多關於我們的故事 →",
+    s0_n:"10,000+",s0_l:"服務客戶及家庭",s1_n:"5,000+",s1_l:"成功升學案例",s2_n:"30+",s2_l:"全球合作夥伴及院校",s3_n:"25+ 年",s3_l:"專業經驗與信賴",
+    journey_label:"OUR JOURNEY",journey_title:"我們的發展歷程",
+    cta_h:"與我們一起規劃您的未來",cta_p:"立即預約免費諮詢，讓專業顧問為您量身設計方案",
+    cta_wa:"💬 WhatsApp 查詢",cta_book:"預約免費諮詢"},
+  sc:{hero_label:"ABOUT US",hero_h1:"关于我们",hero_sub:"以专业与诚信，协助专业人士及家庭<br>建立更清晰的未来发展蓝图",
+    belief_label:"OUR BELIEF",belief_title:"我们的信念",
+    b0_t:"专业",b0_p:"结合教育、职涯、身份及投资领域的专业知识，提供整合性解决方案",
+    b1_t:"诚信",b1_p:"以诚信为本，坚守专业操守，为客户提供客观中立的建议与服务",
+    b2_t:"以人为本",b2_p:"深入了解客户的目标与需求，量身打造最合适的规划方案",
+    b3_t:"全球视野",b3_p:"连结香港与全球优质资源，助您把握国际机遇，开拓更大可能",
+    founder_label:"FOUNDER STORY",founder_title:"创办人背景",
+    founder_p1:"拥有超过25年银行及金融行业的丰富经验，曾于多家国际银行担任管理层职位，专注于财富管理、投资顾问及高净值客户服务。",
+    founder_p2:"深信教育与规划能改变人生，因而创立 Majestic，致力为专业人士及家庭提供一站式的教育、职涯、身份及投资规划服务。",
+    f_li0:"25+ 年银行及金融行业经验",f_li1:"曾任国际银行管理层",f_li2:"专注高净值客户及财富管理",f_li3:"熟悉香港及海外教育与移民政策",
+    founder_btn:"了解更多关于我们的故事 →",
+    s0_n:"10,000+",s0_l:"服务客户及家庭",s1_n:"5,000+",s1_l:"成功升学案例",s2_n:"30+",s2_l:"全球合作伙伴及院校",s3_n:"25+ 年",s3_l:"专业经验与信赖",
+    journey_label:"OUR JOURNEY",journey_title:"我们的发展历程",
+    cta_h:"与我们一起规划您的未来",cta_p:"立即预约免费咨询，让专业顾问为您量身设计方案",
+    cta_wa:"💬 WhatsApp 查询",cta_book:"预约免费咨询"},
+  en:{hero_label:"ABOUT US",hero_h1:"About Us",hero_sub:"With professionalism and integrity, helping professionals<br>and families build a clearer roadmap for the future",
+    belief_label:"OUR BELIEF",belief_title:"Our Beliefs",
+    b0_t:"Expertise",b0_p:"Combining knowledge across education, career, identity and investment to deliver integrated solutions",
+    b1_t:"Integrity",b1_p:"Upholding professional ethics and providing objective, unbiased advice and services to every client",
+    b2_t:"Client-First",b2_p:"Deeply understanding each client's goals and needs to craft the most suitable personalised plan",
+    b3_t:"Global Vision",b3_p:"Connecting Hong Kong with global quality resources to help you seize international opportunities",
+    founder_label:"FOUNDER STORY",founder_title:"Founder Background",
+    founder_p1:"With over 25 years of banking and financial industry experience, having served in senior management at multiple international banks, specialising in wealth management, investment advisory and high-net-worth client services.",
+    founder_p2:"Believing deeply in the transformative power of education and planning, Majestic was founded to provide one-stop education, career, identity and investment planning services.",
+    f_li0:"25+ years banking & financial industry experience",f_li1:"Former international bank management",f_li2:"Specialised in HNW clients & wealth management",f_li3:"Expert in HK & overseas education & immigration",
+    founder_btn:"Learn more about our story →",
+    s0_n:"10,000+",s0_l:"Clients & Families Served",s1_n:"5,000+",s1_l:"Successful Admissions",s2_n:"30+",s2_l:"Global Partners & Institutions",s3_n:"25+ Yrs",s3_l:"Experience & Trust",
+    journey_label:"OUR JOURNEY",journey_title:"Our Journey",
+    cta_h:"Plan Your Future With Us",cta_p:"Book a free consultation and let our advisors design a tailored plan for you",
+    cta_wa:"💬 WhatsApp Us",cta_book:"Book Free Consultation"}
+};
+function updateContent(lang){
+  const t=PT[lang];
+  Object.keys(t).forEach(k=>{
+    const el=document.querySelector("[data-key='"+k+"']");
+    if(el) el.innerHTML=t[k];
+  });
+}
+</script>
 </head>
 <body>
 <nav>
-  <a href="index.html" class="logo"><img src="logo.png" alt="Majestic"></a>
+  <a href="index.html" class="logo">
+    <img src="logo.png" alt="Majestic" style="height:52px;width:auto;">
+  </a>
   <ul class="nav-links">
-    <li><a href="index.html">首頁</a></li>
-    <li><a href="about.html">關於我們</a></li>
-    <li class="nav-dropdown">
-      <a href="#" class="nav-dropdown-toggle" onclick="event.preventDefault();this.nextElementSibling.classList.toggle('open');event.stopPropagation()">升學 ▾</a>
-      <div class="nav-dropdown-menu">
-        <a href="hk-education.html" class="sub-link">🇭🇰 香港升學</a>
-        <a href="uk-education.html" class="sub-link">🇬🇧 英國升學</a>
-      </div>
-    </li>
-    <li><a href="executive-education.html">在職高端教育</a></li>
-    <li><a href="identity-investment.html">身份及投資</a></li>
-    <li><a href="success-stories.html">成功案例</a></li>
-    <li><a href="insights.html">洞察</a></li>
-    <li><a href="contact.html">聯絡我們</a></li>
+    <li><a href="index.html" data-key="nav0">首頁</a></li>
+    <li><a href="about.html" data-key="nav1">關於我們</a></li>
+    <li><a href="hk-education.html" data-key="nav2">香港升學</a></li>
+    <li><a href="uk-education.html" data-key="nav3">英國升學</a></li>
+    <li><a href="executive-education.html" data-key="nav4">在職高端教育</a></li>
+    <li><a href="identity-investment.html" data-key="nav5">身份及投資</a></li>
+    <li><a href="success-stories.html" data-key="nav6">成功案例</a></li>
+    <li><a href="insights.html" data-key="nav7">洞察</a></li>
+    <li><a href="contact.html" data-key="nav8">聯絡我們</a></li>
   </ul>
-  <div class="nav-right">
-    <span class="nav-phone">📞 +852 5338 4136</span>
-    <div class="lang-sw">
+  <div class="nav-cta">
+    <span class="nav-phone">📞 +852 1234 5678</span>
+    <div class="lang-switcher">
       <button class="lang-btn active" data-lang="tc" onclick="setLang('tc')">繁</button>
       <button class="lang-btn" data-lang="sc" onclick="setLang('sc')">简</button>
       <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
     </div>
-    <a href="contact.html" class="btn-cta">免費諮詢</a>
+    <a href="contact.html" class="btn-primary btn-nav-cta">免費諮詢</a>
   </div>
 </nav>
 
-<div class="about-hero">
-  <img class="about-hero-img" src="about-hero.jpg" alt="About Majestic">
-  <div class="about-hero-grad"></div>
-  <div class="about-hero-txt">
-    <div style="font-size:11px;letter-spacing:3px;color:#c9a84c;font-weight:600;margin-bottom:18px">ABOUT US</div>
-    <h1 style="font-family:'Noto Serif TC',serif;font-size:52px;font-weight:700;color:#1a2744;line-height:1.15;margin-bottom:12px">&#38364;&#26044;&#25105;&#20497;</h1>
-    <div style="width:36px;height:3px;background:#c9a84c;margin-bottom:18px"></div>
-    <h2 style="font-family:'Noto Serif TC',serif;font-size:19px;font-weight:500;color:#1a2744;margin-bottom:20px">&#23560;&#26989;&#35215;&#21000;&#12539;&#25104;&#23601;&#26410;&#20358;</h2>
-    <p style="font-size:14px;color:#4a5568;line-height:1.9;max-width:400px">Majestic &#33緻;&#21147;&#28858;&#23458;&#25143;&#21450;&#23478;&#24237;&#25552;&#20379;&#23560;&#26989;&#30340;&#25945;&#32946;&#12289;&#32077;&#28385;&#30330;&#23637;&#21450;&#36523;&#20998;&#35215;&#21000;&#24314;&#35696;&#65292;&#32080;&#21512;&#39321;&#28207;&#33287;&#33521;&#22283;&#36039;&#28304;&#65292;&#21327;&#21161;&#24744;&#22312;&#19981;&#26377;&#35722;&#21270;&#30340;&#19990;&#30028;&#20013;&#65292;&#20316;&#20986;&#26356;&#26126;&#26234;&#30340;&#36984;&#25976;&#65292;&#38283;&#21019;&#26356;&#22810;&#21487;&#33021;&#65292;&#25104;&#23601;&#26356;&#29702;&#24819;&#30340;&#26410;&#20358;&#12290;</p>
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-content">
+    <div class="label" data-key="hero_label">ABOUT US</div>
+    <h1 data-key="hero_h1">關於我們</h1>
+    <p data-key="hero_sub">以專業與誠信，協助專業人士及家庭<br>建立更清晰的未來發展藍圖</p>
   </div>
 </div>
 
-<div class="sec bg-off tc">
-  <div class="sec-label">OUR MISSION</div>
-  <h2 class="sec-title">&#25105;&#20497;&#30340;&#29702;&#24565;</h2>
-  <div class="gold-line"></div>
-  <p style="font-size:14px;color:#4a5568;line-height:1.9;max-width:700px;margin:0 auto 48px">&#27599;&#20491;&#23478;&#24237;&#37117;&#20540;&#24471;&#64021;&#26377;&#26356;&#28165;&#26131;&#30340;&#26410;&#20358;&#35215;&#21000;&#12290;&#28961;&#35542;&#26159;&#23376;&#22899;&#25945;&#32946;&#12289;&#20491;&#20154;&#36914;&#20462;&#12289;&#36523;&#20998;&#23433;&#25490;&#25110;&#38263;&#36960;&#30330;&#23637;&#65292;&#25105;&#20497;&#30456;&#20ชา;&#23560;&#26989;&#24314;&#35696;&#33021;&#22816;&#24112;&#21161;&#23458;&#25143;&#20316;&#20986;&#26356;&#26126;&#26234;&#30340;&#36984;&#25976;&#12290;</p>
-  <div class="g4" style="max-width:1100px;margin:0 auto">
-    <div style="text-align:center;padding:16px"><div style="font-size:36px;margin-bottom:12px">&#128100;</div><h3 style="font-size:14px;font-weight:700;color:#1a2744;margin-bottom:8px">&#21069;&#39321;&#28207;&#37504;&#34892;&#31649;&#29702;&#23652;&#32076;&#26597;</h3><p style="font-size:12.5px;color:#718096;line-height:1.7">&#22810;&#24180;&#26381;&#21153;&#39640;&#36039;&#29986;&#21450;&#23560;&#26989;&#20154;&#22763;&#23478;&#24237;&#65292;&#28145;&#35498;&#36001;&#23500;&#31649;&#29702;&#33287;&#39118;&#38570;&#35215;&#21000;&#20043;&#36947;</p></div>
-    <div style="text-align:center;padding:16px"><div style="font-size:36px;margin-bottom:12px">&#127891;</div><h3 style="font-size:14px;font-weight:700;color:#1a2744;margin-bottom:8px">&#25945;&#32946; &times; &#36523;&#20221; &times; &#36001;&#23500;&#35215;&#21000;</h3><p style="font-size:12.5px;color:#718096;line-height:1.7">&#32080;&#21512;&#25945;&#32946;&#12289;&#32077;&#28385;&#21450;&#36523;&#20998;&#35215;&#21000;&#65292;&#25552;&#20379;&#26356;&#20840;&#38754;&#30340;&#35215;&#21000;&#35222;&#35282;</p></div>
-    <div style="text-align:center;padding:16px"><div style="font-size:36px;margin-bottom:12px">&#127758;</div><h3 style="font-size:14px;font-weight:700;color:#1a2744;margin-bottom:8px">&#39321;&#28207;&#21450;&#33521;&#22283;&#36039;&#28304;&#32178;&#32097;</h3><p style="font-size:12.5px;color:#718096;line-height:1.7">&#36899;&#25509;&#26412;&#22320;&#21450;&#28023;&#22806;&#20339;&#36074;&#36039;&#28304;&#65292;&#25320;&#23637;&#26356;&#22810;&#20551;&#23416;&#33287;&#30330;&#23637;&#26426;&#26371;</p></div>
-    <div style="text-align:center;padding:16px"><div style="font-size:36px;margin-bottom:12px">&#129309;</div><h3 style="font-size:14px;font-weight:700;color:#1a2744;margin-bottom:8px">&#19968;&#23565;&#19968;&#39006;&#21839;&#26381;&#21153;</h3><p style="font-size:12.5px;color:#718096;line-height:1.7">&#28145;&#20837;&#20102;&#35299;&#20491;&#20154;&#21450;&#23478;&#24237;&#38656;&#35201;&#65292;&#37327;&#36523;&#21046;&#23450;&#23560;&#23646;&#35215;&#21000;&#26041;&#26696;</p></div>
+<!-- BELIEF -->
+<div class="section section-center bg-offwhite">
+  <div class="section-label" data-key="belief_label">OUR BELIEF</div>
+  <h2 class="section-title" data-key="belief_title">我們的信念</h2>
+  <div class="divider-gold"></div>
+  <div class="cards-4" style="max-width:1000px;margin:0 auto">
+    <div style="text-align:center;padding:20px">
+      <div style="width:64px;height:64px;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px">
+        <svg viewBox="0 0 24 24" style="width:28px;height:28px;fill:var(--gold)"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+      </div>
+      <h3 style="font-size:15px;font-weight:700;color:var(--navy);margin-bottom:8px" data-key="b0_t">專業</h3>
+      <p style="font-size:12.5px;color:var(--text-light);line-height:1.7" data-key="b0_p">結合教育、職涯、身份及投資領域的專業知識，提供整合性解決方案</p>
+    </div>
+    <div style="text-align:center;padding:20px">
+      <div style="width:64px;height:64px;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px">
+        <svg viewBox="0 0 24 24" style="width:28px;height:28px;fill:var(--gold)"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+      </div>
+      <h3 style="font-size:15px;font-weight:700;color:var(--navy);margin-bottom:8px" data-key="b1_t">誠信</h3>
+      <p style="font-size:12.5px;color:var(--text-light);line-height:1.7" data-key="b1_p">以誠信為本，堅守專業操守，為客戶提供客觀中立的建議與服務</p>
+    </div>
+    <div style="text-align:center;padding:20px">
+      <div style="width:64px;height:64px;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px">
+        <svg viewBox="0 0 24 24" style="width:28px;height:28px;fill:var(--gold)"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+      </div>
+      <h3 style="font-size:15px;font-weight:700;color:var(--navy);margin-bottom:8px" data-key="b2_t">以人為本</h3>
+      <p style="font-size:12.5px;color:var(--text-light);line-height:1.7" data-key="b2_p">深入了解客戶的目標與需求，量身打造最合適的規劃方案</p>
+    </div>
+    <div style="text-align:center;padding:20px">
+      <div style="width:64px;height:64px;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px">
+        <svg viewBox="0 0 24 24" style="width:28px;height:28px;fill:var(--gold)"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+      </div>
+      <h3 style="font-size:15px;font-weight:700;color:var(--navy);margin-bottom:8px" data-key="b3_t">全球視野</h3>
+      <p style="font-size:12.5px;color:var(--text-light);line-height:1.7" data-key="b3_p">連結香港與全球優質資源，助您把握國際機遇，開拓更大可能</p>
+    </div>
   </div>
 </div>
 
-<div class="sec">
-  <div class="g2" style="max-width:1100px;margin:0 auto">
+<!-- FOUNDER -->
+<div class="section" style="padding:72px 80px">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;max-width:1100px;margin:0 auto">
     <div>
-      <div class="sec-label">WHO WE SERVE</div>
-      <h2 class="sec-title" style="text-align:left">&#25105;&#20497;&#26381;&#21153;&#30340;&#23458;&#25143;</h2>
-      <div class="gold-line left"></div>
-      <ul style="list-style:none;display:flex;flex-direction:column;gap:14px">
-        <li style="display:flex;align-items:center;gap:12px;font-size:14px;color:#1a2744"><span style="color:#c9a84c;font-size:18px">&#10022;</span>高才通及計劃來港家庭</li><li style="display:flex;align-items:center;gap:12px;font-size:14px;color:#1a2744"><span style="color:#c9a84c;font-size:18px">&#10022;</span>專業人士及企業管理層</li><li style="display:flex;align-items:center;gap:12px;font-size:14px;color:#1a2744"><span style="color:#c9a84c;font-size:18px">&#10022;</span>香港及海外學生及家長</li><li style="display:flex;align-items:center;gap:12px;font-size:14px;color:#1a2744"><span style="color:#c9a84c;font-size:18px">&#10022;</span>希望在英國升學或進修人士</li><li style="display:flex;align-items:center;gap:12px;font-size:14px;color:#1a2744"><span style="color:#c9a84c;font-size:18px">&#10022;</span>MBA / DBA 及高級管理課程申請人</li><li style="display:flex;align-items:center;gap:12px;font-size:14px;color:#1a2744"><span style="color:#c9a84c;font-size:18px">&#10022;</span>有意進行身分規劃及資產配置人士</li>
+      <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80" alt="Founder" style="width:100%;border-radius:8px;box-shadow:0 8px 40px rgba(26,39,68,.15)">
+    </div>
+    <div>
+      <div class="section-label" data-key="founder_label">FOUNDER STORY</div>
+      <h2 class="section-title" style="text-align:left" data-key="founder_title">創辦人背景</h2>
+      <div class="divider-gold left"></div>
+      <p style="font-size:14px;color:var(--text-mid);line-height:1.9;margin-bottom:16px" data-key="founder_p1">擁有超過25年銀行及金融行業的豐富經驗，曾於多家國際銀行擔任管理層職位，專注於財富管理、投資顧問及高淨值客戶服務。</p>
+      <p style="font-size:14px;color:var(--text-mid);line-height:1.9;margin-bottom:24px" data-key="founder_p2">深信教育與規劃能改變人生，因而創立 Majestic，致力為專業人士及家庭提供一站式的教育、職涯、身份及投資規劃服務，陪伴客戶實現更高遠的目標。</p>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:28px">
+        <li style="display:flex;align-items:center;gap:10px;font-size:13.5px;color:var(--text-dark)"><span style="color:var(--gold)">✦</span><span data-key="f_li0">25+ 年銀行及金融行業經驗</span></li>
+        <li style="display:flex;align-items:center;gap:10px;font-size:13.5px;color:var(--text-dark)"><span style="color:var(--gold)">✦</span><span data-key="f_li1">曾任國際銀行管理層</span></li>
+        <li style="display:flex;align-items:center;gap:10px;font-size:13.5px;color:var(--text-dark)"><span style="color:var(--gold)">✦</span><span data-key="f_li2">專注高淨值客戶及財富管理</span></li>
+        <li style="display:flex;align-items:center;gap:10px;font-size:13.5px;color:var(--text-dark)"><span style="color:var(--gold)">✦</span><span data-key="f_li3">熟悉香港及海外教育與移民政策</span></li>
       </ul>
+      <a href="contact.html" class="btn-gold-sm" data-key="founder_btn">了解更多關於我們的故事 →</a>
     </div>
-    <div><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=700&q=80" alt="Consultation" style="width:100%;height:400px;object-fit:cover;border-radius:12px;box-shadow:0 8px 40px rgba(26,39,68,.12)"></div>
   </div>
 </div>
 
-<div style="background:#1a2744;padding:64px 80px">
-  <div class="g2" style="max-width:1100px;margin:0 auto;align-items:center">
+<!-- STATS -->
+<div style="background:var(--navy);padding:50px 80px">
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:40px;max-width:1000px;margin:0 auto;text-align:center">
     <div>
-      <div style="font-size:60px;color:#c9a84c;line-height:.8;margin-bottom:18px;font-family:Georgia,serif">&ldquo;</div>
-      <p style="font-family:'Noto Serif TC',serif;font-size:22px;font-weight:600;color:#fff;line-height:1.7">&#30495;&#27491;&#30340;&#35215;&#21000;&#65292;&#20006;&#19981;&#21482;&#26159;&#35299;&#20915;&#20170;&#22825;&#30340;&#21839;&#39064;&#65292;&#32780;&#26159;&#28858;<span style="color:#c9a84c">&#26410;&#20358;&#21019;&#36896;&#26356;&#22810;&#21487;&#33021;</span>&#12290;</p>
+      <div style="font-family:'Noto Serif TC',serif;font-size:36px;font-weight:700;color:var(--gold)" data-key="s0_n">10,000+</div>
+      <div style="font-size:13px;color:rgba(255,255,255,.7);margin-top:6px" data-key="s0_l">服務客戶及家庭</div>
     </div>
-    <div><p style="font-size:14px;color:rgba(255,255,255,.8);line-height:1.9">&#25105;&#20497;&#24076;&#26395;&#25104;&#28858;&#24744;&#20540;&#24471;&#20449;&#36180;&#30340;&#38271;&#36960;&#35215;&#21000;&#22030;&#20231;&#65292;&#38922;&#20234;&#24744;&#33287;&#23478;&#20154;&#36234;&#24471;&#26356;&#36960;&#12289;&#30475;&#24471;&#26356;&#39640;&#12289;&#27963;&#20986;&#26356;&#35513;&#30424;&#30340;&#20154;&#29983;&#12290;</p></div>
+    <div>
+      <div style="font-family:'Noto Serif TC',serif;font-size:36px;font-weight:700;color:var(--gold)" data-key="s1_n">5,000+</div>
+      <div style="font-size:13px;color:rgba(255,255,255,.7);margin-top:6px" data-key="s1_l">成功升學案例</div>
+    </div>
+    <div>
+      <div style="font-family:'Noto Serif TC',serif;font-size:36px;font-weight:700;color:var(--gold)" data-key="s2_n">30+</div>
+      <div style="font-size:13px;color:rgba(255,255,255,.7);margin-top:6px" data-key="s2_l">全球合作夥伴及院校</div>
+    </div>
+    <div>
+      <div style="font-family:'Noto Serif TC',serif;font-size:36px;font-weight:700;color:var(--gold)" data-key="s3_n">25+ 年</div>
+      <div style="font-size:13px;color:rgba(255,255,255,.7);margin-top:6px" data-key="s3_l">專業經驗與信賴</div>
+    </div>
   </div>
 </div>
 
-<div class="cta-bar">
-  <div><h2>&#33287;&#25105;&#20497;&#19968;&#36215;&#35215;&#21000;&#24744;&#30340;&#26410;&#20358;</h2><p>&#31435;&#21363;&#39044;&#32422;&#20659;&#36153;&#35443;&#35506;&#65292;&#35046;&#23560;&#26989;&#39006;&#21839;&#28858;&#24744;&#37327;&#36523;&#35373;&#35336;&#26041;&#26696;</p></div>
-  <a href="contact.html" class="btn-gold" style="padding:12px 24px;font-size:14px">&#39044;&#32422;&#20659;&#36153;&#35443;&#35506;</a>
+<!-- JOURNEY -->
+<div class="section section-center">
+  <div class="section-label" data-key="journey_label">OUR JOURNEY</div>
+  <h2 class="section-title" data-key="journey_title">我們的發展歷程</h2>
+  <div class="divider-gold"></div>
+  <div style="display:flex;justify-content:center;gap:0;max-width:1100px;margin:0 auto;position:relative">
+    <div style="position:absolute;top:28px;left:10%;right:10%;height:2px;background:linear-gradient(to right,var(--gold),var(--gold));opacity:.3"></div>
+    <div style="flex:1;text-align:center;padding:0 16px" data-key="j0">
+      <div style="font-size:18px;font-weight:700;color:var(--gold);margin-bottom:12px">2000</div>
+      <div style="width:56px;height:56px;border-radius:50%;border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;background:var(--white)">🏛️</div>
+      <h4 style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:6px">專業起步</h4>
+      <p style="font-size:11.5px;color:var(--text-light);line-height:1.6">於國際銀行開展職業生涯，專注財富管理及客戶服務</p>
+    </div>
+    <div style="flex:1;text-align:center;padding:0 16px">
+      <div style="font-size:18px;font-weight:700;color:var(--gold);margin-bottom:12px">2010</div>
+      <div style="width:56px;height:56px;border-radius:50%;border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;background:var(--white)">👥</div>
+      <h4 style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:6px">管理經驗</h4>
+      <p style="font-size:11.5px;color:var(--text-light);line-height:1.6">晉升管理層，帶領團隊服務高淨值客戶</p>
+    </div>
+    <div style="flex:1;text-align:center;padding:0 16px">
+      <div style="font-size:18px;font-weight:700;color:var(--gold);margin-bottom:12px">2015</div>
+      <div style="width:56px;height:56px;border-radius:50%;border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;background:var(--white)">🌏</div>
+      <h4 style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:6px">國際視野</h4>
+      <p style="font-size:11.5px;color:var(--text-light);line-height:1.6">深入了解海外市場，拓展國際合作網絡</p>
+    </div>
+    <div style="flex:1;text-align:center;padding:0 16px">
+      <div style="font-size:18px;font-weight:700;color:var(--gold);margin-bottom:12px">2020</div>
+      <div style="width:56px;height:56px;border-radius:50%;border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;background:var(--white)">🏆</div>
+      <h4 style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:6px">創立 Majestic</h4>
+      <p style="font-size:11.5px;color:var(--text-light);line-height:1.6">結合教育與財富管理經驗，成立顧問公司</p>
+    </div>
+    <div style="flex:1;text-align:center;padding:0 16px">
+      <div style="font-size:18px;font-weight:700;color:var(--gold);margin-bottom:12px">至今</div>
+      <div style="width:56px;height:56px;border-radius:50%;border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;background:var(--white)">📈</div>
+      <h4 style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:6px">持續成長</h4>
+      <p style="font-size:11.5px;color:var(--text-light);line-height:1.6">持續擴展服務範疇，陪伴更多客戶實現夢想</p>
+    </div>
+  </div>
 </div>
 
+<div class="cta-banner">
+  <div>
+    <h2 data-key="cta_h">與我們一起規劃您的未來</h2>
+    <p data-key="cta_p">立即預約免費諮詢，讓專業顧問為您量身設計方案</p>
+  </div>
+  <div class="cta-banner-right">
+    <button class="btn-wa" data-key="cta_wa">💬 WhatsApp 查詢</button>
+    <a href="contact.html" class="btn-gold" style="padding:11px 22px;font-size:13px" data-key="cta_book">預約免費諮詢</a>
+  </div>
+</div>
 <footer>
   <div class="footer-grid">
-    <div>
-      <img src="logo.png" alt="Majestic" style="height:44px;filter:brightness(0) invert(1);margin-bottom:10px">
-      <p class="footer-tag">以專業與誠信，協助專業人士及家庭<br>建立更清晰的未來發展藍圖</p>
-      <div class="social-row">
-        <a href="https://www.facebook.com/Magesticeduvisa/" target="_blank" class="sb" title="Facebook">f</a>
-        <a href="https://wa.me/85253384136" target="_blank" class="sb" style="background:#25D366;border-color:#25D366;color:#fff" title="WhatsApp">💬</a>
-        <a href="https://www.instagram.com/majestic_educationhk/" target="_blank" class="sb" style="background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);border:none;color:#fff" title="Instagram">ig</a>
-        <a href="javascript:void(0)" onclick="document.getElementById('wc-modal').style.display='flex'" class="sb" style="background:#07C160;border-color:#07C160;color:#fff" title="WeChat">微</a>
+    <div class="footer-logo-col">
+      <img src="logo.png" alt="Majestic" style="height:48px;width:auto;filter:brightness(0) invert(1);margin-bottom:12px;">
+      <p class="footer-tagline" data-key="footer_tag">以專業與誠信，協助專業人士及家庭<br>建立更清晰的未來發展藍圖</p>
+      <div class="social-links">
+        <div class="social-btn">f</div>
+        <div class="social-btn">in</div>
+        <div class="social-btn">ig</div>
+        <div class="social-btn">yt</div>
       </div>
     </div>
     <div class="footer-col">
-      <h4 data-fk="fq">快捷連結</h4>
+      <h4 data-key="footer_quick">快捷連結</h4>
       <ul>
-        <li><a href="about.html" data-fl="0">關於我們</a></li>
-        <li><a href="hk-education.html" data-fl="1">香港升學</a></li>
-        <li><a href="uk-education.html" data-fl="2">英國升學</a></li>
-        <li><a href="executive-education.html" data-fl="3">在職高端教育</a></li>
-        <li><a href="contact.html" data-fl="4">聯絡我們</a></li>
+        <li><a href="about.html" data-key="fnav0">關於我們</a></li>
+        <li><a href="hk-education.html" data-key="fnav1">香港升學</a></li>
+        <li><a href="uk-education.html" data-key="fnav2">英國升學</a></li>
+        <li><a href="executive-education.html" data-key="fnav3">在職高端教育</a></li>
+        <li><a href="contact.html" data-key="fnav4">聯絡我們</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4 data-fk="fi">身份及投資規劃</h4>
+      <h4 data-key="footer_id">身份及投資規劃</h4>
       <ul>
-        <li><a href="success-stories.html" data-fl2="0">成功案例</a></li>
-        <li><a href="insights.html" data-fl2="1">專欄文章</a></li>
-        <li><a href="contact.html" data-fl2="2">聯絡我們</a></li>
+        <li><a href="success-stories.html" data-key="fnav5">成功案例</a></li>
+        <li><a href="insights.html" data-key="fnav6">專欄文章</a></li>
+        <li><a href="contact.html" data-key="fnav7">聯絡我們</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4 data-fk="fc">聯絡資訊</h4>
+      <h4 data-key="footer_contact">聯絡資訊</h4>
       <ul>
-        <li><a href="tel:+852 5338 4136">📞 +852 5338 4136</a></li>
-        <li><a href="tel:+852 3741 1209">📞 +852 3741 1209</a></li>
-        <li><a href="mailto:info@majestic-immigration.com">✉ info@majestic-immigration.com</a></li>
-        <li><a href="#">📍 RM 3805, 38/F ONE MIDTOWN, 11 Hoi Shing Rd, Tsuen Wan, Hong Kong</a></li>
-        <li><a href="#">📍 21 Tothill Street, Westminster, London SW1H 9LL</a></li>
+        <li><a href="#">📞 +852 1234 5678</a></li>
+        <li><a href="#">✉ info@majestic.com.hk</a></li>
+        <li><a href="#">📍 香港中環皇后大道中99號</a></li>
+        <li><a href="#">📍 21 Tothill St, Westminster, London</a></li>
       </ul>
     </div>
   </div>
-  <div class="footer-bot">
-    <span class="copy-text">© 2026 Majestic Education & Immigration Consultancy. All Rights Reserved.</span>
-    <div style="display:flex;gap:18px">
-      <a href="#" data-fk="priv">私隱政策</a>
-      <a href="#" data-fk="disc">免責聲明</a>
+  <div class="footer-bottom">
+    <span data-key="footer_copy">© 2026 Majestic Education & Immigration Consultancy. All Rights Reserved.</span>
+    <div class="footer-bottom-links">
+      <a href="#" data-key="footer_priv">私隱政策</a>
+      <a href="#" data-key="footer_disc">免責聲明</a>
     </div>
   </div>
 </footer>
-<a href="https://wa.me/85253384136" class="wa-float" target="_blank">💬</a>
-<div id="wc-modal" onclick="this.style.display='none'" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:99999;align-items:center;justify-content:center">
-  <div onclick="event.stopPropagation()" style="background:#fff;border-radius:16px;padding:32px;text-align:center;max-width:300px;width:90%">
-    <h3 style="font-size:17px;font-weight:700;color:#1a2744;margin-bottom:4px">WeChat 微信</h3>
-    <p style="font-size:12px;color:#718096;margin-bottom:14px">掃描二維碼加我為朋友</p>
-    <img src="wechat-qr.jpg" style="width:200px;height:200px;object-fit:contain;border-radius:8px;border:1px solid #e2ddd4">
-    <br><button onclick="document.getElementById('wc-modal').style.display='none'" style="margin-top:16px;padding:9px 26px;background:#07C160;color:#fff;border:none;border-radius:20px;cursor:pointer;font-size:13px;font-weight:600">關閉</button>
-  </div>
+<div class="whatsapp-float" onclick="window.open('https://wa.me/85212345678')">
+  <span style="color:white;font-size:26px">💬</span>
 </div>
 <script>
-const T={
-  tc:{nav:["首頁","關於我們","升學","在職高端教育","身份及投資","成功案例","洞察","聯絡我們"],cta:"免費諮詢",phone:"+852 5338 4136",ft:"以專業與誠信，協助專業人士及家庭<br>建立更清晰的未來發展藍圖",fq:"快捷連結",fi:"身份及投資規劃",fc:"聯絡資訊",fl:["關於我們","香港升學","英國升學","在職高端教育","聯絡我們"],fl2:["成功案例","專欄文章","聯絡我們"],copy:"© 2026 Majestic Education & Immigration Consultancy. All Rights Reserved.",priv:"私隱政策",disc:"免責聲明"},
-  sc:{nav:["首页","关于我们","升学","在职高端教育","身份及投资","成功案例","洞察","联系我们"],cta:"免费咨询",phone:"+852 5338 4136",ft:"以专业与诚信，协助专业人士及家庭<br>建立更清晰的未来发展蓝图",fq:"快捷链接",fi:"身份及投资规划",fc:"联系资讯",fl:["关于我们","香港升学","英国升学","在职高端教育","联系我们"],fl2:["成功案例","专栏文章","联系我们"],copy:"© 2026 Majestic Education & Immigration Consultancy. All Rights Reserved.",priv:"私隐政策",disc:"免责声明"},
-  en:{nav:["Home","About Us","Education","Executive Education","Identity & Investment","Success Stories","Insights","Contact"],cta:"Free Consultation",phone:"+852 5338 4136",ft:"With professionalism and integrity, helping professionals<br>and families build a clearer roadmap for their future",fq:"Quick Links",fi:"Identity & Investment",fc:"Contact Info",fl:["About Us","HK Education","UK Education","Executive Education","Contact Us"],fl2:["Success Stories","Articles","Contact Us"],copy:"© 2026 Majestic Education & Immigration Consultancy. All Rights Reserved.",priv:"Privacy Policy",disc:"Disclaimer"}
+const T = {
+  tc:{
+    nav:["首頁","關於我們","香港升學","英國升學","在職高端教育","身份及投資","成功案例","洞察","聯絡我們"],
+    cta:"免費諮詢",phone:"+852 1234 5678",
+    footer_tag:"以專業與誠信，協助專業人士及家庭<br>建立更清晰的未來發展藍圖",
+    footer_quick:"快捷連結",footer_id:"身份及投資規劃",footer_contact:"聯絡資訊",
+    fnav:["關於我們","香港升學","英國升學","在職高端教育","聯絡我們","成功案例","專欄文章","聯絡我們"],
+    footer_copy:"© 2026 Majestic Education & Immigration Consultancy. All Rights Reserved.",
+    footer_priv:"私隱政策",footer_disc:"免責聲明"
+  },
+  sc:{
+    nav:["首页","关于我们","香港升学","英国升学","在职高端教育","身份及投资","成功案例","洞察","联系我们"],
+    cta:"免费咨询",phone:"+852 1234 5678",
+    footer_tag:"以专业与诚信，协助专业人士及家庭<br>建立更清晰的未来发展蓝图",
+    footer_quick:"快捷链接",footer_id:"身份及投资规划",footer_contact:"联系资讯",
+    fnav:["关于我们","香港升学","英国升学","在职高端教育","联系我们","成功案例","专栏文章","联系我们"],
+    footer_copy:"© 2026 Majestic Education & Immigration Consultancy. All Rights Reserved.",
+    footer_priv:"私隐政策",footer_disc:"免责声明"
+  },
+  en:{
+    nav:["Home","About Us","HK Education","UK Education","Executive Education","Identity & Investment","Success Stories","Insights","Contact"],
+    cta:"Free Consultation",phone:"+852 1234 5678",
+    footer_tag:"With professionalism and integrity, helping professionals<br>and families build a clearer roadmap for their future",
+    footer_quick:"Quick Links",footer_id:"Identity & Investment",footer_contact:"Contact Info",
+    fnav:["About Us","HK Education","UK Education","Executive Education","Contact Us","Success Stories","Articles","Contact Us"],
+    footer_copy:"© 2026 Majestic Education & Immigration Consultancy. All Rights Reserved.",
+    footer_priv:"Privacy Policy",footer_disc:"Disclaimer"
+  }
 };
-let lang=localStorage.getItem("mlang")||"tc";
-function setLang(l){
-  lang=l;localStorage.setItem("mlang",l);
-  document.querySelectorAll(".lang-btn").forEach(b=>b.classList.toggle("active",b.dataset.lang===l));
-  document.body.className=l==="en"?"lang-en":l==="sc"?"lang-sc":"";
-  const t=T[l];
-  const nl=document.querySelectorAll(".nav-links a:not(.sub-link)");
-  const labels=[0,1,2,3,4,5,6,7];
-  let ni=0;
-  nl.forEach(a=>{if(!a.closest(".nav-dropdown-menu")){a.textContent=t.nav[ni]||a.textContent;ni++;}}); 
-  const dd=document.querySelector(".nav-dropdown-toggle");
-  if(dd)dd.innerHTML=(l==="en"?"Education":l==="sc"?"升学":"升學")+" ▾";
-  document.querySelectorAll(".btn-cta").forEach(b=>b.textContent=t.cta);
-  document.querySelectorAll(".nav-phone").forEach(b=>b.textContent="📞 "+t.phone);
-  const ft=document.querySelector(".footer-tag");if(ft)ft.innerHTML=t.ft;
-  const fq=document.querySelector("[data-fk='fq']");if(fq)fq.textContent=t.fq;
-  const fi=document.querySelector("[data-fk='fi']");if(fi)fi.textContent=t.fi;
-  const fc=document.querySelector("[data-fk='fc']");if(fc)fc.textContent=t.fc;
-  document.querySelectorAll("[data-fl]").forEach(a=>{const i=parseInt(a.dataset.fl);if(t.fl[i])a.textContent=t.fl[i];});
-  document.querySelectorAll("[data-fl2]").forEach(a=>{const i=parseInt(a.dataset.fl2);if(t.fl2[i])a.textContent=t.fl2[i];});
-  document.querySelectorAll(".copy-text").forEach(e=>e.textContent=t.copy);
-  document.querySelectorAll("[data-fk='priv']").forEach(e=>e.textContent=t.priv);
-  document.querySelectorAll("[data-fk='disc']").forEach(e=>e.textContent=t.disc);
-  if(typeof updateContent==="function")updateContent(l);
+
+let currentLang = localStorage.getItem("majestic_lang")||"tc";
+
+function setLang(lang){
+  currentLang=lang;
+  localStorage.setItem("majestic_lang",lang);
+  document.querySelectorAll(".lang-btn").forEach(b=>b.classList.toggle("active",b.dataset.lang===lang));
+  document.body.className=lang==="en"?"lang-en":lang==="sc"?"lang-sc":"";
+  const t=T[lang];
+  // Nav
+  document.querySelectorAll("[data-key^='nav']").forEach(el=>{
+    const i=parseInt(el.dataset.key.replace("nav",""));
+    if(t.nav[i]!==undefined) el.textContent=t.nav[i];
+  });
+  document.querySelector(".btn-nav-cta").textContent=t.cta;
+  document.querySelector(".nav-phone").textContent="📞 "+t.phone;
+  // Footer
+  const ftag=document.querySelector("[data-key='footer_tag']");
+  if(ftag) ftag.innerHTML=t.footer_tag;
+  const fq=document.querySelector("[data-key='footer_quick']");
+  if(fq) fq.textContent=t.footer_quick;
+  const fi=document.querySelector("[data-key='footer_id']");
+  if(fi) fi.textContent=t.footer_id;
+  const fc=document.querySelector("[data-key='footer_contact']");
+  if(fc) fc.textContent=t.footer_contact;
+  document.querySelectorAll("[data-key^='fnav']").forEach(el=>{
+    const i=parseInt(el.dataset.key.replace("fnav",""));
+    if(t.fnav[i]!==undefined) el.textContent=t.fnav[i];
+  });
+  const fcp=document.querySelector("[data-key='footer_copy']");
+  if(fcp) fcp.textContent=t.footer_copy;
+  const fp=document.querySelector("[data-key='footer_priv']");
+  if(fp) fp.textContent=t.footer_priv;
+  const fd=document.querySelector("[data-key='footer_disc']");
+  if(fd) fd.textContent=t.footer_disc;
+  // Page-specific
+  if(typeof updateContent==="function") updateContent(lang);
 }
+
 document.addEventListener("DOMContentLoaded",()=>{
-  document.querySelectorAll(".faq-item").forEach(item=>item.querySelector(".faq-q").addEventListener("click",()=>item.classList.toggle("open")));
-  document.addEventListener("click",e=>{if(!e.target.closest(".nav-dropdown"))document.querySelectorAll(".nav-dropdown-menu").forEach(m=>m.classList.remove("open"));});
-  setLang(lang);
+  // FAQ
+  document.querySelectorAll(".faq-item").forEach(item=>{
+    item.querySelector(".faq-q").addEventListener("click",()=>item.classList.toggle("open"));
+  });
+  setLang(currentLang);
 });
-function updateContent(l){}</script>
+</script>
 </body>
 </html>
