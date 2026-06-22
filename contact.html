@@ -3,107 +3,129 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>聯絡我們 | Majestic Education & Immigration</title>
+<title>聯絡我們 | Majestic Education &amp; Immigration</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700&family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--navy:#1a2744;--navy-deep:#0f1a30;--gold:#c9a84c;--white:#fff;--off-white:#f8f6f1;--text-dark:#1a2744;--text-mid:#4a5568;--text-light:#718096;--border:#e2ddd4}
-body{font-family:"Noto Sans TC",sans-serif;color:var(--text-dark);background:var(--white);overflow-x:hidden}
-body.lang-en{font-family:"Segoe UI",Arial,sans-serif}
-body.lang-sc{font-family:"Noto Sans SC",sans-serif}
-nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:1px solid var(--border);padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:70px;box-shadow:0 2px 12px rgba(26,39,68,.06)}
-.logo{display:flex;align-items:center;text-decoration:none}
-.nav-links{display:flex;gap:20px;list-style:none}
-.nav-links a{text-decoration:none;font-size:12.5px;font-weight:500;color:var(--text-mid);white-space:nowrap;transition:color .2s}
-.nav-links a:hover,.nav-links a.active{color:var(--navy)}
-.nav-links a.active{border-bottom:2px solid var(--gold);padding-bottom:2px}
-.nav-cta{display:flex;align-items:center;gap:12px}
-.nav-phone{font-size:12px;color:var(--text-mid);white-space:nowrap}
-.lang-switcher{display:flex;gap:3px;background:var(--off-white);border-radius:20px;padding:3px;border:1px solid var(--border)}
-.lang-btn{padding:4px 10px;border:none;background:transparent;font-size:11px;font-weight:600;color:var(--text-mid);cursor:pointer;border-radius:16px;transition:all .2s;font-family:inherit}
+:root{--navy:#1a2744;--navy-deep:#0f1a30;--gold:#c9a84c;--white:#fff;--off:#f8f6f1;--mid:#4a5568;--light:#718096;--border:#e2ddd4}
+body{font-family:'Noto Sans TC',sans-serif;color:var(--navy);background:var(--white);overflow-x:hidden}
+body.lang-en{font-family:'Segoe UI',Arial,sans-serif}
+body.lang-sc{font-family:'Noto Sans SC',sans-serif}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:1000;background:var(--white);border-bottom:1px solid var(--border);height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 48px;box-shadow:0 2px 12px rgba(26,39,68,.06)}
+.logo img{height:48px;width:auto;display:block}
+.nav-links{display:flex;gap:24px;list-style:none;align-items:center}
+.nav-links a{font-size:13px;font-weight:500;color:var(--mid);text-decoration:none;white-space:nowrap;transition:color .2s}
+.nav-links a:hover{color:var(--navy)}
+.nav-dropdown{position:relative}
+.nav-dropdown-menu{display:none;position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%);background:var(--white);border:1px solid var(--border);border-radius:8px;box-shadow:0 8px 28px rgba(26,39,68,.12);min-width:160px;z-index:9999;overflow:hidden}
+.nav-dropdown-menu.open{display:block}
+.nav-dropdown-menu a{display:block;padding:12px 20px;font-size:13px;color:var(--navy);text-decoration:none;white-space:nowrap}
+.nav-dropdown-menu a:hover{background:var(--off)}
+.nav-right{display:flex;align-items:center;gap:12px}
+.nav-phone{font-size:12.5px;color:var(--mid);white-space:nowrap}
+.lang-sw{display:flex;gap:2px;background:var(--off);border-radius:20px;padding:3px;border:1px solid var(--border)}
+.lang-btn{padding:4px 10px;border:none;background:transparent;font-size:11px;font-weight:600;color:var(--mid);cursor:pointer;border-radius:16px;transition:all .2s;font-family:inherit}
 .lang-btn.active{background:var(--navy);color:var(--white)}
-.btn-primary{background:var(--navy);color:var(--white);padding:9px 18px;border:none;border-radius:4px;font-size:12.5px;font-family:inherit;font-weight:500;cursor:pointer;white-space:nowrap;text-decoration:none;display:inline-block;transition:background .2s}
-.btn-primary:hover{background:#253366}
-.btn-gold{background:var(--gold);color:var(--white);padding:13px 28px;border:none;border-radius:4px;font-size:15px;font-family:inherit;font-weight:500;cursor:pointer;text-decoration:none;display:inline-block;transition:background .2s}
-.btn-gold:hover{background:#b8973e}
-.btn-gold-sm{background:var(--gold);color:var(--white);padding:9px 20px;border:none;border-radius:4px;font-size:13px;font-family:inherit;font-weight:500;cursor:pointer;text-decoration:none;display:inline-block}
-.btn-outline{border:1.5px solid var(--navy);color:var(--navy);padding:9px 20px;border-radius:4px;font-size:13px;font-family:inherit;font-weight:500;background:transparent;cursor:pointer;text-decoration:none;display:inline-block}
-.btn-outline-white{border:1.5px solid rgba(255,255,255,0.7);color:var(--white);padding:13px 28px;border-radius:4px;font-size:15px;font-family:inherit;font-weight:500;cursor:pointer;text-decoration:none;display:inline-block;background:transparent}
-/* HERO */
-.page-hero{position:relative;min-height:420px;display:flex;align-items:center;overflow:hidden;background:var(--navy-deep)}
-.page-hero-bg{position:absolute;inset:0;background:url("hero-bg.png") center/cover no-repeat}
-.page-hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(to right,rgba(10,20,45,0.82) 40%,rgba(10,20,45,0.4) 100%)}
-.page-hero-content{position:relative;z-index:2;padding:60px 80px;max-width:620px}
-.page-hero-content .label{color:var(--gold);font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:600;margin-bottom:14px}
-.page-hero-content h1{font-family:"Noto Serif TC",serif;font-size:38px;font-weight:700;color:var(--white);line-height:1.3;margin-bottom:16px}
-body.lang-en .page-hero-content h1{font-family:Georgia,serif;font-size:32px}
-.page-hero-content p{color:rgba(255,255,255,.82);font-size:15px;line-height:1.8}
+.btn-cta{background:var(--navy);color:var(--white);padding:9px 18px;border:none;border-radius:4px;font-size:13px;font-family:inherit;font-weight:500;cursor:pointer;text-decoration:none;white-space:nowrap}
+.btn-cta:hover{background:#253366}
+.btn-gold{background:var(--gold);color:var(--white);padding:12px 26px;border:none;border-radius:4px;font-size:14px;font-family:inherit;font-weight:600;cursor:pointer;text-decoration:none;display:inline-block}
+.btn-outline-w{border:1.5px solid rgba(255,255,255,.75);color:var(--white);padding:12px 26px;border-radius:4px;font-size:14px;font-family:inherit;cursor:pointer;text-decoration:none;display:inline-block;background:transparent}
+
+/* PAGE HERO (inner pages) */
+.page-hero{position:relative;min-height:400px;display:flex;align-items:center;overflow:hidden;background:var(--navy-deep)}
+.page-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;pointer-events:none}
+.page-hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,rgba(10,20,45,.82) 40%,rgba(10,20,45,.4) 100%);pointer-events:none}
+.page-hero-text{position:relative;z-index:2;padding:60px 80px;max-width:640px}
+.page-hero-label{font-size:11px;letter-spacing:3px;color:var(--gold);font-weight:600;margin-bottom:14px;text-transform:uppercase}
+.page-hero-text h1{font-family:'Noto Serif TC',serif;font-size:38px;font-weight:700;color:var(--white);line-height:1.3;margin-bottom:14px}
+.page-hero-text p{font-size:14px;color:rgba(255,255,255,.82);line-height:1.85}
+
 /* SECTIONS */
-.section{padding:72px 80px}
-.section-sm{padding:48px 80px}
-.section-center{text-align:center}
-.section-label{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:8px}
-.section-title{font-family:"Noto Serif TC",serif;font-size:30px;font-weight:700;color:var(--navy);margin-bottom:10px}
-body.lang-en .section-title{font-family:Georgia,serif}
-.divider-gold{width:40px;height:2px;background:var(--gold);margin:0 auto 36px}
-.divider-gold.left{margin:0 0 36px}
-.bg-offwhite{background:var(--off-white)}
+.sec{padding:72px 80px}
+.sec-sm{padding:48px 80px}
+.bg-off{background:var(--off)}
 .bg-navy{background:var(--navy)}
-/* CARDS */
-.cards-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.cards-4{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.cards-5{display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
+.tc{text-align:center}
+.sec-label{font-size:11px;letter-spacing:3px;color:var(--gold);font-weight:600;margin-bottom:8px;text-transform:uppercase}
+.sec-title{font-family:'Noto Serif TC',serif;font-size:30px;font-weight:700;color:var(--navy);margin-bottom:10px}
+body.lang-en .sec-title{font-family:Georgia,serif}
+.gold-line{width:40px;height:2px;background:var(--gold);margin:0 auto 36px}
+.gold-line.left{margin:0 0 36px}
+
+/* GRID */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.g5{display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
+
+/* CARD */
 .card{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:28px;transition:box-shadow .2s}
 .card:hover{box-shadow:0 6px 24px rgba(26,39,68,.1)}
+
 /* STEPS */
-.steps{display:flex;align-items:flex-start;gap:0;justify-content:center;flex-wrap:wrap}
-.step{text-align:center;flex:1;min-width:120px;padding:0 12px;position:relative}
-.step-circle{width:56px;height:56px;border-radius:50%;border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;background:var(--white)}
-.step-circle svg{width:24px;height:24px;fill:var(--gold)}
-.step-arrow{color:var(--gold);font-size:20px;padding-top:20px;flex-shrink:0}
-.step h4{font-size:13px;font-weight:700;color:var(--navy);margin-bottom:6px}
-.step p{font-size:11.5px;color:var(--text-light);line-height:1.6}
+.steps{display:flex;align-items:flex-start;justify-content:center;flex-wrap:wrap;gap:0}
+.step{flex:1;min-width:100px;text-align:center;padding:0 10px}
+.step-circle{width:52px;height:52px;border-radius:50%;border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;background:var(--white);font-size:20px}
 .step-num{font-size:10px;color:var(--gold);font-weight:700;letter-spacing:1px;margin-bottom:4px}
+.step h4{font-size:13px;font-weight:700;color:var(--navy);margin-bottom:5px}
+.step p{font-size:11.5px;color:var(--light);line-height:1.6}
+.step-arr{color:var(--gold);font-size:18px;padding-top:18px;flex-shrink:0}
+
 /* FAQ */
 .faq-item{border-bottom:1px solid var(--border);padding:18px 0;cursor:pointer}
 .faq-q{display:flex;justify-content:space-between;align-items:center;font-size:14px;font-weight:600;color:var(--navy)}
-.faq-plus{color:var(--gold);font-size:20px;font-weight:300}
-.faq-a{font-size:13px;color:var(--text-mid);line-height:1.7;margin-top:12px;display:none}
+.faq-plus{color:var(--gold);font-size:22px;font-weight:300;transition:transform .2s}
+.faq-a{font-size:13px;color:var(--mid);line-height:1.75;margin-top:12px;display:none}
 .faq-item.open .faq-a{display:block}
 .faq-item.open .faq-plus{transform:rotate(45deg)}
+
 /* CTA BANNER */
-.cta-banner{background:var(--navy-deep);padding:40px 80px;display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap}
-.cta-banner h2{font-family:"Noto Serif TC",serif;font-size:22px;font-weight:700;color:var(--white);margin-bottom:6px}
-body.lang-en .cta-banner h2{font-family:Georgia,serif}
-.cta-banner p{font-size:13px;color:rgba(255,255,255,.7)}
-.cta-banner-right{display:flex;gap:12px;flex-wrap:wrap}
-.btn-wa{background:#25D366;color:var(--white);padding:11px 20px;border-radius:4px;font-size:13px;font-weight:600;cursor:pointer;border:none;font-family:inherit;display:inline-flex;align-items:center;gap:8px}
-.btn-email-c{border:1.5px solid rgba(255,255,255,.4);color:var(--white);padding:11px 20px;border-radius:4px;font-size:13px;font-weight:600;background:transparent;cursor:pointer;font-family:inherit;display:inline-flex;align-items:center;gap:8px}
+.cta-bar{background:var(--navy-deep);padding:40px 80px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.cta-bar h2{font-family:'Noto Serif TC',serif;font-size:22px;font-weight:700;color:var(--white);margin-bottom:6px}
+body.lang-en .cta-bar h2{font-family:Georgia,serif}
+.cta-bar p{font-size:13px;color:rgba(255,255,255,.7)}
+.cta-bar-btns{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.btn-wa{background:#25D366;color:var(--white);padding:11px 20px;border-radius:4px;font-size:13px;font-weight:600;border:none;font-family:inherit;cursor:pointer;display:inline-flex;align-items:center;gap:6px;text-decoration:none}
+.btn-email-c{border:1.5px solid rgba(255,255,255,.4);color:var(--white);padding:11px 20px;border-radius:4px;font-size:13px;font-weight:600;background:transparent;border-radius:4px;font-family:inherit;cursor:pointer;display:inline-flex;align-items:center;gap:6px;text-decoration:none}
+
 /* FOOTER */
 footer{background:var(--navy);padding:50px 80px 28px}
-.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;margin-bottom:36px}
-.footer-tagline{font-size:12px;color:rgba(255,255,255,.5);line-height:1.8;margin-top:10px}
+.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;margin-bottom:36px}
+.footer-tag{font-size:12px;color:rgba(255,255,255,.5);line-height:1.8;margin-top:10px}
 .footer-col h4{font-size:11px;font-weight:700;color:var(--gold);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px}
 .footer-col ul{list-style:none}
-.footer-col ul li{margin-bottom:9px}
-.footer-col ul li a{font-size:12.5px;color:rgba(255,255,255,.6);text-decoration:none;transition:color .2s}
-.footer-col ul li a:hover{color:var(--gold)}
-.social-links{display:flex;gap:8px;margin-top:14px}
-.social-btn{width:32px;height:32px;border-radius:50%;border:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.6);font-size:13px;cursor:pointer;transition:all .2s}
-.social-btn:hover{border-color:var(--gold);color:var(--gold)}
-.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:18px;display:flex;justify-content:space-between;align-items:center;font-size:11.5px;color:rgba(255,255,255,.4)}
-.footer-bottom-links{display:flex;gap:18px}
-.footer-bottom-links a{color:rgba(255,255,255,.4);text-decoration:none}
-.footer-bottom-links a:hover{color:var(--gold)}
-.whatsapp-float{position:fixed;bottom:28px;right:28px;width:52px;height:52px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4);cursor:pointer;z-index:999}
+.footer-col li{margin-bottom:9px}
+.footer-col a{font-size:12.5px;color:rgba(255,255,255,.6);text-decoration:none;transition:color .2s}
+.footer-col a:hover{color:var(--gold)}
+.social-row{display:flex;gap:8px;margin-top:14px}
+.sb{width:32px;height:32px;border-radius:50%;border:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.65);font-size:13px;cursor:pointer;transition:all .2s;text-decoration:none}
+.sb:hover{border-color:var(--gold);color:var(--gold)}
+.footer-bot{border-top:1px solid rgba(255,255,255,.1);padding-top:18px;display:flex;justify-content:space-between;align-items:center;font-size:11.5px;color:rgba(255,255,255,.4)}
+.footer-bot a{color:rgba(255,255,255,.4);text-decoration:none}
+.footer-bot a:hover{color:var(--gold)}
+
+/* WA FLOAT */
+.wa-float{position:fixed;bottom:28px;right:28px;width:52px;height:52px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4);cursor:pointer;z-index:9998;font-size:24px;text-decoration:none}
+
 /* RESPONSIVE */
-@media(max-width:900px){
+@media(max-width:960px){
   nav{padding:0 20px}
   .nav-links{display:none}
-  .page-hero-content{padding:40px 24px}
-  .section,.section-sm,.cta-banner{padding-left:24px;padding-right:24px}
-  .cards-3,.cards-4,.cards-5{grid-template-columns:1fr 1fr}
+  .page-hero-text{padding:40px 24px}
+  .sec,.sec-sm,.cta-bar{padding-left:24px;padding-right:24px}
+  .g2,.g3,.g4,.g5{grid-template-columns:1fr 1fr}
+  footer{padding:40px 24px 24px}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  .g2,.g3,.g4,.g5{grid-template-columns:1fr}
+  .page-hero-text h1{font-size:28px}
+  .cta-bar{flex-direction:column}
+}
+5{grid-template-columns:1fr 1fr}
   .footer-grid{grid-template-columns:1fr 1fr;padding:0}
   footer{padding:40px 24px 24px}
 }
@@ -142,43 +164,35 @@ footer{background:var(--navy);padding:50px 80px 28px}
   .nav-dropdown-menu a:hover { background: var(--off-white); color: var(--navy) !important; }
   .nav-dropdown-menu.open { display: block !important; }
   /* mobile */
-  @media(max-width:900px){ .nav-dropdown-menu { display: none !important; } }
-
-</style>
-<script>
-const PT={tc:{h1:"聯絡我們",hs:"無論您有任何升學、進修、身份或投資規劃需求，<br>我們的專業團隊隨時為您提供協助。",cta_h:"準備好規劃您的未來了嗎？",cta_sub:"立即聯繫我們，開啟屬於您的專屬方案"},sc:{h1:"联系我们",hs:"无论您有任何升学、进修、身份或投资规划需求，<br>我们的专业团队随时为您提供协助。",cta_h:"准备好规划您的未来了吗？",cta_sub:"立即联系我们，开启属于您的专属方案"},en:{h1:"Contact Us",hs:"Whatever your education, professional development, identity or investment planning needs,<br>our professional team is always here to help.",cta_h:"Ready to Plan Your Future?",cta_sub:"Contact us now to start your personalised plan"}};
-function updateContent(lang){const t=PT[lang];Object.keys(t).forEach(k=>{const el=document.querySelector("[data-key='"+k+"']");if(el)el.innerHTML=t[k];});}
-</script>
+  @media(max-width:900px){ .nav-dropdown-menu { display: none !important; } }</style>
 </head>
 <body>
 <nav>
-  <a href="index.html" class="logo">
-    <img src="logo.png" alt="Majestic Education &amp; Immigration" style="height:52px;width:auto;">
-  </a>
+  <a href="index.html" class="logo"><img src="logo.png" alt="Majestic"></a>
   <ul class="nav-links">
-    <li><a href="index.html" data-key="nav0">首頁</a></li>
-    <li><a href="about.html" data-key="nav1">關於我們</a></li>
+    <li><a href="index.html">首頁</a></li>
+    <li><a href="about.html">關於我們</a></li>
     <li class="nav-dropdown">
-      <a href="hk-education.html" class="nav-dropdown-toggle" data-key="nav2" onclick="var e=event,m=this.nextElementSibling;if(window.innerWidth>900){e.preventDefault();m.classList.toggle('open');e.stopPropagation();}">升學 ▾</a>
+      <a href="#" class="nav-dropdown-toggle" onclick="event.preventDefault();this.nextElementSibling.classList.toggle('open');event.stopPropagation()">升學 ▾</a>
       <div class="nav-dropdown-menu">
-        <a href="hk-education.html">🇭🇰 香港升學</a>
-        <a href="uk-education.html">🇬🇧 英國升學</a>
+        <a href="hk-education.html" class="sub-link">🇭🇰 香港升學</a>
+        <a href="uk-education.html" class="sub-link">🇬🇧 英國升學</a>
       </div>
     </li>
-    <li><a href="executive-education.html" data-key="nav4">在職高端教育</a></li>
-    <li><a href="identity-investment.html" data-key="nav5">身份及投資</a></li>
-    <li><a href="success-stories.html" data-key="nav6">成功案例</a></li>
-    <li><a href="insights.html" data-key="nav7">洞察</a></li>
-    <li><a href="contact.html" data-key="nav8">聯絡我們</a></li>
+    <li><a href="executive-education.html">在職高端教育</a></li>
+    <li><a href="identity-investment.html">身份及投資</a></li>
+    <li><a href="success-stories.html">成功案例</a></li>
+    <li><a href="insights.html">洞察</a></li>
+    <li><a href="contact.html">聯絡我們</a></li>
   </ul>
-  <div class="nav-cta">
+  <div class="nav-right">
     <span class="nav-phone">📞 +852 5338 4136</span>
-    <div class="lang-switcher">
+    <div class="lang-sw">
       <button class="lang-btn active" data-lang="tc" onclick="setLang('tc')">繁</button>
       <button class="lang-btn" data-lang="sc" onclick="setLang('sc')">简</button>
       <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
     </div>
-    <a href="contact.html" class="btn-primary btn-nav-cta">免費諮詢</a>
+    <a href="contact.html" class="btn-cta">免費諮詢</a>
   </div>
 </nav>
 <script>
@@ -305,155 +319,102 @@ document.addEventListener('click',function(e){
 </div>
 <footer>
   <div class="footer-grid">
-    <div class="footer-logo-col">
-      <img src="logo.png" alt="Majestic" style="height:48px;width:auto;filter:brightness(0) invert(1);margin-bottom:12px;">
-      <p class="footer-tagline" data-key="footer_tag">以專業與誠信，協助專業人士及家庭<br>建立更清晰的未來發展藍圖</p>
-      <div class="social-links">
-        <a href="https://www.facebook.com/Magesticeduvisa/" target="_blank" class="social-btn" title="Facebook">f</a>
-        <a href="https://wa.me/85253384136" target="_blank" class="social-btn" title="WhatsApp" style="background:#25D366;border-color:#25D366;color:#fff">💬</a>
-        <a href="https://www.instagram.com/majestic_educationhk/" target="_blank" class="social-btn" title="Instagram" style="background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);border:none;color:#fff">ig</a>
-        <a href="javascript:void(0)" onclick="document.getElementById('wechat-modal').style.display='flex'" class="social-btn" title="WeChat" style="background:#07C160;border-color:#07C160;color:#fff;pointer-events:auto !important;cursor:pointer;position:relative;z-index:9999">微</a>
+    <div>
+      <img src="logo.png" alt="Majestic" style="height:44px;filter:brightness(0) invert(1);margin-bottom:10px">
+      <p class="footer-tag">以專業與誠信，協助專業人士及家庭<br>建立更清晰的未來發展藍圖</p>
+      <div class="social-row">
+        <a href="https://www.facebook.com/Magesticeduvisa/" target="_blank" class="sb" title="Facebook">f</a>
+        <a href="https://wa.me/85253384136" target="_blank" class="sb" style="background:#25D366;border-color:#25D366;color:#fff" title="WhatsApp">💬</a>
+        <a href="https://www.instagram.com/majestic_educationhk/" target="_blank" class="sb" style="background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);border:none;color:#fff" title="Instagram">ig</a>
+        <a href="javascript:void(0)" onclick="document.getElementById('wc-modal').style.display='flex'" class="sb" style="background:#07C160;border-color:#07C160;color:#fff" title="WeChat">微</a>
       </div>
     </div>
     <div class="footer-col">
-      <h4 data-key="footer_quick">快捷連結</h4>
+      <h4 data-fk="fq">快捷連結</h4>
       <ul>
-        <li><a href="about.html" data-key="fnav0">關於我們</a></li>
-        <li><a href="hk-education.html" data-key="fnav1">香港升學</a></li>
-        <li><a href="uk-education.html" data-key="fnav2">英國升學</a></li>
-        <li><a href="executive-education.html" data-key="fnav3">在職高端教育</a></li>
-        <li><a href="contact.html" data-key="fnav4">聯絡我們</a></li>
+        <li><a href="about.html" data-fl="0">關於我們</a></li>
+        <li><a href="hk-education.html" data-fl="1">香港升學</a></li>
+        <li><a href="uk-education.html" data-fl="2">英國升學</a></li>
+        <li><a href="executive-education.html" data-fl="3">在職高端教育</a></li>
+        <li><a href="contact.html" data-fl="4">聯絡我們</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4 data-key="footer_id">身份及投資規劃</h4>
+      <h4 data-fk="fi">身份及投資規劃</h4>
       <ul>
-        <li><a href="success-stories.html" data-key="fnav5">成功案例</a></li>
-        <li><a href="insights.html" data-key="fnav6">專欄文章</a></li>
-        <li><a href="contact.html" data-key="fnav7">聯絡我們</a></li>
+        <li><a href="success-stories.html" data-fl2="0">成功案例</a></li>
+        <li><a href="insights.html" data-fl2="1">專欄文章</a></li>
+        <li><a href="contact.html" data-fl2="2">聯絡我們</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4 data-key="footer_contact">聯絡資訊</h4>
+      <h4 data-fk="fc">聯絡資訊</h4>
       <ul>
-        <li><a href="#">📞 +852 5338 4136</a></li>
-        <li><a href="#">✉ info@majestic-immigration.com</a></li>
+        <li><a href="tel:+852 5338 4136">📞 +852 5338 4136</a></li>
+        <li><a href="tel:+852 3741 1209">📞 +852 3741 1209</a></li>
+        <li><a href="mailto:info@majestic-immigration.com">✉ info@majestic-immigration.com</a></li>
         <li><a href="#">📍 RM 3805, 38/F ONE MIDTOWN, 11 Hoi Shing Rd, Tsuen Wan, Hong Kong</a></li>
-        <li><a href="#">📍 21 Tothill St, Westminster, London</a></li>
+        <li><a href="#">📍 21 Tothill Street, Westminster, London SW1H 9LL</a></li>
       </ul>
     </div>
   </div>
-  <div class="footer-bottom">
-    <span data-key="footer_copy">© 2026 Majestic Education & Immigration Consultancy. All Rights Reserved.</span>
-    <div class="footer-bottom-links">
-      <a href="#" data-key="footer_priv">私隱政策</a>
-      <a href="#" data-key="footer_disc">免責聲明</a>
+  <div class="footer-bot">
+    <span class="copy-text">© 2026 Majestic Education & Immigration Consultancy. All Rights Reserved.</span>
+    <div style="display:flex;gap:18px">
+      <a href="#" data-fk="priv">私隱政策</a>
+      <a href="#" data-fk="disc">免責聲明</a>
     </div>
   </div>
 </footer>
-<div class="whatsapp-float" onclick="window.open('https://wa.me/85253384136')">
-  <span style="color:white;font-size:26px">💬</span>
-</div>
-<script>
-const T = {
-  tc:{
-    nav:["首頁","關於我們","香港升學","英國升學","在職高端教育","身份及投資","成功案例","洞察","聯絡我們"],
-    cta:"免費諮詢",phone:"+852 5338 4136",
-    footer_tag:"以專業與誠信，協助專業人士及家庭<br>建立更清晰的未來發展藍圖",
-    footer_quick:"快捷連結",footer_id:"身份及投資規劃",footer_contact:"聯絡資訊",
-    fnav:["關於我們","香港升學","英國升學","在職高端教育","聯絡我們","成功案例","專欄文章","聯絡我們"],
-    footer_copy:"© 2026 Majestic Education & Immigration Consultancy. All Rights Reserved.",
-    footer_priv:"私隱政策",footer_disc:"免責聲明"
-  },
-  sc:{
-    nav:["首页","关于我们","香港升学","英国升学","在职高端教育","身份及投资","成功案例","洞察","联系我们"],
-    cta:"免费咨询",phone:"+852 5338 4136",
-    footer_tag:"以专业与诚信，协助专业人士及家庭<br>建立更清晰的未来发展蓝图",
-    footer_quick:"快捷链接",footer_id:"身份及投资规划",footer_contact:"联系资讯",
-    fnav:["关于我们","香港升学","英国升学","在职高端教育","联系我们","成功案例","专栏文章","联系我们"],
-    footer_copy:"© 2026 Majestic Education & Immigration Consultancy. All Rights Reserved.",
-    footer_priv:"私隐政策",footer_disc:"免责声明"
-  },
-  en:{
-    nav:["Home","About Us","HK Education","UK Education","Executive Education","Identity & Investment","Success Stories","Insights","Contact"],
-    cta:"Free Consultation",phone:"+852 5338 4136",
-    footer_tag:"With professionalism and integrity, helping professionals<br>and families build a clearer roadmap for their future",
-    footer_quick:"Quick Links",footer_id:"Identity & Investment",footer_contact:"Contact Info",
-    fnav:["About Us","HK Education","UK Education","Executive Education","Contact Us","Success Stories","Articles","Contact Us"],
-    footer_copy:"© 2026 Majestic Education & Immigration Consultancy. All Rights Reserved.",
-    footer_priv:"Privacy Policy",footer_disc:"Disclaimer"
-  }
-};
-
-let currentLang = localStorage.getItem("majestic_lang")||"tc";
-
-function setLang(lang){
-  currentLang=lang;
-  localStorage.setItem("majestic_lang",lang);
-  document.querySelectorAll(".lang-btn").forEach(b=>b.classList.toggle("active",b.dataset.lang===lang));
-  document.body.className=lang==="en"?"lang-en":lang==="sc"?"lang-sc":"";
-  const t=T[lang];
-  // Nav
-  document.querySelectorAll("[data-key^='nav']").forEach(el=>{
-    const i=parseInt(el.dataset.key.replace("nav",""));
-    if(t.nav[i]!==undefined) el.textContent=t.nav[i];
-  });
-  document.querySelector(".btn-nav-cta").textContent=t.cta;
-  document.querySelector(".nav-phone").textContent="📞 "+t.phone;
-  // Footer
-  const ftag=document.querySelector("[data-key='footer_tag']");
-  if(ftag) ftag.innerHTML=t.footer_tag;
-  const fq=document.querySelector("[data-key='footer_quick']");
-  if(fq) fq.textContent=t.footer_quick;
-  const fi=document.querySelector("[data-key='footer_id']");
-  if(fi) fi.textContent=t.footer_id;
-  const fc=document.querySelector("[data-key='footer_contact']");
-  if(fc) fc.textContent=t.footer_contact;
-  document.querySelectorAll("[data-key^='fnav']").forEach(el=>{
-    const i=parseInt(el.dataset.key.replace("fnav",""));
-    if(t.fnav[i]!==undefined) el.textContent=t.fnav[i];
-  });
-  const fcp=document.querySelector("[data-key='footer_copy']");
-  if(fcp) fcp.textContent=t.footer_copy;
-  const fp=document.querySelector("[data-key='footer_priv']");
-  if(fp) fp.textContent=t.footer_priv;
-  const fd=document.querySelector("[data-key='footer_disc']");
-  if(fd) fd.textContent=t.footer_disc;
-  // Page-specific
-  
-  // Update dropdown toggle text
-  const dropToggle = document.querySelector(".nav-dropdown-toggle");
-  if(dropToggle) dropToggle.textContent = lang==="en" ? "Education ▾" : lang==="sc" ? "升学 ▾" : "升學 ▾";
-
-  if(typeof updateContent==="function") updateContent(lang);
-}
-
-document.addEventListener("DOMContentLoaded",()=>{
-  // FAQ
-  document.querySelectorAll(".faq-item").forEach(item=>{
-    item.querySelector(".faq-q").addEventListener("click",()=>item.classList.toggle("open"));
-  });
-  setLang(currentLang);
-});
-</script>
-
-<!-- WeChat Modal -->
-<div id="wechat-modal" onclick="this.style.display='none'" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);z-index:999999;align-items:center;justify-content:center">
-  <div onclick="event.stopPropagation()" style="background:#fff;border-radius:20px;padding:32px 28px;text-align:center;max-width:300px;width:88%;box-shadow:0 20px 60px rgba(0,0,0,0.3)">
-    <div style="font-size:32px;margin-bottom:8px">💚</div>
-    <h3 style="font-size:18px;font-weight:700;color:#1a2744;margin-bottom:4px">WeChat 微信</h3>
-    <p style="font-size:12px;color:#718096;margin-bottom:16px">掃描二維碼，加我為朋友<br>雄景 Majestic</p>
-    <img src="wechat-qr.jpg" alt="WeChat QR Code" style="width:200px;height:200px;object-fit:contain;border-radius:8px;border:1px solid #e2ddd4">
-    <br>
-    <button onclick="document.getElementById('wechat-modal').style.display='none'" style="margin-top:18px;padding:10px 28px;background:#07C160;color:#fff;border:none;border-radius:20px;cursor:pointer;font-size:14px;font-weight:600">關閉</button>
+<a href="https://wa.me/85253384136" class="wa-float" target="_blank">💬</a>
+<div id="wc-modal" onclick="this.style.display='none'" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:99999;align-items:center;justify-content:center">
+  <div onclick="event.stopPropagation()" style="background:#fff;border-radius:16px;padding:32px;text-align:center;max-width:300px;width:90%">
+    <h3 style="font-size:17px;font-weight:700;color:#1a2744;margin-bottom:4px">WeChat 微信</h3>
+    <p style="font-size:12px;color:#718096;margin-bottom:14px">掃描二維碼加我為朋友</p>
+    <img src="wechat-qr.jpg" style="width:200px;height:200px;object-fit:contain;border-radius:8px;border:1px solid #e2ddd4">
+    <br><button onclick="document.getElementById('wc-modal').style.display='none'" style="margin-top:16px;padding:9px 26px;background:#07C160;color:#fff;border:none;border-radius:20px;cursor:pointer;font-size:13px;font-weight:600">關閉</button>
   </div>
 </div>
-
 <script>
-document.addEventListener('click', function(e){
-  if(!e.target.closest('.nav-dropdown')){
-    document.querySelectorAll('.nav-dropdown-menu').forEach(m=>m.classList.remove('open'));
-  }
+const T={
+  tc:{nav:["首頁","關於我們","升學","在職高端教育","身份及投資","成功案例","洞察","聯絡我們"],cta:"免費諮詢",phone:"+852 5338 4136",ft:"以專業與誠信，協助專業人士及家庭<br>建立更清晰的未來發展藍圖",fq:"快捷連結",fi:"身份及投資規劃",fc:"聯絡資訊",fl:["關於我們","香港升學","英國升學","在職高端教育","聯絡我們"],fl2:["成功案例","專欄文章","聯絡我們"],copy:"© 2026 Majestic Education & Immigration Consultancy. All Rights Reserved.",priv:"私隱政策",disc:"免責聲明"},
+  sc:{nav:["首页","关于我们","升学","在职高端教育","身份及投资","成功案例","洞察","联系我们"],cta:"免费咨询",phone:"+852 5338 4136",ft:"以专业与诚信，协助专业人士及家庭<br>建立更清晰的未来发展蓝图",fq:"快捷链接",fi:"身份及投资规划",fc:"联系资讯",fl:["关于我们","香港升学","英国升学","在职高端教育","联系我们"],fl2:["成功案例","专栏文章","联系我们"],copy:"© 2026 Majestic Education & Immigration Consultancy. All Rights Reserved.",priv:"私隐政策",disc:"免责声明"},
+  en:{nav:["Home","About Us","Education","Executive Education","Identity & Investment","Success Stories","Insights","Contact"],cta:"Free Consultation",phone:"+852 5338 4136",ft:"With professionalism and integrity, helping professionals<br>and families build a clearer roadmap for their future",fq:"Quick Links",fi:"Identity & Investment",fc:"Contact Info",fl:["About Us","HK Education","UK Education","Executive Education","Contact Us"],fl2:["Success Stories","Articles","Contact Us"],copy:"© 2026 Majestic Education & Immigration Consultancy. All Rights Reserved.",priv:"Privacy Policy",disc:"Disclaimer"}
+};
+let lang=localStorage.getItem("mlang")||"tc";
+function setLang(l){
+  lang=l;localStorage.setItem("mlang",l);
+  document.querySelectorAll(".lang-btn").forEach(b=>b.classList.toggle("active",b.dataset.lang===l));
+  document.body.className=l==="en"?"lang-en":l==="sc"?"lang-sc":"";
+  const t=T[l];
+  const nl=document.querySelectorAll(".nav-links a:not(.sub-link)");
+  const labels=[0,1,2,3,4,5,6,7];
+  let ni=0;
+  nl.forEach(a=>{if(!a.closest(".nav-dropdown-menu")){a.textContent=t.nav[ni]||a.textContent;ni++;}}); 
+  const dd=document.querySelector(".nav-dropdown-toggle");
+  if(dd)dd.innerHTML=(l==="en"?"Education":l==="sc"?"升学":"升學")+" ▾";
+  document.querySelectorAll(".btn-cta").forEach(b=>b.textContent=t.cta);
+  document.querySelectorAll(".nav-phone").forEach(b=>b.textContent="📞 "+t.phone);
+  const ft=document.querySelector(".footer-tag");if(ft)ft.innerHTML=t.ft;
+  const fq=document.querySelector("[data-fk='fq']");if(fq)fq.textContent=t.fq;
+  const fi=document.querySelector("[data-fk='fi']");if(fi)fi.textContent=t.fi;
+  const fc=document.querySelector("[data-fk='fc']");if(fc)fc.textContent=t.fc;
+  document.querySelectorAll("[data-fl]").forEach(a=>{const i=parseInt(a.dataset.fl);if(t.fl[i])a.textContent=t.fl[i];});
+  document.querySelectorAll("[data-fl2]").forEach(a=>{const i=parseInt(a.dataset.fl2);if(t.fl2[i])a.textContent=t.fl2[i];});
+  document.querySelectorAll(".copy-text").forEach(e=>e.textContent=t.copy);
+  document.querySelectorAll("[data-fk='priv']").forEach(e=>e.textContent=t.priv);
+  document.querySelectorAll("[data-fk='disc']").forEach(e=>e.textContent=t.disc);
+  if(typeof updateContent==="function")updateContent(l);
+}
+document.addEventListener("DOMContentLoaded",()=>{
+  document.querySelectorAll(".faq-item").forEach(item=>item.querySelector(".faq-q").addEventListener("click",()=>item.classList.toggle("open")));
+  document.addEventListener("click",e=>{if(!e.target.closest(".nav-dropdown"))document.querySelectorAll(".nav-dropdown-menu").forEach(m=>m.classList.remove("open"));});
+  setLang(lang);
+});
+</script>
+<script>
+document.addEventListener('click',function(e){
+  if(!e.target.closest('.nav-dropdown')) document.querySelectorAll('.nav-dropdown-menu').forEach(m=>m.classList.remove('open'));
 });
 </script>
 </body>
