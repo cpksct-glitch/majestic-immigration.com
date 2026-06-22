@@ -112,6 +112,38 @@ footer{background:var(--navy);padding:50px 80px 28px}
   .page-hero-content h1{font-size:26px}
   .cta-banner{flex-direction:column}
 }
+
+  /* Dropdown */
+  .nav-dropdown { position: relative; }
+  .nav-dropdown-toggle { cursor: pointer; }
+  .nav-dropdown-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(26,39,68,.12);
+    min-width: 160px;
+    overflow: hidden;
+    z-index: 9999;
+  }
+  .nav-dropdown-menu a {
+    display: block;
+    padding: 12px 20px;
+    font-size: 13px;
+    color: var(--text-dark) !important;
+    text-decoration: none;
+    transition: background .15s;
+    white-space: nowrap;
+  }
+  .nav-dropdown-menu a:hover { background: var(--off-white); color: var(--navy) !important; }
+  .nav-dropdown:hover .nav-dropdown-menu { display: block; }
+  /* mobile */
+  @media(max-width:900px){ .nav-dropdown-menu { display: none !important; } }
+
 </style>
 <script>
 const PT={tc:{h1:"聯絡我們",hs:"無論您有任何升學、進修、身份或投資規劃需求，<br>我們的專業團隊隨時為您提供協助。",cta_h:"準備好規劃您的未來了嗎？",cta_sub:"立即聯繫我們，開啟屬於您的專屬方案"},sc:{h1:"联系我们",hs:"无论您有任何升学、进修、身份或投资规划需求，<br>我们的专业团队随时为您提供协助。",cta_h:"准备好规划您的未来了吗？",cta_sub:"立即联系我们，开启属于您的专属方案"},en:{h1:"Contact Us",hs:"Whatever your education, professional development, identity or investment planning needs,<br>our professional team is always here to help.",cta_h:"Ready to Plan Your Future?",cta_sub:"Contact us now to start your personalised plan"}};
@@ -126,8 +158,13 @@ function updateContent(lang){const t=PT[lang];Object.keys(t).forEach(k=>{const e
   <ul class="nav-links">
     <li><a href="index.html" data-key="nav0">首頁</a></li>
     <li><a href="about.html" data-key="nav1">關於我們</a></li>
-    <li><a href="hk-education.html" data-key="nav2">香港升學</a></li>
-    <li><a href="uk-education.html" data-key="nav3">英國升學</a></li>
+    <li class="nav-dropdown">
+      <a href="#" data-key="nav2" class="nav-dropdown-toggle">升學 ▾</a>
+      <div class="nav-dropdown-menu">
+        <a href="hk-education.html">🇭🇰 香港升學</a>
+        <a href="uk-education.html">🇬🇧 英國升學</a>
+      </div>
+    </li>
     <li><a href="executive-education.html" data-key="nav4">在職高端教育</a></li>
     <li><a href="identity-investment.html" data-key="nav5">身份及投資</a></li>
     <li><a href="success-stories.html" data-key="nav6">成功案例</a></li>
@@ -378,6 +415,11 @@ function setLang(lang){
   const fd=document.querySelector("[data-key='footer_disc']");
   if(fd) fd.textContent=t.footer_disc;
   // Page-specific
+  
+  // Update dropdown toggle text
+  const dropToggle = document.querySelector(".nav-dropdown-toggle");
+  if(dropToggle) dropToggle.textContent = lang==="en" ? "Education ▾" : lang==="sc" ? "升学 ▾" : "升學 ▾";
+
   if(typeof updateContent==="function") updateContent(lang);
 }
 
