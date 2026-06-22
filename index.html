@@ -190,6 +190,38 @@
   .hero > *:not(.hero-content) { pointer-events: none !important; }
   .hero-content, .hero-content * { pointer-events: auto !important; }
   nav, nav * { pointer-events: auto !important; }
+
+  /* Dropdown */
+  .nav-dropdown { position: relative; }
+  .nav-dropdown-toggle { cursor: pointer; }
+  .nav-dropdown-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(26,39,68,.12);
+    min-width: 160px;
+    overflow: hidden;
+    z-index: 9999;
+  }
+  .nav-dropdown-menu a {
+    display: block;
+    padding: 12px 20px;
+    font-size: 13px;
+    color: var(--text-dark) !important;
+    text-decoration: none;
+    transition: background .15s;
+    white-space: nowrap;
+  }
+  .nav-dropdown-menu a:hover { background: var(--off-white); color: var(--navy) !important; }
+  .nav-dropdown:hover .nav-dropdown-menu { display: block; }
+  /* mobile */
+  @media(max-width:900px){ .nav-dropdown-menu { display: none !important; } }
+
 </style>
 </head>
 <body>
