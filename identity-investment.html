@@ -114,6 +114,12 @@ footer{background:var(--navy);padding:50px 80px 28px}
 }
 /* click-fix */
 a, button, .btn-primary, .btn-gold, .btn-outline-white, .lang-btn, .nav-links a, .nav-links li, .social-btn, .whatsapp-float, .wa-float { pointer-events: auto !important; cursor: pointer !important; }
+
+  .nav-dropdown { position: relative; }
+  .nav-dropdown-menu { display: none; position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: #fff; border: 1px solid #e2ddd4; border-radius: 8px; box-shadow: 0 8px 28px rgba(26,39,68,.12); min-width: 160px; z-index: 9999; overflow: hidden; }
+  .nav-dropdown-menu.open { display: block; }
+  .nav-dropdown-menu a { display: block; padding: 12px 20px; font-size: 13px; color: #1a2744 !important; text-decoration: none; white-space: nowrap; }
+  .nav-dropdown-menu a:hover { background: #f8f6f1; }
 </style>
 <script>
 const PT={tc:{h1:"身份及投資規劃",hs:"專業團隊助您及家人開拓更多可能<br>實現全球身份與資產增值",cta_h:"讓 Majestic 成為您值得信賴的夥伴",cta_btn:"免費諮詢 →"},sc:{h1:"身份及投资规划",hs:"专业团队助您及家人开拓更多可能<br>实现全球身份与资产增值",cta_h:"让 Majestic 成为您值得信赖的伙伴",cta_btn:"免费咨询 →"},en:{h1:"Identity & Investment Planning",hs:"Our professional team helps you and your family explore more possibilities<br>Achieving global identity and asset growth",cta_h:"Let Majestic Be Your Trusted Partner",cta_btn:"Free Consultation →"}};
@@ -123,13 +129,18 @@ function updateContent(lang){const t=PT[lang];Object.keys(t).forEach(k=>{const e
 <body>
 <nav>
   <a href="index.html" class="logo">
-    <img src="logo.png" alt="Majestic" style="height:52px;width:auto;">
+    <img src="logo.png" alt="Majestic Education & Immigration" style="height:52px;width:auto;">
   </a>
   <ul class="nav-links">
     <li><a href="index.html" data-key="nav0">首頁</a></li>
     <li><a href="about.html" data-key="nav1">關於我們</a></li>
-    <li><a href="hk-education.html" data-key="nav2">香港升學</a></li>
-    <li><a href="uk-education.html" data-key="nav3">英國升學</a></li>
+    <li class="nav-dropdown">
+      <a href="hk-education.html" class="nav-dropdown-toggle" data-key="nav2" onclick="if(window.innerWidth>900){event.preventDefault();this.nextElementSibling.classList.toggle('open');event.stopPropagation()}">升學 ▾</a>
+      <div class="nav-dropdown-menu">
+        <a href="hk-education.html">🇭🇰 香港升學</a>
+        <a href="uk-education.html">🇬🇧 英國升學</a>
+      </div>
+    </li>
     <li><a href="executive-education.html" data-key="nav4">在職高端教育</a></li>
     <li><a href="identity-investment.html" data-key="nav5">身份及投資</a></li>
     <li><a href="success-stories.html" data-key="nav6">成功案例</a></li>
@@ -146,6 +157,12 @@ function updateContent(lang){const t=PT[lang];Object.keys(t).forEach(k=>{const e
     <a href="contact.html" class="btn-primary btn-nav-cta">免費諮詢</a>
   </div>
 </nav>
+<script>
+document.addEventListener('click',function(e){
+  if(!e.target.closest('.nav-dropdown'))
+    document.querySelectorAll('.nav-dropdown-menu').forEach(m=>m.classList.remove('open'));
+});
+</script>
 
 <div class="page-hero">
   <div class="page-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=1600&q=80')"></div>
