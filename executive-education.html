@@ -5,393 +5,332 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>在職高端教育 | Majestic Education & Immigration</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700&family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--navy:#1a2744;--navy-deep:#0f1a30;--gold:#c9a84c;--white:#fff;--off-white:#f8f6f1;--text-dark:#1a2744;--text-mid:#4a5568;--text-light:#718096;--border:#e2ddd4}
-body{font-family:"Noto Sans TC",sans-serif;color:var(--text-dark);background:var(--white);overflow-x:hidden}
-body.lang-en{font-family:"Segoe UI",Arial,sans-serif}
-body.lang-sc{font-family:"Noto Sans SC",sans-serif}
-nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:1px solid var(--border);padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:70px;box-shadow:0 2px 12px rgba(26,39,68,.06)}
-.logo{display:flex;align-items:center;text-decoration:none}
-.nav-links{display:flex;gap:20px;list-style:none}
-.nav-links a{text-decoration:none;font-size:12.5px;font-weight:500;color:var(--text-mid);white-space:nowrap;transition:color .2s}
-.nav-links a:hover,.nav-links a.active{color:var(--navy)}
-.nav-links a.active{border-bottom:2px solid var(--gold);padding-bottom:2px}
-.nav-cta{display:flex;align-items:center;gap:12px}
-.nav-phone{font-size:12px;color:var(--text-mid);white-space:nowrap}
-.lang-switcher{display:flex;gap:3px;background:var(--off-white);border-radius:20px;padding:3px;border:1px solid var(--border)}
-.lang-btn{padding:4px 10px;border:none;background:transparent;font-size:11px;font-weight:600;color:var(--text-mid);cursor:pointer;border-radius:16px;transition:all .2s;font-family:inherit}
-.lang-btn.active{background:var(--navy);color:var(--white)}
-.btn-primary{background:var(--navy);color:var(--white);padding:9px 18px;border:none;border-radius:4px;font-size:12.5px;font-family:inherit;font-weight:500;cursor:pointer;white-space:nowrap;text-decoration:none;display:inline-block;transition:background .2s}
-.btn-primary:hover{background:#253366}
-.btn-gold{background:var(--gold);color:var(--white);padding:13px 28px;border:none;border-radius:4px;font-size:15px;font-family:inherit;font-weight:500;cursor:pointer;text-decoration:none;display:inline-block;transition:background .2s}
-.btn-gold:hover{background:#b8973e}
-.btn-gold-sm{background:var(--gold);color:var(--white);padding:9px 20px;border:none;border-radius:4px;font-size:13px;font-family:inherit;font-weight:500;cursor:pointer;text-decoration:none;display:inline-block}
-.btn-outline{border:1.5px solid var(--navy);color:var(--navy);padding:9px 20px;border-radius:4px;font-size:13px;font-family:inherit;font-weight:500;background:transparent;cursor:pointer;text-decoration:none;display:inline-block}
-.btn-outline-white{border:1.5px solid rgba(255,255,255,0.7);color:var(--white);padding:13px 28px;border-radius:4px;font-size:15px;font-family:inherit;font-weight:500;cursor:pointer;text-decoration:none;display:inline-block;background:transparent}
-/* HERO */
-.page-hero{position:relative;min-height:420px;display:flex;align-items:center;overflow:hidden;background:var(--navy-deep)}
-.page-hero-bg{position:absolute;inset:0;background:url("hero-bg.png") center/cover no-repeat}
-.page-hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(to right,rgba(10,20,45,0.82) 40%,rgba(10,20,45,0.4) 100%)}
-.page-hero-content{position:relative;z-index:2;padding:60px 80px;max-width:620px}
-.page-hero-content .label{color:var(--gold);font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:600;margin-bottom:14px}
-.page-hero-content h1{font-family:"Noto Serif TC",serif;font-size:38px;font-weight:700;color:var(--white);line-height:1.3;margin-bottom:16px}
-body.lang-en .page-hero-content h1{font-family:Georgia,serif;font-size:32px}
-.page-hero-content p{color:rgba(255,255,255,.82);font-size:15px;line-height:1.8}
-/* SECTIONS */
-.section{padding:72px 80px}
-.section-sm{padding:48px 80px}
-.section-center{text-align:center}
-.section-label{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:8px}
-.section-title{font-family:"Noto Serif TC",serif;font-size:30px;font-weight:700;color:var(--navy);margin-bottom:10px}
-body.lang-en .section-title{font-family:Georgia,serif}
-.divider-gold{width:40px;height:2px;background:var(--gold);margin:0 auto 36px}
-.divider-gold.left{margin:0 0 36px}
-.bg-offwhite{background:var(--off-white)}
-.bg-navy{background:var(--navy)}
-/* CARDS */
-.cards-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.cards-4{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.cards-5{display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
-.card{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:28px;transition:box-shadow .2s}
-.card:hover{box-shadow:0 6px 24px rgba(26,39,68,.1)}
-/* STEPS */
-.steps{display:flex;align-items:flex-start;gap:0;justify-content:center;flex-wrap:wrap}
-.step{text-align:center;flex:1;min-width:120px;padding:0 12px;position:relative}
-.step-circle{width:56px;height:56px;border-radius:50%;border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;background:var(--white)}
-.step-circle svg{width:24px;height:24px;fill:var(--gold)}
-.step-arrow{color:var(--gold);font-size:20px;padding-top:20px;flex-shrink:0}
-.step h4{font-size:13px;font-weight:700;color:var(--navy);margin-bottom:6px}
-.step p{font-size:11.5px;color:var(--text-light);line-height:1.6}
-.step-num{font-size:10px;color:var(--gold);font-weight:700;letter-spacing:1px;margin-bottom:4px}
-/* FAQ */
+:root{--navy:#1a2744;--navy2:#0f1a30;--gold:#c9a84c;--white:#fff;--off:#f8f6f1;--mid:#4a5568;--light:#718096;--border:#e2ddd4}
+body{font-family:'Noto Sans TC',sans-serif;color:var(--navy);background:var(--white);overflow-x:hidden}
+a{text-decoration:none}
+nav{position:sticky;top:0;z-index:1000;background:var(--white);border-bottom:1px solid var(--border);height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 48px;box-shadow:0 2px 12px rgba(26,39,68,.06)}
+.logo img{height:46px;width:auto}
+.nav-links{display:flex;gap:22px;list-style:none;align-items:center}
+.nav-links a{font-size:12.5px;font-weight:500;color:var(--mid);white-space:nowrap}
+.nav-links a:hover,.nav-links a.cur{color:var(--navy)}
+.nav-links a.cur{border-bottom:2px solid var(--gold);padding-bottom:2px}
+.nav-dropdown{position:relative}
+.nav-dd-menu{display:none;position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%);background:#fff;border:1px solid var(--border);border-radius:8px;box-shadow:0 8px 28px rgba(26,39,68,.12);min-width:160px;z-index:9999;overflow:hidden}
+.nav-dd-menu.open{display:block}
+.nav-dd-menu a{display:block;padding:12px 20px;font-size:13px;color:var(--navy)}
+.nav-dd-menu a:hover{background:var(--off)}
+.nav-r{display:flex;align-items:center;gap:12px}
+.lang-sw{display:flex;gap:2px;background:var(--off);border-radius:20px;padding:3px;border:1px solid var(--border)}
+.lb{padding:4px 10px;border:none;background:transparent;font-size:11px;font-weight:600;color:var(--mid);cursor:pointer;border-radius:16px;font-family:inherit}
+.lb.on{background:var(--navy);color:#fff}
+.btn-nav{background:var(--navy);color:#fff;padding:9px 18px;border:none;border-radius:4px;font-size:13px;font-family:inherit;font-weight:500;cursor:pointer;text-decoration:none}
+.page-hero{position:relative;min-height:420px;display:flex;align-items:center;overflow:hidden;background:var(--navy2)}
+.page-hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1526129318478-62ed807ebdf9?auto=format&fit=crop&w=1600&q=80') center/cover;opacity:.4;pointer-events:none}
+.page-hero-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(10,20,45,.88) 40%,rgba(10,20,45,.4) 100%);pointer-events:none}
+.page-hero-txt{position:relative;z-index:2;padding:60px 80px;max-width:660px}
+.page-hero-label{font-size:11px;letter-spacing:2.5px;color:var(--gold);font-weight:600;margin-bottom:14px;text-transform:uppercase}
+.page-hero-txt h1{font-family:'Noto Serif TC',serif;font-size:36px;font-weight:700;color:#fff;line-height:1.3;margin-bottom:14px}
+.page-hero-txt p{font-size:14px;color:rgba(255,255,255,.85);line-height:1.85;max-width:520px}
+.sec{padding:64px 80px}
+.bg-off{background:var(--off)}
+.tc{text-align:center}
+.sec-label{font-size:11px;letter-spacing:2.5px;color:var(--gold);font-weight:600;margin-bottom:8px;text-transform:uppercase}
+.sec-title{font-family:'Noto Serif TC',serif;font-size:26px;font-weight:700;color:var(--navy);margin-bottom:10px}
+.gold-line{width:36px;height:2px;background:var(--gold);margin:0 auto 36px}
+.gold-line-l{width:36px;height:2px;background:var(--gold);margin:0 0 28px}
+.prog-block{background:#fff;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:24px}
+.prog-header{background:var(--navy);padding:24px 32px;display:flex;align-items:center;gap:20px}
+.prog-badge{background:var(--gold);color:#fff;font-size:13px;font-weight:700;padding:6px 16px;border-radius:20px;letter-spacing:.5px;flex-shrink:0}
+.prog-header h3{font-family:'Noto Serif TC',serif;font-size:19px;font-weight:700;color:#fff}
+.prog-header p{font-size:13px;color:rgba(255,255,255,.7);margin-top:4px}
+.prog-body{padding:28px 32px;display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.prog-col h4{font-size:13px;font-weight:700;color:var(--navy);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+.prog-item{display:flex;align-items:flex-start;gap:10px;margin-bottom:10px}
+.prog-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:6px}
+.prog-item p{font-size:13px;color:var(--mid);line-height:1.7}
+.req-row{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--off);border-radius:6px;margin-bottom:8px}
+.req-label{font-size:12.5px;font-weight:600;color:var(--navy)}
+.req-val{font-size:12.5px;color:var(--mid)}
 .faq-item{border-bottom:1px solid var(--border);padding:18px 0;cursor:pointer}
-.faq-q{display:flex;justify-content:space-between;align-items:center;font-size:14px;font-weight:600;color:var(--navy)}
-.faq-plus{color:var(--gold);font-size:20px;font-weight:300}
-.faq-a{font-size:13px;color:var(--text-mid);line-height:1.7;margin-top:12px;display:none}
+.faq-q{display:flex;justify-content:space-between;align-items:center;font-size:13.5px;font-weight:600;color:var(--navy)}
+.faq-plus{color:var(--gold);font-size:22px;font-weight:300;transition:transform .2s}
+.faq-a{font-size:13px;color:var(--mid);line-height:1.8;margin-top:12px;display:none}
 .faq-item.open .faq-a{display:block}
 .faq-item.open .faq-plus{transform:rotate(45deg)}
-/* CTA BANNER */
-.cta-banner{background:var(--navy-deep);padding:40px 80px;display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap}
-.cta-banner h2{font-family:"Noto Serif TC",serif;font-size:22px;font-weight:700;color:var(--white);margin-bottom:6px}
-body.lang-en .cta-banner h2{font-family:Georgia,serif}
-.cta-banner p{font-size:13px;color:rgba(255,255,255,.7)}
-.cta-banner-right{display:flex;gap:12px;flex-wrap:wrap}
-.btn-wa{background:#25D366;color:var(--white);padding:11px 20px;border-radius:4px;font-size:13px;font-weight:600;cursor:pointer;border:none;font-family:inherit;display:inline-flex;align-items:center;gap:8px}
-.btn-email-c{border:1.5px solid rgba(255,255,255,.4);color:var(--white);padding:11px 20px;border-radius:4px;font-size:13px;font-weight:600;background:transparent;cursor:pointer;font-family:inherit;display:inline-flex;align-items:center;gap:8px}
-/* FOOTER */
+.steps{display:flex;align-items:flex-start;justify-content:center;flex-wrap:wrap;gap:0;max-width:1000px;margin:0 auto}
+.step{flex:1;min-width:90px;text-align:center;padding:0 10px}
+.step-circle{width:48px;height:48px;border-radius:50%;background:var(--navy);color:var(--gold);font-size:16px;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 10px}
+.step h4{font-size:12.5px;font-weight:700;color:var(--navy);margin-bottom:4px}
+.step p{font-size:11.5px;color:var(--light);line-height:1.6}
+.step-arr{color:var(--gold);font-size:16px;padding-top:14px;flex-shrink:0}
+.cta-bar{background:var(--navy2);padding:40px 80px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.cta-bar h2{font-family:'Noto Serif TC',serif;font-size:20px;font-weight:700;color:#fff;margin-bottom:6px}
+.cta-bar p{font-size:13px;color:rgba(255,255,255,.7)}
+.btn-gold{background:var(--gold);color:#fff;padding:11px 22px;border-radius:4px;font-size:13px;font-weight:600;text-decoration:none;display:inline-block}
+.btn-wa{background:#25D366;color:#fff;padding:11px 20px;border-radius:4px;font-size:13px;font-weight:600;text-decoration:none;display:inline-block}
 footer{background:var(--navy);padding:50px 80px 28px}
-.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;margin-bottom:36px}
-.footer-tagline{font-size:12px;color:rgba(255,255,255,.5);line-height:1.8;margin-top:10px}
-.footer-col h4{font-size:11px;font-weight:700;color:var(--gold);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px}
+.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;margin-bottom:36px}
+.ft{font-size:12px;color:rgba(255,255,255,.5);line-height:1.8;margin-top:10px}
+.footer-col h4{font-size:10.5px;font-weight:700;color:var(--gold);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px}
 .footer-col ul{list-style:none}
-.footer-col ul li{margin-bottom:9px}
-.footer-col ul li a{font-size:12.5px;color:rgba(255,255,255,.6);text-decoration:none;transition:color .2s}
-.footer-col ul li a:hover{color:var(--gold)}
-.social-links{display:flex;gap:8px;margin-top:14px}
-.social-btn{width:32px;height:32px;border-radius:50%;border:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.6);font-size:13px;cursor:pointer;transition:all .2s}
-.social-btn:hover{border-color:var(--gold);color:var(--gold)}
-.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:18px;display:flex;justify-content:space-between;align-items:center;font-size:11.5px;color:rgba(255,255,255,.4)}
-.footer-bottom-links{display:flex;gap:18px}
-.footer-bottom-links a{color:rgba(255,255,255,.4);text-decoration:none}
-.footer-bottom-links a:hover{color:var(--gold)}
-.whatsapp-float{position:fixed;bottom:28px;right:28px;width:52px;height:52px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4);cursor:pointer;z-index:999}
-/* RESPONSIVE */
-@media(max-width:900px){
-  nav{padding:0 20px}
-  .nav-links{display:none}
-  .page-hero-content{padding:40px 24px}
-  .section,.section-sm,.cta-banner{padding-left:24px;padding-right:24px}
-  .cards-3,.cards-4,.cards-5{grid-template-columns:1fr 1fr}
-  .footer-grid{grid-template-columns:1fr 1fr;padding:0}
-  footer{padding:40px 24px 24px}
-}
-@media(max-width:600px){
-  .cards-3,.cards-4,.cards-5{grid-template-columns:1fr}
-  .page-hero-content h1{font-size:26px}
-  .cta-banner{flex-direction:column}
-}
-/* click-fix */
-a, button, .btn-primary, .btn-gold, .btn-outline-white, .lang-btn, .nav-links a, .nav-links li, .social-btn, .whatsapp-float, .wa-float { pointer-events: auto !important; cursor: pointer !important; }
-
-  .nav-dropdown { position: relative; }
-  .nav-dropdown-menu { display: none; position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: #fff; border: 1px solid #e2ddd4; border-radius: 8px; box-shadow: 0 8px 28px rgba(26,39,68,.12); min-width: 160px; z-index: 9999; overflow: hidden; }
-  .nav-dropdown-menu.open { display: block; }
-  .nav-dropdown-menu a { display: block; padding: 12px 20px; font-size: 13px; color: #1a2744 !important; text-decoration: none; white-space: nowrap; }
-  .nav-dropdown-menu a:hover { background: #f8f6f1; }
+.footer-col li{margin-bottom:9px}
+.footer-col a{font-size:12px;color:rgba(255,255,255,.6);text-decoration:none}
+.footer-col a:hover{color:var(--gold)}
+.social-row{display:flex;gap:8px;margin-top:14px}
+.sb{width:32px;height:32px;border-radius:50%;border:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.65);font-size:13px;cursor:pointer;text-decoration:none}
+.sb:hover{border-color:var(--gold);color:var(--gold)}
+.footer-bot{border-top:1px solid rgba(255,255,255,.1);padding-top:18px;display:flex;justify-content:space-between;font-size:11.5px;color:rgba(255,255,255,.4)}
+.footer-bot a{color:rgba(255,255,255,.4);text-decoration:none}
+.wa-float{position:fixed;bottom:28px;right:28px;width:52px;height:52px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4);cursor:pointer;z-index:9998;font-size:24px;text-decoration:none}
+@media(max-width:960px){nav{padding:0 20px}.nav-links{display:none}.sec,.cta-bar{padding-left:24px;padding-right:24px}.prog-body{grid-template-columns:1fr}.page-hero-txt{padding:40px 24px}footer{padding:40px 24px 24px}.footer-grid{grid-template-columns:1fr 1fr}}
 </style>
-<script>
-const PT={tc:{h1:"在職高端教育",hs:"持續進修、提升領導力、擴展人脈資源<br>成就更高層次的事業發展",ov_t:"為何選擇在職高端課程？",prog_t:"課程選擇",why_t:"為什麼選擇 Majestic？",cta_h:"開啟您的高端進修之旅",cta_btn:"免費諮詢 →"},sc:{h1:"在职高端教育",hs:"持续进修、提升领导力、扩展人脉资源<br>成就更高层次的事业发展",ov_t:"为何选择在职高端课程？",prog_t:"课程选择",why_t:"为什么选择 Majestic？",cta_h:"开启您的高端进修之旅",cta_btn:"免费咨询 →"},en:{h1:"Executive Education",hs:"Continuous learning, leadership development, network expansion<br>Achieve higher-level career advancement",ov_t:"Why Choose Executive Education?",prog_t:"Programme Selection",why_t:"Why Choose Majestic?",cta_h:"Begin Your Executive Education Journey",cta_btn:"Free Consultation →"}};
-function updateContent(lang){const t=PT[lang];Object.keys(t).forEach(k=>{const el=document.querySelector("[data-key='"+k+"']");if(el)el.innerHTML=t[k];});}
-</script>
 </head>
 <body>
 <nav>
-  <a href="index.html" class="logo">
-    <img src="logo.png" alt="Majestic Education & Immigration" style="height:52px;width:auto;">
-  </a>
+  <a href="index.html" class="logo"><img src="logo.png" alt="Majestic" onerror="this.style.display='none';this.nextSibling.style.display='block'"><span style="display:none;font-family:'Noto Serif TC',serif;font-size:18px;font-weight:700;color:#1a2744">MAJESTIC</span></a>
   <ul class="nav-links">
-    <li><a href="index.html" data-key="nav0">首頁</a></li>
-    <li><a href="about.html" data-key="nav1">關於我們</a></li>
+    <li><a href="index.html">首頁</a></li>
+    <li><a href="about.html">關於我們</a></li>
     <li class="nav-dropdown">
-      <a href="hk-education.html" class="nav-dropdown-toggle" data-key="nav2" onclick="if(window.innerWidth>900){event.preventDefault();this.nextElementSibling.classList.toggle('open');event.stopPropagation()}">升學 ▾</a>
-      <div class="nav-dropdown-menu">
-        <a href="hk-education.html">🇭🇰 香港升學</a>
-        <a href="uk-education.html">🇬🇧 英國升學</a>
-      </div>
+      <a href="hk-education.html" onclick="if(window.innerWidth>960){event.preventDefault();this.nextSibling.classList.toggle('open');event.stopPropagation()}">升學 ▾</a>
+      <div class="nav-dd-menu"><a href="hk-education.html">🇭🇰 香港升學</a><a href="uk-education.html">🇬🇧 英國升學</a></div>
     </li>
-    <li><a href="executive-education.html" data-key="nav4">在職高端教育</a></li>
-    <li><a href="identity-investment.html" data-key="nav5">身份及投資</a></li>
-    <li><a href="success-stories.html" data-key="nav6">成功案例</a></li>
-    <li><a href="insights.html" data-key="nav7">洞察</a></li>
-    <li><a href="contact.html" data-key="nav8">聯絡我們</a></li>
+    <li><a href="executive-education.html" class="cur">在職高端教育</a></li>
+    <li><a href="identity-investment.html">身份及投資</a></li>
+    <li><a href="success-stories.html">成功案例</a></li>
+    <li><a href="insights.html">洞察</a></li>
+    <li><a href="contact.html">聯絡我們</a></li>
   </ul>
-  <div class="nav-cta">
-    <span class="nav-phone">📞 +852 5338 4136</span>
-    <div class="lang-switcher">
-      <button class="lang-btn active" data-lang="tc" onclick="setLang('tc')">繁</button>
-      <button class="lang-btn" data-lang="sc" onclick="setLang('sc')">简</button>
-      <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
-    </div>
-    <a href="contact.html" class="btn-primary btn-nav-cta">免費諮詢</a>
+  <div class="nav-r">
+    <span style="font-size:12px;color:var(--mid)">📞 +852 5338 4136</span>
+    <div class="lang-sw"><button class="lb on">繁</button><button class="lb">简</button><button class="lb">EN</button></div>
+    <a href="contact.html" class="btn-nav">免費諮詢</a>
   </div>
 </nav>
-<script>
-document.addEventListener('click',function(e){
-  if(!e.target.closest('.nav-dropdown'))
-    document.querySelectorAll('.nav-dropdown-menu').forEach(m=>m.classList.remove('open'));
-});
-</script>
 
 <div class="page-hero">
-  <div class="page-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1600&q=80')"></div>
-  <div class="page-hero-content">
-    <div class="label">EXECUTIVE EDUCATION</div>
-    <h1 data-key="h1">在職高端教育</h1>
-    <p data-key="hs">持續進修、提升領導力、擴展人脈資源<br>成就更高層次的事業發展</p>
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-txt">
+    <div class="page-hero-label">UK EDUCATION</div>
+    <h1>英國升學規劃</h1>
+    <p>Majestic 與英國知名大學合作，為內地在職管理人員提供 MBA 及 DBA 課程申請支援。在職進修，無需放棄事業，學以致用，即時提升管理效能。</p>
   </div>
 </div>
-<div class="section section-center">
-  <h2 class="section-title" data-key="ov_t">為何選擇在職高端課程？</h2>
-  <div class="divider-gold"></div>
-  <div class="cards-5" style="max-width:1100px;margin:0 auto">
-    <div style="text-align:center;padding:16px"><div style="font-size:28px;margin-bottom:10px">🎯</div><h4 style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:6px">提升領導力</h4><p style="font-size:11.5px;color:var(--text-light)">系統化課程提升決策力、管理力與領導力</p></div>
-    <div style="text-align:center;padding:16px"><div style="font-size:28px;margin-bottom:10px">📈</div><h4 style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:6px">推動事業發展</h4><p style="font-size:11.5px;color:var(--text-light)">增強事業競爭力，拓展晉升與事業機會</p></div>
-    <div style="text-align:center;padding:16px"><div style="font-size:28px;margin-bottom:10px">👥</div><h4 style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:6px">拓展高端人脈</h4><p style="font-size:11.5px;color:var(--text-light)">結識來自各行各業的高層管理人才</p></div>
-    <div style="text-align:center;padding:16px"><div style="font-size:28px;margin-bottom:10px">💡</div><h4 style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:6px">學以致用</h4><p style="font-size:11.5px;color:var(--text-light)">還活學習模式，兼顧工作與學習平衡</p></div>
-    <div style="text-align:center;padding:16px"><div style="font-size:28px;margin-bottom:10px">🌏</div><h4 style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:6px">國際視野</h4><p style="font-size:11.5px;color:var(--text-light)">接軌國際前沿管理知識，拓展全球視野</p></div>
+
+<!-- WHY UK -->
+<div class="sec bg-off tc">
+  <div class="sec-label">WHY UK</div>
+  <h2 class="sec-title">為何選擇英國 MBA / DBA？</h2>
+  <div class="gold-line"></div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:10px;overflow:hidden;max-width:1000px;margin:0 auto">
+    <div style="background:#fff;padding:24px 22px;text-align:left"><div style="border-left:3px solid var(--gold);padding-left:14px"><p style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:6px">國際認可學歷</p><p style="font-size:12.5px;color:var(--light);line-height:1.7">英國大學學位獲全球僱主及頂尖院校廣泛認可，大幅提升個人國際競爭力</p></div></div>
+    <div style="background:#fff;padding:24px 22px;text-align:left"><div style="border-left:3px solid var(--gold);padding-left:14px"><p style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:6px">學制高效靈活</p><p style="font-size:12.5px;color:var(--light);line-height:1.7">MBA 一般一年完成，DBA 約三至四年，在職進修不影響正常工作與事業發展</p></div></div>
+    <div style="background:#fff;padding:24px 22px;text-align:left"><div style="border-left:3px solid var(--gold);padding-left:14px"><p style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:6px">全球頂尖人脈</p><p style="font-size:12.5px;color:var(--light);line-height:1.7">與來自世界各地的管理精英同學，建立珍貴的國際商業人脈與合作機會</p></div></div>
+    <div style="background:#fff;padding:24px 22px;text-align:left"><div style="border-left:3px solid var(--gold);padding-left:14px"><p style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:6px">即學即用</p><p style="font-size:12.5px;color:var(--light);line-height:1.7">課程設計緊貼商業實踐，所學知識可直接應用於工作，即時提升管理效能</p></div></div>
+    <div style="background:#fff;padding:24px 22px;text-align:left"><div style="border-left:3px solid var(--gold);padding-left:14px"><p style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:6px">晉升薪酬優勢</p><p style="font-size:12.5px;color:var(--light);line-height:1.7">持有英國 MBA / DBA 學位，在晉升及薪酬談判上具明顯優勢，回報可觀</p></div></div>
+    <div style="background:#fff;padding:24px 22px;text-align:left"><div style="border-left:3px solid var(--gold);padding-left:14px"><p style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:6px">提升企業形象</p><p style="font-size:12.5px;color:var(--light);line-height:1.7">持有英國知名大學學位，為個人品牌及企業形象帶來正面加持，增強市場信任</p></div></div>
   </div>
 </div>
-<div class="section section-center bg-offwhite">
-  <h2 class="section-title" data-key="prog_t">課程選擇</h2>
-  <div class="divider-gold"></div>
-  <div class="cards-3" style="max-width:1000px;margin:0 auto">
-    <div style="border-radius:8px;overflow:hidden;border:1px solid var(--border);background:var(--white)">
-      <div style="height:180px;background:url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=500&q=80') center/cover"></div>
-      <div style="padding:28px">
-        <div style="font-size:11px;font-weight:700;color:var(--gold);letter-spacing:2px;margin-bottom:8px">MBA</div>
-        <h3 style="font-size:18px;font-weight:700;color:var(--navy);margin-bottom:10px">MBA 工商管理碩士</h3>
-        <p style="font-size:13px;color:var(--text-mid);line-height:1.7;margin-bottom:14px">培養全面的商業思維與管理技能，適合中高層管理人員及企業領袖。</p>
-        <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;margin-bottom:18px">
-          <li style="font-size:12px;color:var(--text-mid)">✓ 策略管理</li>
-          <li style="font-size:12px;color:var(--text-mid)">✓ 領導力發展</li>
-          <li style="font-size:12px;color:var(--text-mid)">✓ 財務分析</li>
-          <li style="font-size:12px;color:var(--text-mid)">✓ 市場營銷</li>
-        </ul>
-        <a href="contact.html" class="btn-outline">了解更多 →</a>
+
+<!-- PROGRAMS -->
+<div class="sec" style="max-width:1100px;margin:0 auto">
+  <div class="sec-label tc">PROGRAMMES</div>
+  <h2 class="sec-title tc">課程詳情</h2>
+  <div class="gold-line"></div>
+
+  <div class="prog-block">
+    <div class="prog-header">
+      <div>
+        <span class="prog-badge">MBA</span>
+      </div>
+      <div>
+        <h3>工商管理碩士</h3>
+        <p>Master of Business Administration — 適合具3年或以上工作經驗的管理人員</p>
       </div>
     </div>
-    <div style="border-radius:8px;overflow:hidden;border:1px solid var(--border);background:var(--white)">
-      <div style="height:180px;background:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&q=80') center/cover"></div>
-      <div style="padding:28px">
-        <div style="font-size:11px;font-weight:700;color:var(--gold);letter-spacing:2px;margin-bottom:8px">MSc</div>
-        <h3 style="font-size:18px;font-weight:700;color:var(--navy);margin-bottom:10px">MSc 理學碩士</h3>
-        <p style="font-size:13px;color:var(--text-mid);line-height:1.7;margin-bottom:14px">針對特定領域深入學習，提升專業知識與實務能力。</p>
-        <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;margin-bottom:18px">
-          <li style="font-size:12px;color:var(--text-mid)">✓ 金融學</li>
-          <li style="font-size:12px;color:var(--text-mid)">✓ 管理學</li>
-          <li style="font-size:12px;color:var(--text-mid)">✓ 市場營銷</li>
-          <li style="font-size:12px;color:var(--text-mid)">✓ 數據分析</li>
-        </ul>
-        <a href="contact.html" class="btn-outline">了解更多 →</a>
+    <div class="prog-body">
+      <div>
+        <h4>課程核心內容</h4>
+        <div class="prog-item"><div class="prog-dot"></div><p>策略管理與企業決策框架</p></div>
+        <div class="prog-item"><div class="prog-dot"></div><p>財務分析、投資管理與風險評估</p></div>
+        <div class="prog-item"><div class="prog-dot"></div><p>市場營銷策略與品牌管理</p></div>
+        <div class="prog-item"><div class="prog-dot"></div><p>領導力發展與人才管理</p></div>
+        <div class="prog-item"><div class="prog-dot"></div><p>商業倫理與企業管治</p></div>
+        <div class="prog-item"><div class="prog-dot"></div><p>數字化轉型與創新管理</p></div>
       </div>
-    </div>
-    <div style="border-radius:8px;overflow:hidden;border:1px solid var(--border);background:var(--white)">
-      <div style="height:180px;background:url('https://images.unsplash.com/photo-1627556704283-56d5bdafff9c?auto=format&fit=crop&w=500&q=80') center/cover"></div>
-      <div style="padding:28px">
-        <div style="font-size:11px;font-weight:700;color:var(--gold);letter-spacing:2px;margin-bottom:8px">DBA</div>
-        <h3 style="font-size:18px;font-weight:700;color:var(--navy);margin-bottom:10px">DBA 工商管理博士</h3>
-        <p style="font-size:13px;color:var(--text-mid);line-height:1.7;margin-bottom:14px">專為高層管理人員及企業家設計，提升策略思維與研究能力。</p>
-        <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;margin-bottom:18px">
-          <li style="font-size:12px;color:var(--text-mid)">✓ 企業策略</li>
-          <li style="font-size:12px;color:var(--text-mid)">✓ 領導力與變革</li>
-          <li style="font-size:12px;color:var(--text-mid)">✓ 創新與研究</li>
-          <li style="font-size:12px;color:var(--text-mid)">✓ 全球商業環境</li>
-        </ul>
-        <a href="contact.html" class="btn-outline">了解更多 →</a>
+      <div>
+        <h4>申請要求</h4>
+        <div class="req-row"><span class="req-label">學歷</span><span class="req-val">本科學位（任何學科）</span></div>
+        <div class="req-row"><span class="req-label">工作經驗</span><span class="req-val">3年或以上管理經驗</span></div>
+        <div class="req-row"><span class="req-label">英語要求</span><span class="req-val">IELTS 6.5 或以上</span></div>
+        <div class="req-row"><span class="req-label">學習模式</span><span class="req-val">在職 / 兼讀（網上為主）</span></div>
+        <div class="req-row"><span class="req-label">修業時間</span><span class="req-val">一般12–18個月</span></div>
+        <div style="margin-top:14px;padding:12px 14px;background:rgba(201,168,76,.1);border-radius:6px">
+          <p style="font-size:12.5px;color:var(--navy)">💡 <strong>適合：</strong>希望提升管理視野、轉型創業或晉升高管職位的在職專業人士</p>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<div class="section section-center">
-  <h2 class="section-title" data-key="why_t">為什麼選擇 Majestic？</h2>
-  <div class="divider-gold"></div>
-  <div class="cards-4" style="max-width:1000px;margin:0 auto">
-    <div class="card" style="text-align:center"><div style="font-size:28px;margin-bottom:12px">👨‍💼</div><h4 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:8px">資深顧問團隊</h4><p style="font-size:12px;color:var(--text-light)">擁有豐富的教育背景及企業管理經驗</p></div>
-    <div class="card" style="text-align:center"><div style="font-size:28px;margin-bottom:12px">🏛️</div><h4 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:8px">全球合作院校</h4><p style="font-size:12px;color:var(--text-light)">與世界頂尖大學及商學院建立緊密合作</p></div>
-    <div class="card" style="text-align:center"><div style="font-size:28px;margin-bottom:12px">📐</div><h4 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:8px">量身訂制方案</h4><p style="font-size:12px;color:var(--text-light)">根據個人目標，設計最合適的進修路徑</p></div>
-    <div class="card" style="text-align:center"><div style="font-size:28px;margin-bottom:12px">🎓</div><h4 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:8px">校友資源豐富</h4><p style="font-size:12px;color:var(--text-light)">加入高端校友發展網，拓展人脈與資源</p></div>
+
+  <div class="prog-block">
+    <div class="prog-header">
+      <div>
+        <span class="prog-badge">DBA</span>
+      </div>
+      <div>
+        <h3>工商管理博士</h3>
+        <p>Doctor of Business Administration — 專為資深企業管理者及企業家設計</p>
+      </div>
+    </div>
+    <div class="prog-body">
+      <div>
+        <h4>課程核心內容</h4>
+        <div class="prog-item"><div class="prog-dot"></div><p>企業策略與創新管理研究</p></div>
+        <div class="prog-item"><div class="prog-dot"></div><p>組織變革、領導力與企業文化</p></div>
+        <div class="prog-item"><div class="prog-dot"></div><p>商業研究方法論與學術寫作</p></div>
+        <div class="prog-item"><div class="prog-dot"></div><p>全球商業環境分析與策略</p></div>
+        <div class="prog-item"><div class="prog-dot"></div><p>獨立研究項目（Thesis）</p></div>
+        <div class="prog-item"><div class="prog-dot"></div><p>行業應用研究與實踐整合</p></div>
+      </div>
+      <div>
+        <h4>申請要求</h4>
+        <div class="req-row"><span class="req-label">學歷</span><span class="req-val">MBA 或相關碩士學位</span></div>
+        <div class="req-row"><span class="req-label">工作經驗</span><span class="req-val">豐富管理經驗（一般8年+）</span></div>
+        <div class="req-row"><span class="req-label">英語要求</span><span class="req-val">IELTS 7.0 或以上</span></div>
+        <div class="req-row"><span class="req-label">研究計劃</span><span class="req-val">需提交研究計劃書</span></div>
+        <div class="req-row"><span class="req-label">修業時間</span><span class="req-val">一般3–4年（在職模式）</span></div>
+        <div style="margin-top:14px;padding:12px 14px;background:rgba(201,168,76,.1);border-radius:6px">
+          <p style="font-size:12.5px;color:var(--navy)">💡 <strong>適合：</strong>企業家、二代接班人、高級管理人員，希望以學術研究深化管理實踐</p>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-<div class="section section-center bg-offwhite">
-  <h2 class="section-title">申請流程</h2>
-  <div class="divider-gold"></div>
-  <div class="steps" style="max-width:1100px;margin:0 auto">
-    <div class="step"><div class="step-num">Step 1</div><div class="step-circle">💬</div><h4>免費諮詢</h4><p>了解需求及發展目標，制定進修方案</p></div>
-    <div class="step-arrow">→</div>
-    <div class="step"><div class="step-num">Step 2</div><div class="step-circle">📚</div><h4>選擇課程</h4><p>根據職業目標，選擇合適通課程</p></div>
-    <div class="step-arrow">→</div>
-    <div class="step"><div class="step-num">Step 3</div><div class="step-circle">📝</div><h4>準備申請</h4><p>準備申請材料，提升錄取機會</p></div>
-    <div class="step-arrow">→</div>
-    <div class="step"><div class="step-num">Step 4</div><div class="step-circle">📮</div><h4>提交申請</h4><p>遞交申請材料，跟進申請進度</p></div>
-    <div class="step-arrow">→</div>
-    <div class="step"><div class="step-num">Step 5</div><div class="step-circle">✉️</div><h4>錄取通知</h4><p>獲得錄取通知，辦理入學手續</p></div>
-    <div class="step-arrow">→</div>
-    <div class="step"><div class="step-num">Step 6</div><div class="step-circle">🎯</div><h4>開啟學習之旅</h4><p>開始課程學習，實現自我提升</p></div>
+
+<!-- WHY MAJESTIC -->
+<div class="sec bg-off">
+  <div style="max-width:1000px;margin:0 auto">
+    <div class="sec-label tc">WHY MAJESTIC</div>
+    <h2 class="sec-title tc">為何透過 Majestic 申請？</h2>
+    <div class="gold-line"></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+      <div style="background:#fff;border-radius:8px;padding:22px;border:1px solid var(--border);display:flex;gap:14px;align-items:flex-start">
+        <div style="width:44px;height:44px;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">🤝</div>
+        <div><h3 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:6px">大學合作關係</h3><p style="font-size:13px;color:var(--mid);line-height:1.7">與英國多所知名大學建立合作關係，深入了解各院校收生偏好及內部標準</p></div>
+      </div>
+      <div style="background:#fff;border-radius:8px;padding:22px;border:1px solid var(--border);display:flex;gap:14px;align-items:flex-start">
+        <div style="width:44px;height:44px;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">📝</div>
+        <div><h3 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:6px">文書專業支援</h3><p style="font-size:13px;color:var(--mid);line-height:1.7">個人陳述、研究計劃書專業撰寫，協助將商業經驗轉化為有說服力的學術申請材料</p></div>
+      </div>
+      <div style="background:#fff;border-radius:8px;padding:22px;border:1px solid var(--border);display:flex;gap:14px;align-items:flex-start">
+        <div style="width:44px;height:44px;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">🎤</div>
+        <div><h3 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:6px">面試全面準備</h3><p style="font-size:13px;color:var(--mid);line-height:1.7">針對英國院校面試風格，提供模擬練習、常見問題應對及英語表達技巧指導</p></div>
+      </div>
+      <div style="background:#fff;border-radius:8px;padding:22px;border:1px solid var(--border);display:flex;gap:14px;align-items:flex-start">
+        <div style="width:44px;height:44px;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">🌐</div>
+        <div><h3 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:6px">在職安排協調</h3><p style="font-size:13px;color:var(--mid);line-height:1.7">協助安排彈性學習時間表，確保在職進修與工作之間取得最佳平衡</p></div>
+      </div>
+    </div>
   </div>
 </div>
-<div class="cta-banner">
-  <div><h2 data-key="cta_h">開啟您的高端進修之旅</h2><p>提升自我、成就未來、與卓越者同行</p></div>
-  <a href="contact.html" class="btn-gold" data-key="cta_btn">免費諮詢 →</a>
+
+<!-- PROCESS -->
+<div class="sec tc">
+  <div class="sec-label">APPLICATION PROCESS</div>
+  <h2 class="sec-title">申請流程</h2>
+  <div class="gold-line"></div>
+  <div class="steps">
+    <div class="step"><div class="step-circle">1</div><h4>免費諮詢</h4><p>了解背景目標，評估 MBA 或 DBA 的適合性</p></div>
+    <div class="step-arr">›</div>
+    <div class="step"><div class="step-circle">2</div><h4>選校建議</h4><p>推薦最合適的英國大學及課程</p></div>
+    <div class="step-arr">›</div>
+    <div class="step"><div class="step-circle">3</div><h4>文書準備</h4><p>個人陳述、CV、研究計劃書撰寫優化</p></div>
+    <div class="step-arr">›</div>
+    <div class="step"><div class="step-circle">4</div><h4>遞交申請</h4><p>完成申請表格，準時遞交各院校</p></div>
+    <div class="step-arr">›</div>
+    <div class="step"><div class="step-circle">5</div><h4>面試培訓</h4><p>模擬面試，提升錄取機會</p></div>
+    <div class="step-arr">›</div>
+    <div class="step" style="--c:var(--gold)"><div class="step-circle" style="background:var(--gold)">6</div><h4>錄取安排</h4><p>協助辦理簽證及開學準備</p></div>
+  </div>
 </div>
+
+<!-- FAQ -->
+<div class="sec bg-off" style="max-width:800px;margin:0 auto">
+  <div class="sec-label tc">FAQ</div>
+  <h2 class="sec-title tc">常見問題</h2>
+  <div class="gold-line"></div>
+  <div class="faq-item"><div class="faq-q"><span>MBA 和 DBA 有什麼分別？應該選哪個？</span><span class="faq-plus">+</span></div><div class="faq-a">MBA 側重廣泛的管理技能培訓，適合希望全面提升管理能力或轉換行業的人士，一般要求3年或以上工作經驗。DBA 則以研究為主，要求申請人有豐富管理經驗（通常8年以上）及碩士學位，適合希望以學術研究深化專業實踐、或取得博士學位的資深管理者。Majestic 可根據您的背景及目標，提供專業建議。</div></div>
+  <div class="faq-item"><div class="faq-q"><span>在職人士可以讀英國 MBA / DBA 嗎？</span><span class="faq-plus">+</span></div><div class="faq-a">可以。大部分英國 MBA 及 DBA 課程均設有在職兼讀模式，以網上授課為主，配合定期實體工作坊（通常每學期1-2次赴英）。課程設計充分考慮在職人士的時間限制，讓您在不放棄事業的情況下完成學業。</div></div>
+  <div class="faq-item"><div class="faq-q"><span>英語成績不夠怎麼辦？</span><span class="faq-plus">+</span></div><div class="faq-a">部分院校接受以英語為工作語言的申請人豁免英語成績要求，或提供預備課程（Pre-sessional English）。Majestic 可協助評估您的英語水平，建議最合適的備考策略，或推薦英語要求較為彈性的院校。</div></div>
+  <div class="faq-item"><div class="faq-q"><span>DBA 需要提交研究計劃書，我該如何準備？</span><span class="faq-plus">+</span></div><div class="faq-a">研究計劃書是 DBA 申請最關鍵的材料，需清晰闡述研究題目、研究問題、研究方法及預期貢獻。Majestic 的顧問具備豐富的 DBA 申請經驗，可協助您從商業實踐中提煉研究方向，並撰寫符合院校要求的學術計劃書。</div></div>
+</div>
+
+<div class="cta-bar">
+  <div>
+    <h2>準備開啟您的英國進修之旅？</h2>
+    <p>立即聯繫我們，獲取免費評估及個人化 MBA / DBA 申請方案</p>
+  </div>
+  <div style="display:flex;gap:12px;flex-wrap:wrap">
+    <a href="https://wa.me/85253384136" target="_blank" class="btn-wa">💬 WhatsApp 查詢</a>
+    <a href="contact.html" class="btn-gold">預約免費諮詢</a>
+  </div>
+</div>
+
 <footer>
   <div class="footer-grid">
-    <div class="footer-logo-col">
-      <img src="logo.png" alt="Majestic" style="height:48px;width:auto;filter:brightness(0) invert(1);margin-bottom:12px;">
-      <p class="footer-tagline" data-key="footer_tag">以專業與誠信，協助專業人士及家庭<br>建立更清晰的未來發展藍圖</p>
-      <div class="social-links">
-        <a href="https://www.facebook.com/Magesticeduvisa/" target="_blank" class="social-btn">f</a>
-        <a href="https://wa.me/85253384136" target="_blank" class="social-btn" style="background:#25D366;border-color:#25D366;color:#fff">💬</a>
-        <a href="https://www.instagram.com/majestic_educationhk/" target="_blank" class="social-btn" style="background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);border:none;color:#fff">ig</a>
-        <a href="javascript:void(0)" onclick="document.getElementById('wc-modal').style.display='flex'" class="social-btn" style="background:#07C160;border-color:#07C160;color:#fff;cursor:pointer">微</a>
+    <div>
+      <img src="logo.png" alt="Majestic" style="height:44px;filter:brightness(0) invert(1);margin-bottom:10px" onerror="this.style.display='none'">
+      <p class="ft">以專業與誠信，為內地專業人士及家庭<br>提供香港升學、身份規劃及英國進修服務</p>
+      <div class="social-row">
+        <a href="https://www.facebook.com/Magesticeduvisa/" target="_blank" class="sb">f</a>
+        <a href="https://wa.me/85253384136" target="_blank" class="sb" style="background:#25D366;border-color:#25D366;color:#fff">💬</a>
+        <a href="https://www.instagram.com/majestic_educationhk/" target="_blank" class="sb" style="background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);border:none;color:#fff">ig</a>
+        <a href="javascript:void(0)" onclick="document.getElementById('wc').style.display='flex'" class="sb" style="background:#07C160;border-color:#07C160;color:#fff">微</a>
       </div>
     </div>
-    <div class="footer-col">
-      <h4 data-key="footer_quick">快捷連結</h4>
-      <ul>
-        <li><a href="about.html" data-key="fnav0">關於我們</a></li>
-        <li><a href="hk-education.html" data-key="fnav1">香港升學</a></li>
-        <li><a href="uk-education.html" data-key="fnav2">英國升學</a></li>
-        <li><a href="executive-education.html" data-key="fnav3">在職高端教育</a></li>
-        <li><a href="contact.html" data-key="fnav4">聯絡我們</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4 data-key="footer_id">身份及投資規劃</h4>
-      <ul>
-        <li><a href="success-stories.html" data-key="fnav5">成功案例</a></li>
-        <li><a href="insights.html" data-key="fnav6">專欄文章</a></li>
-        <li><a href="contact.html" data-key="fnav7">聯絡我們</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4 data-key="footer_contact">聯絡資訊</h4>
-      <ul>
-        <li><a href="#">📞 +852 5338 4136</a></li>
-        <li><a href="#">✉ info@majestic-immigration.com</a></li>
-        <li><a href="#">📍 RM 3805, 38/F ONE MIDTOWN, 11 Hoi Shing Rd, Tsuen Wan, Hong Kong</a></li>
-        
-      </ul>
-    </div>
+    <div class="footer-col"><h4>快捷連結</h4><ul>
+      <li><a href="about.html">關於我們</a></li>
+      <li><a href="hk-education.html">香港升學</a></li>
+      <li><a href="uk-education.html">英國升學</a></li>
+      <li><a href="executive-education.html" class="cur">在職高端教育</a></li>
+      <li><a href="contact.html">聯絡我們</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>身份規劃</h4><ul>
+      <li><a href="identity-investment.html">高才通計劃</a></li>
+      <li><a href="identity-investment.html">優才計劃 QMAS</a></li>
+      <li><a href="identity-investment.html">CIES 投資移民</a></li>
+      <li><a href="identity-investment.html">輸入內地人才</a></li>
+      <li><a href="success-stories.html">成功案例</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>聯絡資訊</h4><ul>
+      <li><a href="tel:+85253384136">📞 +852 5338 4136</a></li>
+      <li><a href="tel:+85237411209">📞 +852 3741 1209</a></li>
+      <li><a href="mailto:info@majestic-immigration.com">✉ info@majestic-immigration.com</a></li>
+      <li><a href="#">📍 RM 3805, 38/F ONE MIDTOWN<br>Tsuen Wan, HK</a></li>
+    </ul></div>
   </div>
-  <div class="footer-bottom">
-    <span data-key="footer_copy">© 2026 Majestic Education & Immigration Consultancy. All Rights Reserved.</span>
-    <div class="footer-bottom-links">
-      <a href="#" data-key="footer_priv">私隱政策</a>
-      <a href="#" data-key="footer_disc">免責聲明</a>
-    </div>
+  <div class="footer-bot">
+    <span>© 2026 Majestic Education & Immigration Consultancy. All Rights Reserved.</span>
+    <div style="display:flex;gap:18px"><a href="#">私隱政策</a><a href="#">免責聲明</a></div>
   </div>
 </footer>
-<div class="whatsapp-float" onclick="window.open('https://wa.me/85253384136')">
-  <span style="color:white;font-size:26px">💬</span>
+
+<a href="https://wa.me/85253384136" class="wa-float" target="_blank">💬</a>
+<div id="wc" onclick="this.style.display='none'" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:99999;align-items:center;justify-content:center">
+  <div onclick="event.stopPropagation()" style="background:#fff;border-radius:16px;padding:32px;text-align:center;max-width:300px;width:90%">
+    <h3 style="font-size:17px;font-weight:700;color:#1a2744;margin-bottom:4px">WeChat 微信</h3>
+    <p style="font-size:12px;color:#718096;margin-bottom:14px">掃描二維碼加我為朋友</p>
+    <img src="wechat-qr.jpg" style="width:200px;height:200px;object-fit:contain;border-radius:8px" onerror="this.style.display='none'">
+    <br><button onclick="document.getElementById('wc').style.display='none'" style="margin-top:16px;padding:9px 26px;background:#07C160;color:#fff;border:none;border-radius:20px;cursor:pointer;font-size:13px;font-weight:600">關閉</button>
+  </div>
 </div>
 <script>
-const T = {
-  tc:{
-    nav:["首頁","關於我們","香港升學","英國升學","在職高端教育","身份及投資","成功案例","洞察","聯絡我們"],
-    cta:"免費諮詢",phone:"+852 5338 4136",
-    footer_tag:"以專業與誠信，協助專業人士及家庭<br>建立更清晰的未來發展藍圖",
-    footer_quick:"快捷連結",footer_id:"身份及投資規劃",footer_contact:"聯絡資訊",
-    fnav:["關於我們","香港升學","英國升學","在職高端教育","聯絡我們","成功案例","專欄文章","聯絡我們"],
-    footer_copy:"© 2026 Majestic Education & Immigration Consultancy. All Rights Reserved.",
-    footer_priv:"私隱政策",footer_disc:"免責聲明"
-  },
-  sc:{
-    nav:["首页","关于我们","香港升学","英国升学","在职高端教育","身份及投资","成功案例","洞察","联系我们"],
-    cta:"免费咨询",phone:"+852 5338 4136",
-    footer_tag:"以专业与诚信，协助专业人士及家庭<br>建立更清晰的未来发展蓝图",
-    footer_quick:"快捷链接",footer_id:"身份及投资规划",footer_contact:"联系资讯",
-    fnav:["关于我们","香港升学","英国升学","在职高端教育","联系我们","成功案例","专栏文章","联系我们"],
-    footer_copy:"© 2026 Majestic Education & Immigration Consultancy. All Rights Reserved.",
-    footer_priv:"私隐政策",footer_disc:"免责声明"
-  },
-  en:{
-    nav:["Home","About Us","HK Education","UK Education","Executive Education","Identity & Investment","Success Stories","Insights","Contact"],
-    cta:"Free Consultation",phone:"+852 5338 4136",
-    footer_tag:"With professionalism and integrity, helping professionals<br>and families build a clearer roadmap for their future",
-    footer_quick:"Quick Links",footer_id:"Identity & Investment",footer_contact:"Contact Info",
-    fnav:["About Us","HK Education","UK Education","Executive Education","Contact Us","Success Stories","Articles","Contact Us"],
-    footer_copy:"© 2026 Majestic Education & Immigration Consultancy. All Rights Reserved.",
-    footer_priv:"Privacy Policy",footer_disc:"Disclaimer"
-  }
-};
-
-let currentLang = localStorage.getItem("majestic_lang")||"tc";
-
-function setLang(lang){
-  currentLang=lang;
-  localStorage.setItem("majestic_lang",lang);
-  document.querySelectorAll(".lang-btn").forEach(b=>b.classList.toggle("active",b.dataset.lang===lang));
-  document.body.className=lang==="en"?"lang-en":lang==="sc"?"lang-sc":"";
-  const t=T[lang];
-  // Nav
-  document.querySelectorAll("[data-key^='nav']").forEach(el=>{
-    const i=parseInt(el.dataset.key.replace("nav",""));
-    if(t.nav[i]!==undefined) el.textContent=t.nav[i];
-  });
-  document.querySelector(".btn-nav-cta").textContent=t.cta;
-  document.querySelector(".nav-phone").textContent="📞 "+t.phone;
-  // Footer
-  const ftag=document.querySelector("[data-key='footer_tag']");
-  if(ftag) ftag.innerHTML=t.footer_tag;
-  const fq=document.querySelector("[data-key='footer_quick']");
-  if(fq) fq.textContent=t.footer_quick;
-  const fi=document.querySelector("[data-key='footer_id']");
-  if(fi) fi.textContent=t.footer_id;
-  const fc=document.querySelector("[data-key='footer_contact']");
-  if(fc) fc.textContent=t.footer_contact;
-  document.querySelectorAll("[data-key^='fnav']").forEach(el=>{
-    const i=parseInt(el.dataset.key.replace("fnav",""));
-    if(t.fnav[i]!==undefined) el.textContent=t.fnav[i];
-  });
-  const fcp=document.querySelector("[data-key='footer_copy']");
-  if(fcp) fcp.textContent=t.footer_copy;
-  const fp=document.querySelector("[data-key='footer_priv']");
-  if(fp) fp.textContent=t.footer_priv;
-  const fd=document.querySelector("[data-key='footer_disc']");
-  if(fd) fd.textContent=t.footer_disc;
-  // Page-specific
-  if(typeof updateContent==="function") updateContent(lang);
-}
-
-document.addEventListener("DOMContentLoaded",()=>{
-  // FAQ
-  document.querySelectorAll(".faq-item").forEach(item=>{
-    item.querySelector(".faq-q").addEventListener("click",()=>item.classList.toggle("open"));
-  });
-  setLang(currentLang);
-});
+document.addEventListener('click',function(e){if(!e.target.closest('.nav-dropdown'))document.querySelectorAll('.nav-dd-menu').forEach(m=>m.classList.remove('open'));});
+document.querySelectorAll('.faq-item').forEach(item=>item.querySelector('.faq-q').addEventListener('click',()=>item.classList.toggle('open')));
 </script>
 </body>
 </html>
