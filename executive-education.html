@@ -28,8 +28,8 @@ nav{position:sticky;top:0;z-index:1000;background:var(--white);border-bottom:1px
 .lb.on{background:var(--navy);color:#fff}
 .btn-nav{background:var(--navy);color:#fff;padding:9px 18px;border:none;border-radius:4px;font-size:13px;font-family:inherit;font-weight:500;cursor:pointer;text-decoration:none}
 .page-hero{position:relative;min-height:420px;display:flex;align-items:center;overflow:hidden;background:var(--navy2)}
-.page-hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1526129318478-62ed807ebdf9?auto=format&fit=crop&w=1600&q=80') center/cover;opacity:.4;pointer-events:none}
-.page-hero-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(10,20,45,.88) 40%,rgba(10,20,45,.4) 100%);pointer-events:none}
+.page-hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1600&q=80') center/cover;opacity:.38;pointer-events:none}
+.page-hero-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(10,20,45,.9) 40%,rgba(10,20,45,.4) 100%);pointer-events:none}
 .page-hero-txt{position:relative;z-index:2;padding:60px 80px;max-width:660px}
 .page-hero-label{font-size:11px;letter-spacing:2.5px;color:var(--gold);font-weight:600;margin-bottom:14px;text-transform:uppercase}
 .page-hero-txt h1{font-family:'Noto Serif TC',serif;font-size:36px;font-weight:700;color:#fff;line-height:1.3;margin-bottom:14px}
@@ -40,7 +40,6 @@ nav{position:sticky;top:0;z-index:1000;background:var(--white);border-bottom:1px
 .sec-label{font-size:11px;letter-spacing:2.5px;color:var(--gold);font-weight:600;margin-bottom:8px;text-transform:uppercase}
 .sec-title{font-family:'Noto Serif TC',serif;font-size:26px;font-weight:700;color:var(--navy);margin-bottom:10px}
 .gold-line{width:36px;height:2px;background:var(--gold);margin:0 auto 36px}
-.gold-line-l{width:36px;height:2px;background:var(--gold);margin:0 0 28px}
 .prog-block{background:#fff;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:24px}
 .prog-header{background:var(--navy);padding:24px 32px;display:flex;align-items:center;gap:20px}
 .prog-badge{background:var(--gold);color:#fff;font-size:13px;font-weight:700;padding:6px 16px;border-radius:20px;letter-spacing:.5px;flex-shrink:0}
@@ -54,6 +53,8 @@ nav{position:sticky;top:0;z-index:1000;background:var(--white);border-bottom:1px
 .req-row{display:flex;justify-content:space-between;align-items:center;padding:10px 16px;background:var(--off);border-radius:6px;margin-bottom:8px;gap:16px}
 .req-label{font-size:12.5px;font-weight:600;color:var(--navy);white-space:nowrap;flex-shrink:0}
 .req-val{font-size:12.5px;color:var(--mid);text-align:right}
+.tip-box{margin-top:14px;padding:12px 16px;background:rgba(201,168,76,.1);border-radius:6px;border-left:3px solid var(--gold)}
+.tip-box p{font-size:12.5px;color:var(--navy);line-height:1.6}
 .faq-item{border-bottom:1px solid var(--border);padding:18px 0;cursor:pointer}
 .faq-q{display:flex;justify-content:space-between;align-items:center;font-size:13.5px;font-weight:600;color:var(--navy)}
 .faq-plus{color:var(--gold);font-size:22px;font-weight:300;transition:transform .2s}
@@ -115,24 +116,24 @@ footer{background:var(--navy);padding:50px 80px 28px}
   <div class="page-hero-bg"></div>
   <div class="page-hero-overlay"></div>
   <div class="page-hero-txt">
-    <div class="page-hero-label">UK EDUCATION</div>
-    <h1>英國升學規劃</h1>
-    <p>Majestic 與英國知名大學合作，為內地在職管理人員提供 MBA 及 DBA 課程申請支援。在職進修，無需放棄事業，學以致用，即時提升管理效能。</p>
+    <div class="page-hero-label">EXECUTIVE EDUCATION</div>
+    <h1>在職高端教育</h1>
+    <p>專為內地在職管理人員而設，無需放棄事業，透過 MBA 及 DBA 課程提升管理視野與領導力，學以致用，即時見效。</p>
   </div>
 </div>
 
-<!-- WHY UK -->
+<!-- WHO IS IT FOR -->
 <div class="sec bg-off tc">
-  <div class="sec-label">WHY UK</div>
-  <h2 class="sec-title">為何選擇英國 MBA / DBA？</h2>
+  <div class="sec-label">WHO IS IT FOR</div>
+  <h2 class="sec-title">適合哪些人？</h2>
   <div class="gold-line"></div>
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:10px;overflow:hidden;max-width:1000px;margin:0 auto">
-    <div style="background:#fff;padding:24px 22px;text-align:left"><div style="border-left:3px solid var(--gold);padding-left:14px"><p style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:6px">國際認可學歷</p><p style="font-size:12.5px;color:var(--light);line-height:1.7">英國大學學位獲全球僱主及頂尖院校廣泛認可，大幅提升個人國際競爭力</p></div></div>
-    <div style="background:#fff;padding:24px 22px;text-align:left"><div style="border-left:3px solid var(--gold);padding-left:14px"><p style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:6px">學制高效靈活</p><p style="font-size:12.5px;color:var(--light);line-height:1.7">MBA 一般一年完成，DBA 約三至四年，在職進修不影響正常工作與事業發展</p></div></div>
-    <div style="background:#fff;padding:24px 22px;text-align:left"><div style="border-left:3px solid var(--gold);padding-left:14px"><p style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:6px">全球頂尖人脈</p><p style="font-size:12.5px;color:var(--light);line-height:1.7">與來自世界各地的管理精英同學，建立珍貴的國際商業人脈與合作機會</p></div></div>
-    <div style="background:#fff;padding:24px 22px;text-align:left"><div style="border-left:3px solid var(--gold);padding-left:14px"><p style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:6px">即學即用</p><p style="font-size:12.5px;color:var(--light);line-height:1.7">課程設計緊貼商業實踐，所學知識可直接應用於工作，即時提升管理效能</p></div></div>
-    <div style="background:#fff;padding:24px 22px;text-align:left"><div style="border-left:3px solid var(--gold);padding-left:14px"><p style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:6px">晉升薪酬優勢</p><p style="font-size:12.5px;color:var(--light);line-height:1.7">持有英國 MBA / DBA 學位，在晉升及薪酬談判上具明顯優勢，回報可觀</p></div></div>
-    <div style="background:#fff;padding:24px 22px;text-align:left"><div style="border-left:3px solid var(--gold);padding-left:14px"><p style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:6px">提升企業形象</p><p style="font-size:12.5px;color:var(--light);line-height:1.7">持有英國知名大學學位，為個人品牌及企業形象帶來正面加持，增強市場信任</p></div></div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:10px;overflow:hidden;max-width:960px;margin:0 auto">
+    <div style="background:#fff;padding:24px 22px;text-align:left"><div style="border-left:3px solid var(--gold);padding-left:14px"><p style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:6px">中高層管理人員</p><p style="font-size:12.5px;color:var(--light);line-height:1.7">希望突破事業瓶頸，取得認可學位，晉升更高管理職位</p></div></div>
+    <div style="background:#fff;padding:24px 22px;text-align:left"><div style="border-left:3px solid var(--gold);padding-left:14px"><p style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:6px">企業家及二代接班人</p><p style="font-size:12.5px;color:var(--light);line-height:1.7">希望系統化提升管理知識，為企業轉型及傳承做好準備</p></div></div>
+    <div style="background:#fff;padding:24px 22px;text-align:left"><div style="border-left:3px solid var(--gold);padding-left:14px"><p style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:6px">有志學術研究的管理者</p><p style="font-size:12.5px;color:var(--light);line-height:1.7">希望以 DBA 深化管理實踐，取得博士學位提升個人地位</p></div></div>
+    <div style="background:#fff;padding:24px 22px;text-align:left"><div style="border-left:3px solid var(--gold);padding-left:14px"><p style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:6px">計劃轉型或創業人士</p><p style="font-size:12.5px;color:var(--light);line-height:1.7">透過 MBA 拓展視野，建立國際人脈，為創業或轉型做準備</p></div></div>
+    <div style="background:#fff;padding:24px 22px;text-align:left"><div style="border-left:3px solid var(--gold);padding-left:14px"><p style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:6px">尋求國際認可學歷人士</p><p style="font-size:12.5px;color:var(--light);line-height:1.7">英國頂尖大學學位，獲全球認可，大幅提升個人競爭力</p></div></div>
+    <div style="background:#fff;padding:24px 22px;text-align:left"><div style="border-left:3px solid var(--gold);padding-left:14px"><p style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:6px">在職人士（不需放棄工作）</p><p style="font-size:12.5px;color:var(--light);line-height:1.7">以在職兼讀模式完成學業，工作學習兩不誤</p></div></div>
   </div>
 </div>
 
@@ -144,12 +145,10 @@ footer{background:var(--navy);padding:50px 80px 28px}
 
   <div class="prog-block">
     <div class="prog-header">
-      <div>
-        <span class="prog-badge">MBA</span>
-      </div>
+      <span class="prog-badge">MBA</span>
       <div>
         <h3>工商管理碩士</h3>
-        <p>Master of Business Administration — 適合具3年或以上工作經驗的管理人員</p>
+        <p>Master of Business Administration — 全面提升商業思維與領導能力</p>
       </div>
     </div>
     <div class="prog-body">
@@ -159,31 +158,27 @@ footer{background:var(--navy);padding:50px 80px 28px}
         <div class="prog-item"><div class="prog-dot"></div><p>財務分析、投資管理與風險評估</p></div>
         <div class="prog-item"><div class="prog-dot"></div><p>市場營銷策略與品牌管理</p></div>
         <div class="prog-item"><div class="prog-dot"></div><p>領導力發展與人才管理</p></div>
-        <div class="prog-item"><div class="prog-dot"></div><p>商業倫理與企業管治</p></div>
         <div class="prog-item"><div class="prog-dot"></div><p>數字化轉型與創新管理</p></div>
+        <div class="prog-item"><div class="prog-dot"></div><p>商業倫理與企業管治</p></div>
       </div>
       <div>
         <h4>申請要求</h4>
         <div class="req-row"><span class="req-label">學歷</span><span class="req-val">本科學位（任何學科）</span></div>
         <div class="req-row"><span class="req-label">工作經驗</span><span class="req-val">3年或以上管理經驗</span></div>
         <div class="req-row"><span class="req-label">英語要求</span><span class="req-val">IELTS 6.5 或以上</span></div>
-        <div class="req-row"><span class="req-label">學習模式</span><span class="req-val">在職 / 兼讀（網上為主）</span></div>
-        <div class="req-row"><span class="req-label">修業時間</span><span class="req-val">一般12–18個月</span></div>
-        <div style="margin-top:14px;padding:12px 14px;background:rgba(201,168,76,.1);border-radius:6px">
-          <p style="font-size:12.5px;color:var(--navy);line-height:1.6"><strong>適合：</strong>希望提升管理視野、轉型創業或晉升高管職位的在職專業人士</p>
-        </div>
+        <div class="req-row"><span class="req-label">學習模式</span><span class="req-val">在職兼讀（網上為主）</span></div>
+        <div class="req-row"><span class="req-label">修業時間</span><span class="req-val">一般 12–18 個月</span></div>
+        <div class="tip-box"><p><strong>適合：</strong>管理人員、轉型創業者、有意晉升高管職位的在職專才</p></div>
       </div>
     </div>
   </div>
 
   <div class="prog-block">
     <div class="prog-header">
-      <div>
-        <span class="prog-badge">DBA</span>
-      </div>
+      <span class="prog-badge">DBA</span>
       <div>
         <h3>工商管理博士</h3>
-        <p>Doctor of Business Administration — 專為資深企業管理者及企業家設計</p>
+        <p>Doctor of Business Administration — 結合學術研究與商業實踐</p>
       </div>
     </div>
     <div class="prog-body">
@@ -193,19 +188,17 @@ footer{background:var(--navy);padding:50px 80px 28px}
         <div class="prog-item"><div class="prog-dot"></div><p>組織變革、領導力與企業文化</p></div>
         <div class="prog-item"><div class="prog-dot"></div><p>商業研究方法論與學術寫作</p></div>
         <div class="prog-item"><div class="prog-dot"></div><p>全球商業環境分析與策略</p></div>
-        <div class="prog-item"><div class="prog-dot"></div><p>獨立研究項目（Thesis）</p></div>
+        <div class="prog-item"><div class="prog-dot"></div><p>獨立研究項目（Doctoral Thesis）</p></div>
         <div class="prog-item"><div class="prog-dot"></div><p>行業應用研究與實踐整合</p></div>
       </div>
       <div>
         <h4>申請要求</h4>
         <div class="req-row"><span class="req-label">學歷</span><span class="req-val">MBA 或相關碩士學位</span></div>
-        <div class="req-row"><span class="req-label">工作經驗</span><span class="req-val">豐富管理經驗（一般8年+）</span></div>
+        <div class="req-row"><span class="req-label">工作經驗</span><span class="req-val">豐富管理經驗（8年+）</span></div>
         <div class="req-row"><span class="req-label">英語要求</span><span class="req-val">IELTS 7.0 或以上</span></div>
         <div class="req-row"><span class="req-label">研究計劃</span><span class="req-val">需提交研究計劃書</span></div>
-        <div class="req-row"><span class="req-label">修業時間</span><span class="req-val">一般3–4年（在職模式）</span></div>
-        <div style="margin-top:14px;padding:12px 14px;background:rgba(201,168,76,.1);border-radius:6px">
-          <p style="font-size:12.5px;color:var(--navy);line-height:1.6"><strong>適合：</strong>企業家、二代接班人、高級管理人員，希望以學術研究深化管理實踐</p>
-        </div>
+        <div class="req-row"><span class="req-label">修業時間</span><span class="req-val">一般 3–4 年（在職）</span></div>
+        <div class="tip-box"><p><strong>適合：</strong>企業家、二代接班人、資深管理者，以學術研究深化管理實踐</p></div>
       </div>
     </div>
   </div>
@@ -220,19 +213,19 @@ footer{background:var(--navy);padding:50px 80px 28px}
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
       <div style="background:#fff;border-radius:8px;padding:22px;border:1px solid var(--border);display:flex;gap:14px;align-items:flex-start">
         <div style="width:44px;height:44px;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">🤝</div>
-        <div><h3 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:6px">大學合作關係</h3><p style="font-size:13px;color:var(--mid);line-height:1.7">與英國多所知名大學建立合作關係，深入了解各院校收生偏好及內部標準</p></div>
+        <div><h3 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:6px">大學合作關係</h3><p style="font-size:13px;color:var(--mid);line-height:1.7">與英國多所知名大學建立合作，深入了解各院校收生偏好及標準</p></div>
       </div>
       <div style="background:#fff;border-radius:8px;padding:22px;border:1px solid var(--border);display:flex;gap:14px;align-items:flex-start">
         <div style="width:44px;height:44px;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">📝</div>
-        <div><h3 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:6px">文書專業支援</h3><p style="font-size:13px;color:var(--mid);line-height:1.7">個人陳述、研究計劃書專業撰寫，協助將商業經驗轉化為有說服力的學術申請材料</p></div>
+        <div><h3 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:6px">文書專業支援</h3><p style="font-size:13px;color:var(--mid);line-height:1.7">個人陳述、研究計劃書專業撰寫，將商業經驗轉化為有力申請材料</p></div>
       </div>
       <div style="background:#fff;border-radius:8px;padding:22px;border:1px solid var(--border);display:flex;gap:14px;align-items:flex-start">
         <div style="width:44px;height:44px;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">🎤</div>
-        <div><h3 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:6px">面試全面準備</h3><p style="font-size:13px;color:var(--mid);line-height:1.7">針對英國院校面試風格，提供模擬練習、常見問題應對及英語表達技巧指導</p></div>
+        <div><h3 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:6px">面試全面準備</h3><p style="font-size:13px;color:var(--mid);line-height:1.7">針對英國院校面試風格，提供模擬練習及英語表達技巧指導</p></div>
       </div>
       <div style="background:#fff;border-radius:8px;padding:22px;border:1px solid var(--border);display:flex;gap:14px;align-items:flex-start">
         <div style="width:44px;height:44px;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">🌐</div>
-        <div><h3 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:6px">在職安排協調</h3><p style="font-size:13px;color:var(--mid);line-height:1.7">協助安排彈性學習時間表，確保在職進修與工作之間取得最佳平衡</p></div>
+        <div><h3 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:6px">在職安排協調</h3><p style="font-size:13px;color:var(--mid);line-height:1.7">協助安排彈性學習時間表，確保在職進修與工作取得最佳平衡</p></div>
       </div>
     </div>
   </div>
@@ -248,13 +241,13 @@ footer{background:var(--navy);padding:50px 80px 28px}
     <div class="step-arr">›</div>
     <div class="step"><div class="step-circle">2</div><h4>選校建議</h4><p>推薦最合適的英國大學及課程</p></div>
     <div class="step-arr">›</div>
-    <div class="step"><div class="step-circle">3</div><h4>文書準備</h4><p>個人陳述、CV、研究計劃書撰寫優化</p></div>
+    <div class="step"><div class="step-circle">3</div><h4>文書準備</h4><p>個人陳述、CV、研究計劃書撰寫</p></div>
     <div class="step-arr">›</div>
-    <div class="step"><div class="step-circle">4</div><h4>遞交申請</h4><p>完成申請表格，準時遞交各院校</p></div>
+    <div class="step"><div class="step-circle">4</div><h4>遞交申請</h4><p>準時遞交，跟進審批進度</p></div>
     <div class="step-arr">›</div>
     <div class="step"><div class="step-circle">5</div><h4>面試培訓</h4><p>模擬面試，提升錄取機會</p></div>
     <div class="step-arr">›</div>
-    <div class="step" style="--c:var(--gold)"><div class="step-circle" style="background:var(--gold)">6</div><h4>錄取安排</h4><p>協助辦理簽證及開學準備</p></div>
+    <div class="step"><div class="step-circle" style="background:var(--gold)">6</div><h4>錄取安排</h4><p>協助辦理簽證及開學準備</p></div>
   </div>
 </div>
 
@@ -263,15 +256,15 @@ footer{background:var(--navy);padding:50px 80px 28px}
   <div class="sec-label tc">FAQ</div>
   <h2 class="sec-title tc">常見問題</h2>
   <div class="gold-line"></div>
-  <div class="faq-item"><div class="faq-q"><span>MBA 和 DBA 有什麼分別？應該選哪個？</span><span class="faq-plus">+</span></div><div class="faq-a">MBA 側重廣泛的管理技能培訓，適合希望全面提升管理能力或轉換行業的人士，一般要求3年或以上工作經驗。DBA 則以研究為主，要求申請人有豐富管理經驗（通常8年以上）及碩士學位，適合希望以學術研究深化專業實踐、或取得博士學位的資深管理者。Majestic 可根據您的背景及目標，提供專業建議。</div></div>
-  <div class="faq-item"><div class="faq-q"><span>在職人士可以讀英國 MBA / DBA 嗎？</span><span class="faq-plus">+</span></div><div class="faq-a">可以。大部分英國 MBA 及 DBA 課程均設有在職兼讀模式，以網上授課為主，配合定期實體工作坊（通常每學期1-2次赴英）。課程設計充分考慮在職人士的時間限制，讓您在不放棄事業的情況下完成學業。</div></div>
-  <div class="faq-item"><div class="faq-q"><span>英語成績不夠怎麼辦？</span><span class="faq-plus">+</span></div><div class="faq-a">部分院校接受以英語為工作語言的申請人豁免英語成績要求，或提供預備課程（Pre-sessional English）。Majestic 可協助評估您的英語水平，建議最合適的備考策略，或推薦英語要求較為彈性的院校。</div></div>
-  <div class="faq-item"><div class="faq-q"><span>DBA 需要提交研究計劃書，我該如何準備？</span><span class="faq-plus">+</span></div><div class="faq-a">研究計劃書是 DBA 申請最關鍵的材料，需清晰闡述研究題目、研究問題、研究方法及預期貢獻。Majestic 的顧問具備豐富的 DBA 申請經驗，可協助您從商業實踐中提煉研究方向，並撰寫符合院校要求的學術計劃書。</div></div>
+  <div class="faq-item"><div class="faq-q"><span>MBA 和 DBA 有什麼分別？</span><span class="faq-plus">+</span></div><div class="faq-a">MBA 側重廣泛管理技能培訓，適合希望全面提升管理能力、轉換行業或晉升的在職人士，一般要求3年工作經驗。DBA 以研究為主，要求豐富管理經驗（通常8年以上）及碩士學位，適合希望以學術研究深化管理實踐的資深管理者。</div></div>
+  <div class="faq-item"><div class="faq-q"><span>在職人士可以兼讀嗎？需要去英國嗎？</span><span class="faq-plus">+</span></div><div class="faq-a">可以。大部分英國 MBA 及 DBA 課程均設有在職兼讀模式，以網上授課為主，配合每學期1-2次實體工作坊（通常在英國或香港舉行）。課程設計充分考慮在職人士的時間限制，讓您在不放棄事業的情況下完成學業。</div></div>
+  <div class="faq-item"><div class="faq-q"><span>英語成績不夠怎麼辦？</span><span class="faq-plus">+</span></div><div class="faq-a">部分院校接受以英語為工作語言的申請人豁免英語成績要求，或提供英語預備課程。Majestic 可協助評估您的英語水平，建議最合適的備考策略，或推薦英語要求較為彈性的院校。</div></div>
+  <div class="faq-item"><div class="faq-q"><span>DBA 研究計劃書應該如何準備？</span><span class="faq-plus">+</span></div><div class="faq-a">研究計劃書需清晰闡述研究題目、研究問題、研究方法及預期貢獻。Majestic 可協助您從商業實踐中提煉研究方向，撰寫符合院校要求的學術計劃書，這是我們最常協助客戶的環節之一。</div></div>
 </div>
 
 <div class="cta-bar">
   <div>
-    <h2>準備開啟您的英國進修之旅？</h2>
+    <h2>準備提升您的管理競爭力？</h2>
     <p>立即聯繫我們，獲取免費評估及個人化 MBA / DBA 申請方案</p>
   </div>
   <div style="display:flex;gap:12px;flex-wrap:wrap">
@@ -296,7 +289,7 @@ footer{background:var(--navy);padding:50px 80px 28px}
       <li><a href="about.html">關於我們</a></li>
       <li><a href="hk-education.html">香港升學</a></li>
       <li><a href="uk-education.html">英國升學</a></li>
-      <li><a href="executive-education.html" class="cur">在職高端教育</a></li>
+      <li><a href="executive-education.html">在職高端教育</a></li>
       <li><a href="contact.html">聯絡我們</a></li>
     </ul></div>
     <div class="footer-col"><h4>身份規劃</h4><ul>
@@ -318,7 +311,6 @@ footer{background:var(--navy);padding:50px 80px 28px}
     <div style="display:flex;gap:18px"><a href="#">私隱政策</a><a href="#">免責聲明</a></div>
   </div>
 </footer>
-
 <a href="https://wa.me/85253384136" class="wa-float" target="_blank">💬</a>
 <div id="wc" onclick="this.style.display='none'" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:99999;align-items:center;justify-content:center">
   <div onclick="event.stopPropagation()" style="background:#fff;border-radius:16px;padding:32px;text-align:center;max-width:300px;width:90%">
